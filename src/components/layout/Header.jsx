@@ -23,10 +23,10 @@ const ICON_LIST = [
 const Header = () => {
   return (
     <div className="flex flex-row justify-between items-center px-7 py-2">
-      <div className="flex flex-row gap-1 items-center">
+      <Link className="flex flex-row gap-1 items-center" to={"/"}>
         <img src={Logo} alt="logo" />
         <div className="font-bold text-[34px]">Furniro</div>
-      </div>
+      </Link>
       <div className="space-x-9">
         {LIST_ITEM.map(({ name, path }) => (
           <Link to={path}>{name}</Link>

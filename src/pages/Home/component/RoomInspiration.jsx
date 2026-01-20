@@ -4,7 +4,7 @@ import Living from "../../../assets/Living.png";
 
 const RoomInspiration = () => {
   return (
-    <div className="bg-[#FCF8F3] flex w-full">
+    <div className="bg-[#FCF8F3] flex w-full justify-around">
       <div className="flex flex-col justify-center p-10 space-y-2">
         <div className="font-bold text-[40px]">
           50+ Beautiful rooms inspiration
