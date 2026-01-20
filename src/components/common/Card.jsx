@@ -39,5 +39,3 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag }) => {
 };
 
 export default Card;
-{
-}
