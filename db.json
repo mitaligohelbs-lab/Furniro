@@ -1,0 +1,104 @@
+{
+    "Browse" :[
+        {
+            "id" :"1" , "name":"Dining" ,"url":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
+        },
+        {
+            "id":"2" , "name":"Living" , "url":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768881332/LivingRoom_q4cvpy.png"
+        },
+        {
+            "id" :"3" , "name":"Dining" ,"url":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
+        }
+    ],
+
+    "Product" :[
+ {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product1_aqmpkv.png",
+    "name": "Syltherine",
+    "subTitle": "Stylish cafe chair",
+    "price": "2.500.000",
+    "originalPrice": "3.500.000",
+    "tag": "-50%"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
+    "name": "Lolito",
+    "subTitle": "Luxury big sofa",
+    "price": "7.000.000",
+    "originalPrice": "14.000.000"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
+    "name": "Respira",
+    "subTitle": "Outdoor bar table and stool",
+    "price": "500.000"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+    "name": "Grifo",
+    "subTitle": "Night lamp",
+    "price": "1.500.000",
+    "tag": "-30%"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+    "name": "Muggo",
+    "subTitle": "Small mug",
+    "price": "150.000"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+    "name": "Pingky",
+    "subTitle": "Cute bed set",
+    "price": "7.000.000",
+    "originalPrice": "14.000.000"
+  },
+  {
+    "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+    "name": "Potty",
+    "subTitle": "Minimalist flower pot",
+    "price": "500.000",
+    "tag": "New"
+  }
+    ],
+
+    "Shape":[
+        {
+            "id":"1",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape1_dguljz.png"
+        },
+        {
+            "id":"2",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape2_kgxvho.png"
+        },
+        {
+            "id":"3",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape3_prhgws.png"
+        },
+        {
+            "id":"4",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape4_dbm5qr.png"
+        },
+        {
+            "id":"5",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape5_uk1g1f.png"
+        },
+        {
+            "id":"6",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape6_m8acro.png"
+        },
+        {
+            "id":"7",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882447/shape7_izltka.png"
+        },
+        {
+            "id":"8",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882451/shape8_attown.png"
+        },
+        {
+            "id":"9",
+            "src":"https://res.cloudinary.com/dbfad05pd/image/upload/v1768882452/shape9_ziy6h4.png"
+        }
+    ]
+
+}
