@@ -1,5 +1,15 @@
+import Header from "./component/Header";
+import ProductList from "./component/ProductList";
+import Service from "./component/Service";
+
 const Shop = () => {
-  return <div>Shop</div>;
+  return (
+    <>
+      <Header />
+      <ProductList />
+      <Service />
+    </>
+  );
 };
 
 export default Shop;

@@ -5,13 +5,11 @@ import httpService from "../../../service/httpService";
 const Browse = () => {
   const [browseData, setBrowseData] = useState([]);
 
-  const fetchBrowseData = async () => {
-    const res = await httpService.get("/Browse");
-    setBrowseData(res.data);
-  };
-
   useEffect(() => {
-    fetchBrowseData();
+    (async () => {
+      const res = await httpService.get("/Browse");
+      setBrowseData(res.data);
+    })();
   }, []);
 
   return (
