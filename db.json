@@ -17,130 +17,460 @@
     }
   ],
   "Product": [
-    {
-      "id": "1",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product1_aqmpkv.png",
-      "name": "Syltherine",
-      "subTitle": "Stylish cafe chair",
-      "price": "2.500.000",
-      "originalPrice": "3.500.000",
-      "tag": "-50%"
-    },
-    {
-      "id": "2",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
-      "name": "Lolito",
-      "subTitle": "Luxury big sofa",
-      "price": "7.000.000",
-      "originalPrice": "14.000.000"
-    },
-    {
-      "id": "3",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
-      "name": "Respira",
-      "subTitle": "Outdoor bar table and stool",
-      "price": "500.000"
-    },
-    {
-      "id": "4",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-      "name": "Grifo",
-      "subTitle": "Night lamp",
-      "price": "1.500.000",
-      "tag": "-30%"
-    },
-    {
-      "id": "5",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-      "name": "Muggo",
-      "subTitle": "Small mug",
-      "price": "150.000"
-    },
-    {
-      "id": "6",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-      "name": "Pingky",
-      "subTitle": "Cute bed set",
-      "price": "7.000.000",
-      "originalPrice": "14.000.000"
-    },
-    {
-      "id": "7",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty",
-      "subTitle": "Minimalist flower pot",
-      "price": "500.000",
-      "tag": "New"
-    },
-    {
-      "id": "8",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-      "name": "Grifo",
-      "subTitle": "Night lamp",
-      "price": "1.500.000",
-      "tag": "-30%"
-    },
-    {
-      "id": "9",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-      "name": "Muggo",
-      "subTitle": "Small mug",
-      "price": "150.000"
-    },
-    {
-      "id": "10",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-      "name": "Pingky",
-      "subTitle": "Cute bed set",
-      "price": "7.000.000",
-      "originalPrice": "14.000.000"
-    },
-    {
-      "id": "11",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty",
-      "subTitle": "Minimalist flower pot",
-      "price": "500.000",
-      "tag": "New"
-    },
-    {
-      "id": "12",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-      "name": "Grifo",
-      "subTitle": "Night lamp",
-      "price": "1.500.000",
-      "tag": "-30%"
-    },
-    {
-      "id": "13",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-      "name": "Muggo",
-      "subTitle": "Small mug",
-      "price": "150.000"
-    },
-    {
-      "id": "14",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-      "name": "Pingky",
-      "subTitle": "Cute bed set",
-      "price": "7.000.000",
-      "originalPrice": "14.000.000"
-    },
-    {
-      "id": "15",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty",
-      "subTitle": "Minimalist flower pot",
-      "price": "500.000",
-      "tag": "New"
-    },
-     {
-      "id": "16",
-      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
-      "name": "Respira",
-      "subTitle": "Outdoor bar table and stool",
-      "price": "500.000"
-    }
+      {
+        "id": "1",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "name": "Syltherine",
+        "subTitle": "Stylish cafe chair",
+        "price": "2500",
+        "originalPrice": "3500",
+        "tag": "-50%",
+        "SKU": "SS001",
+        "category": "Sofas",
+        "tags": "Sofa, Chair, Home, Shop",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+        "description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+        "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "2",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
+        "name": "Lolito",
+        "subTitle": "Luxury big sofa",
+        "price": "7000",
+        "originalPrice": "14000",
+        "tag": "-50%",
+        "SKU": "SS002",
+        "category": "Sofas",
+        "tags": "Sofa, Luxury, Living",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.",
+        "description": "Designed for spacious living rooms with superior comfort.",
+        "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "3",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
+        "name": "Respira",
+        "subTitle": "Outdoor bar table and stool",
+        "price": "500",
+        "tag": "New",
+        "SKU": "SS003",
+        "category": "Outdoor",
+        "tags": "Outdoor, Table, Stool",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.",
+        "description": "Perfect for gardens, balconies, and patios.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "4",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo",
+        "subTitle": "Night lamp",
+        "price": "1500",
+        "tag": "-30%",
+        "SKU": "SS004",
+        "category": "Lighting",
+        "tags": "Lamp, Lighting, Bedroom",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.",
+        "description": "Minimal night lamp with warm illumination.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "5",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+        "name": "Muggo",
+        "subTitle": "Small mug",
+        "price": "1500",
+        "SKU": "SS005",
+        "category": "Kitchen",
+        "tags": "Mug, Kitchen, Ceramic",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Ceramic mug for everyday beverages.Ceramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beverages",
+        "description": "Simple and durable mug design.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "6",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+        "name": "Pingky",
+        "subTitle": "Cute bed set",
+        "price": "7000",
+        "originalPrice": "14000",
+        "SKU": "SS006",
+        "category": "Bedroom",
+        "tags": "Bed, Bedroom, Comfort",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.",
+        "description": "Designed for a cozy sleeping experience.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "7",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+        "name": "Potty",
+        "subTitle": "Minimalist flower pot",
+        "price": "500",
+        "tag": "New",
+        "SKU": "SS007",
+        "category": "Decor",
+        "tags": "Plant, Decor, Home",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Minimal pot for indoor plants.Minimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plants",
+        "description": "Perfect decorative addition for modern homes.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "8",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo Mini",
+        "subTitle": "Compact night lamp",
+        "price": "1200",
+        "tag": "-30%",
+        "SKU": "SS008",
+        "category": "Lighting",
+        "tags": "Lamp, Lighting",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.",
+        "description": "Soft lighting with minimalist design.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "9",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+        "name": "Muggo Plus",
+        "subTitle": "Large coffee mug",
+        "price": "250",
+        "SKU": "SS009",
+        "category": "Kitchen",
+        "tags": "Mug, Coffee",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.",
+        "description": "Ideal for coffee lovers.",
+        "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "10",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+        "name": "Pingky Deluxe",
+        "subTitle": "Premium bed set",
+        "price": "8500",
+        "originalPrice": "15.000.000",
+        "SKU": "SS010",
+        "category": "Bedroom",
+        "tags": "Bed, Premium",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Luxury comfort for better sleep.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "11",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+        "name": "Potty XL",
+        "subTitle": "Large flower pot",
+        "price": "700",
+        "tag": "New",
+        "SKU": "SS011",
+        "category": "Decor",
+        "tags": "Plant, Garden",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Large decorative flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Ideal for indoor and outdoor plants.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "12",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo Pro",
+        "subTitle": "Designer night lamp",
+        "price": "2000",
+        "tag": "New",
+        "SKU": "SS012",
+        "category": "Lighting",
+        "tags": "Lamp, Designer",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Premium designer lamp.",
+        "description": "Elegant lighting solution.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "13",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+        "name": "Muggo Stone",
+        "subTitle": "Stone finish mug",
+        "price": "300",
+        "SKU": "SS013",
+        "category": "Kitchen",
+        "tags": "Mug, Stoneware",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Stoneware mug for durability.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Rustic and modern design.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "14",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+        "name": "Pingky Soft",
+        "subTitle": "Comfort bed set",
+        "price": "6500",
+        "originalPrice": "12000",
+        "SKU": "SS014",
+        "category": "Bedroom",
+        "tags": "Bed, Soft",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Extra soft bedding set.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Comfort-focused bedroom solution.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "15",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+        "name": "Potty Round",
+        "subTitle": "Round flower pot",
+        "price": "550",
+        "tag": "New",
+        "SKU": "SS015",
+        "category": "Decor",
+        "tags": "Plant, Decor",
+        "revies": "4",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Round modern flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Perfect for minimalist interiors.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "16",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
+        "name": "Respira Plus",
+        "subTitle": "Outdoor furniture set",
+        "price": "650",
+        "SKU": "SS016",
+        "category": "Outdoor",
+        "tags": "Outdoor, Furniture",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Improved outdoor furniture design.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+        "description": "Built for durability and outdoor comfort.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "17",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo Pro",
+        "subTitle": "Designer night lamp",
+        "price": "2000",
+        "tag": "-5%",
+        "SKU": "SS012",
+        "category": "Lighting",
+        "tags": "Lamp, Designer",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Premium designer lamp.",
+        "description": "Elegant lighting solution.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "18",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo Pro",
+        "subTitle": "Designer night lamp",
+        "price": "2000",
+        "tag": "-60%",
+        "SKU": "SS012",
+        "category": "Lighting",
+        "tags": "Lamp, Designer",
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Premium designer lamp.",
+        "description": "Elegant lighting solution.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      },
+      {
+        "id": "19",
+        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+        "name": "Grifo Pro",
+        "subTitle": "Designer night lamp",
+        "price": "2000",
+        "tag": "New",
+        "SKU": "SS012",
+        "category": "Lighting",
+        "tags": "Lamp, Designer", 
+        "revies": "5",
+        "extraImages": [
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+        ],
+        "additionalInformation": "Premium designer lamp.",
+        "description": "Elegant lighting solution.",
+          "detailImage":[
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+        ]
+      }
   ],
   "Shape": [
     {

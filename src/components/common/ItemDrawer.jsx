@@ -1,0 +1,69 @@
+import { useDispatch, useSelector } from "react-redux";
+import Vector from "../../assets/Vector.png";
+import Cancel from "../../assets/Group.png";
+import { removeItem } from "../../redux/features/cart/CartSlice";
+
+const ItemDrawer = ({ onClose }) => {
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.items);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+
+  return (
+    <div className="fixed inset-0 z-50">
+      <div className="absolute inset-0 bg-black/40" onClick={onClose} />
+      <div className="ml-auto h-186 w-104 bg-white p-6 shadow-xl relative">
+        <div className="flex justify-between items-center mb-4">
+          <span className="font-semibold text-[24px]">Shopping Cart</span>
+          <button onClick={onClose} className="text-xl cursor-pointer">
+            <img src={Cancel} />
+          </button>
+        </div>
+        <hr className="mb-4 border-[#D9D9D9]" />
+        <div className="flex flex-col gap-4 overflow-auto max-h-140 p-4">
+          {items.map(({ id, name, price, src, quantity }) => (
+            <div key={id} className="flex items-center justify-between gap-4">
+              <img src={src} className="h-25 w-27 rounded-xl object-cover" />
+
+              <div className="flex flex-col gap-4 max-w-32 flex-1 justify-center">
+                <div className="text-[16px] font-medium">{name}</div>
+                <div className="text-sm">
+                  {quantity} X
+                  <span className="text-[#B88E2F] font-semibold">
+                    {" "}
+                    ₹{price}
+                  </span>
+                </div>
+              </div>
+
+              <img
+                src={Vector}
+                className="cursor-pointer"
+                alt="remove"
+                onClick={() => dispatch(removeItem(id))}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="fixed top-165">
+          <div>
+            <span>Total:</span>
+            <span className="text-[#B88E2F]">{totalAmount}</span>
+            {/*  */}
+            <hr className="text-[#D9D9D9]" />
+            <div className="flex gap-2 mt-3">
+              <button className="px-8 py-1.5 border rounded-2xl">Cart</button>
+              <button className="px-8 py-1.5 border rounded-2xl">
+                Checkout
+              </button>
+              <button className="px-6 py-1.5 border rounded-2xl">
+                Comparision
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ItemDrawer;

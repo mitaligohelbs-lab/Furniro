@@ -1,10 +1,21 @@
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import clsx from "clsx";
+import { addToCard } from "../../redux/features/card/CardSlice";
 
-const Card = ({ src, name, subTitle, price, originalPrice, tag }) => {
+const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
-    <div>
+    <button
+      className="cursor-pointer"
+      onClick={() => {
+        dispatch(addToCard(id));
+        navigate(`/shop/${id}`);
+      }}
+    >
       <div className="relative">
-        <img src={src} />
+        <img src={src} className="h-72" />
         <span
           className={clsx(
             "absolute",
@@ -18,7 +29,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag }) => {
             },
             {
               "h-12 w-12": tag,
-            }
+            },
           )}
         >
           {tag}
@@ -34,7 +45,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag }) => {
           )}
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
