@@ -1,13 +1,24 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-import Logo from "../../assets/logo.svg";
-import { ICON_LIST, LIST_ITEM } from "../../constant";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+
 import ItemDrawer from "../common/ItemDrawer";
+
+import { ICON_LIST, LIST_ITEM } from "../../constant";
+import Logo from "../../assets/logo.svg";
 
 const Header = () => {
   const item = useSelector((state) => state.cart.items);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (totalAmount === 0) {
+      setIsOpen(false);
+    }
+  }, [totalAmount]);
+
   return (
     <>
       <div className="flex flex-row justify-between items-center px-7 py-2">

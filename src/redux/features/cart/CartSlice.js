@@ -25,7 +25,7 @@ export const cartSlice = createSlice({
     },
 
     increseQuantity: (state, action) => {
-      const item = state.items.find((item) => item.id === action.payload);
+      const item = state.items.find(({ id }) => id === action.payload);
       if (item) {
         item.quantity++;
         state.totalQuantity++;
@@ -34,22 +34,22 @@ export const cartSlice = createSlice({
     },
 
     decreaseQuantity: (state, action) => {
-      const item = state.items.find((item) => item.id === action.payload);
+      const item = state.items.find(({ id }) => id === action.payload);
       if (item) {
         item.quantity--;
         state.totalQuantity--;
         state.totalAmount -= +item.price;
       }
       if (item.quantity === 0) {
-        state.items = state.items.filter((i) => i.id !== id);
+        state.items = state.items.filter(({ id }) => id !== action.payload);
       }
     },
 
     removeItem: (state, action) => {
-      const item = state.items.find((item) => item.id === action.payload);
+      const item = state.items.find(({ id }) => id === action.payload);
       if (item) {
-        state.items = state.items.filter((item) => item.id !== action.payload);
-        state.totalAmount = state.totalAmount - item.price;
+        state.items = state.items.filter(({ id }) => id !== action.payload);
+        state.totalAmount = state.totalAmount - item.price * item.quantity;
         state.totalQuantity = state.totalQuantity - item.quantity;
       }
     },

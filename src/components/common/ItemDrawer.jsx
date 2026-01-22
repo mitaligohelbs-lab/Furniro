@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
+import { removeItem } from "../../redux/features/cart/CartSlice";
+
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
-import { removeItem } from "../../redux/features/cart/CartSlice";
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -23,18 +24,13 @@ const ItemDrawer = ({ onClose }) => {
           {items.map(({ id, name, price, src, quantity }) => (
             <div key={id} className="flex items-center justify-between gap-4">
               <img src={src} className="h-25 w-27 rounded-xl object-cover" />
-
               <div className="flex flex-col gap-4 max-w-32 flex-1 justify-center">
                 <div className="text-[16px] font-medium">{name}</div>
                 <div className="text-sm">
                   {quantity} X
-                  <span className="text-[#B88E2F] font-semibold">
-                    {" "}
-                    ₹{price}
-                  </span>
+                  <span className="text-[#B88E2F] font-semibold">₹{price}</span>
                 </div>
               </div>
-
               <img
                 src={Vector}
                 className="cursor-pointer"
@@ -48,7 +44,6 @@ const ItemDrawer = ({ onClose }) => {
           <div>
             <span>Total:</span>
             <span className="text-[#B88E2F]">{totalAmount}</span>
-            {/*  */}
             <hr className="text-[#D9D9D9]" />
             <div className="flex gap-2 mt-3">
               <button className="px-8 py-1.5 border rounded-2xl">Cart</button>

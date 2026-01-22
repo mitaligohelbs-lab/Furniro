@@ -1,17 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
 
 import httpService from "../../../service/httpService";
-
-import RatingStars from "../../../components/common/RatingStars";
-import CommonPage from "../../../components/common/CommonPage";
-import Card from "../../../components/common/Card";
-import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   decreaseQuantity,
   increseQuantity,
 } from "../../../redux/features/cart/CartSlice";
+
+import RatingStars from "../../../components/common/RatingStars";
+import CommonPage from "../../../components/common/CommonPage";
+import Card from "../../../components/common/Card";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -20,11 +20,17 @@ const ItemDetails = () => {
   const [productDetail, setProductDetail] = useState([]);
   const [allProduct, setAllProduct] = useState([]);
   const [showAllDetails, setShowAllDetails] = useState(false);
-  const itemsss = useSelector((state) => state.cart.items);
-  const totalPrice = useSelector((state) => state.cart.totalAmount);
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const currItem = itemsss?.find((item) => item?.id === id);
+  const item = useSelector((state) => state.cart.items);
+  const currItem = item?.find((item) => item?.id === id);
   const [quantity, setQuantity] = useState(currItem?.quantity || 1);
+
+  useEffect(() => {
+    if (currItem) {
+      setQuantity(currItem.quantity);
+    } else {
+      setQuantity(0);
+    }
+  }, [currItem]);
 
   useEffect(() => {
     (async () => {
@@ -64,9 +70,10 @@ const ItemDetails = () => {
     (product) => product.category === category,
   );
 
-  const finalData = useMemo(() => {
-    return showAllDetails ? relatedProduct : relatedProduct.slice(0, 4);
-  }, [showAllDetails, relatedProduct]);
+  const finalData = useMemo(
+    () => (showAllDetails ? relatedProduct : relatedProduct.slice(0, 4)),
+    [showAllDetails, relatedProduct],
+  );
 
   return (
     <>
@@ -111,36 +118,44 @@ const ItemDetails = () => {
           <div className="text-[13px] max-w-100">{description}</div>
 
           <div className="flex gap-1 mb-10">
-            <div className="border flex w-30 justify-around rounded-md border-[#9F9F9F] ">
+            <div className="border px-3 py-2 flex w-30 justify-around rounded-md border-[#9F9F9F] ">
               <button
                 onClick={() => {
-                  setQuantity((prev) => prev - 1);
-                  dispatch(decreaseQuantity(id));
+                  if (currItem) {
+                    dispatch(decreaseQuantity(id));
+                  } else {
+                    setQuantity((prev) => prev - 1);
+                  }
                 }}
-                disabled={quantity <= 1}
-                className={`cursor-pointer ${quantity <= 1 ? "text-gray-400" : ""}`}
+                disabled={quantity < 1}
+                className={`cursor-pointer ${quantity < 1 ? "text-gray-400" : ""}`}
               >
                 -
               </button>
               <button>{quantity}</button>
               <button
                 onClick={() => {
-                  setQuantity((prev) => prev + 1);
-                  dispatch(increseQuantity(id));
+                  if (currItem) {
+                    dispatch(increseQuantity(id));
+                  } else {
+                    setQuantity((prev) => prev + 1);
+                  }
                 }}
                 className="cursor-pointer"
               >
                 +
               </button>
             </div>
-            <button
-              className="px-3 py-2 rounded-md border cursor-pointer"
-              onClick={() =>
-                dispatch(addToCart({ id, name, price, src, quantity }))
-              }
-            >
-              Add To Cart
-            </button>
+            {quantity !== 0 && (
+              <button
+                className="px-3 py-2 rounded-md border cursor-pointer"
+                onClick={() =>
+                  dispatch(addToCart({ id, name, price, src, quantity }))
+                }
+              >
+                Add To Cart
+              </button>
+            )}
           </div>
 
           <hr className="text-[#D9D9D9]" />
