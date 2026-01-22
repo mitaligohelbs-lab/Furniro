@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import CommonPage from "../../../components/common/CommonPage";
-import httpService from "../../../service/httpService";
-import Card from "../../../components/common/Card";
+import { useNavigate } from "react-router";
 
+import httpService from "../../../service/httpService";
+import CommonPage from "../../../components/common/CommonPage";
+import Card from "../../../components/common/Card";
 const Product = () => {
   const [product, setProduct] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     (async () => {
@@ -23,6 +25,12 @@ const Product = () => {
         {product?.map((item, index) => (
           <Card key={index} {...item} />
         ))}
+      </div>
+      <div
+        className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer"
+        onClick={() => navigate("/shop")}
+      >
+        Show More
       </div>
     </CommonPage>
   );

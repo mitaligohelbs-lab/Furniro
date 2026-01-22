@@ -6,7 +6,7 @@ import Card from "../../../components/common/Card";
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
-  const [currPage, setCurrentPage] = useState(1);
+  const [currPage, setCurrentPage] = useState(0);
   const [limit, setLimit] = useState(8);
   const [sortValue, setSortValue] = useState("Default");
 
@@ -41,7 +41,7 @@ const ProductList = () => {
       ({ name, subTitle, tag }) =>
         name?.toLowerCase().includes(searchText) ||
         subTitle?.toLowerCase().includes(searchText) ||
-        tag?.toLowerCase().includes(searchText)
+        tag?.toLowerCase().includes(searchText),
     );
   }, [products, search]);
 
@@ -95,8 +95,9 @@ const ProductList = () => {
 
       <div className="flex gap-2 justify-center mb-4">
         <button
-          disabled={currPage === 1}
-          onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+          className="cursor-pointer"
+          disabled={currPage === 0}
+          onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
         >
           Prev
         </button>
@@ -106,15 +107,20 @@ const ProductList = () => {
             key={p}
             onClick={() => setCurrentPage(p)}
             className={clsx("h-10 w-10 cursor-pointer", {
-              "bg-[#B88E2F] font-bold": currPage === p,
-              "bg-[#F9F1EF]": currPage !== p,
+              "bg-[#B88E2F] font-bold": currPage === p - 1,
+              "bg-[#F9F1EF]": currPage !== p - 1,
             })}
           >
             {p}
           </button>
         ))}
 
-        <button onClick={() => setCurrentPage((p) => p + 1)}>Next</button>
+        <button
+          onClick={() => setCurrentPage((p) => p + 1)}
+          className="cursor-pointer"
+        >
+          Next
+        </button>
       </div>
     </>
   );
