@@ -345,7 +345,7 @@
     {
       "id": "7",
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty",
+      "name": "Pot",
       "subTitle": "Minimalist flower pot",
       "price": "500",
       "tag": "New",
@@ -560,7 +560,7 @@
     {
       "id": "11",
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty XL",
+      "name": "Pot",
       "subTitle": "Large flower pot",
       "price": "700",
       "tag": "New",
@@ -775,7 +775,7 @@
     {
       "id": "15",
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-      "name": "Potty Round",
+      "name": "Pot Round",
       "subTitle": "Round flower pot",
       "price": "550",
       "tag": "New",

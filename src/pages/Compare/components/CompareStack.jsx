@@ -15,7 +15,7 @@ import Vector from "../../../assets/Vector.png";
 const CompareStack = () => {
   const location = useLocation();
   const dispatch = useDispatch();
-  const { isDisplay } = location.state;
+  const { isDisplay } = location.state ?? { isDisplay: false };
 
   const selectedProductId = useSelector((state) => state.compareItem.item);
 
@@ -120,7 +120,7 @@ const CompareStack = () => {
         </div>
 
         <div className="flex flex-col">
-          {selectedProductId[0]?.length < 2 ? (
+          {selectedProductId[0]?.length < 2 || selectedProductId.length < 2 ? (
             <div className="flex flex-col gap-3 relative w-75">
               <div className="text-[24px] font-semibold">Add a Product</div>
               <button
