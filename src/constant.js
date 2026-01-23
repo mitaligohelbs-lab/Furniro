@@ -90,3 +90,46 @@ export const ICON_LIST = [
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/cart_ripi72.svg",
   },
 ];
+
+export const DISPLAY_KEYS = [
+  {
+    name: "General",
+    value: "general",
+  },
+  {
+    name: "Product",
+    value: "productSpecs",
+  },
+  {
+    name: "Dimensions",
+    value: "dimensions",
+  },
+  {
+    name: "Warranty",
+    value: "warranty",
+  },
+];
+
+export const CART_HEADER = [
+  {
+    name: "Product",
+  },
+  {
+    name: "Name",
+  },
+  {
+    name: "Price",
+  },
+  {
+    name: "Quantity",
+  },
+  {
+    name: "Total",
+  },
+  {
+    name: "Compare",
+  },
+  {
+    name: "Remove",
+  },
+];

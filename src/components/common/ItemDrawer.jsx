@@ -3,10 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 import { removeItem } from "../../redux/features/cart/CartSlice";
-import { addToCompareItem } from "../../redux/features/cart/ComparisionSlice";
 
+import QuantityControl from "./QuantityControl";
+
+import { CART_HEADER } from "../../constant";
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
+import {
+  addToCompareItem,
+  removeCompareItem,
+} from "../../redux/features/cart/ComparisionSlice";
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -14,6 +20,7 @@ const ItemDrawer = ({ onClose }) => {
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const [selectedCamparision, setSelectedComparision] = useState([]);
+  const selectedCartIds = useSelector((state) => state.compareItem.item);
 
   const handleChange = (id, checked) => {
     setSelectedComparision((prev) => {
@@ -28,7 +35,7 @@ const ItemDrawer = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
-      <div className="ml-auto h-186 w-104 bg-white p-6 shadow-xl relative">
+      <div className="ml-auto h-200 w-150 bg-white p-4 shadow-xl relative">
         <div className="flex justify-between items-center mb-4">
           <span className="font-semibold text-[24px]">Shopping Cart</span>
           <button onClick={onClose} className="text-xl cursor-pointer">
@@ -36,38 +43,75 @@ const ItemDrawer = ({ onClose }) => {
           </button>
         </div>
         <hr className="mb-4 border-[#D9D9D9]" />
-        <div className="flex flex-col gap-4 overflow-auto max-h-140 p-4">
-          {items.map(({ id, name, price, src, quantity }) => (
-            <div key={id} className="flex items-center justify-between gap-4">
-              <img src={src} className="h-25 w-27 rounded-xl object-cover" />
-              <div className="flex flex-col gap-4 max-w-32 flex-1 justify-center">
-                <div className="text-[16px] font-medium">{name}</div>
-                <div className="text-sm">
-                  {quantity} X
-                  <span className="text-[#B88E2F] font-semibold">₹{price}</span>
-                </div>
-              </div>
-              <img
-                src={Vector}
-                className="cursor-pointer"
-                alt="remove"
-                onClick={() => dispatch(removeItem(id))}
-              />
-              <input
-                type="checkbox"
-                checked={selectedCamparision?.includes(+id)}
-                value={+id}
-                onChange={(e) => handleChange(+id, e.target.checked)}
-              />
-            </div>
-          ))}
+        <div className="overflow-auto max-h-140">
+          <table className="w-full border-collapse text-sm">
+            <thead className="sticky top-0 bg-gray-100">
+              <tr className="text-left">
+                {CART_HEADER.map(({ name }) => (
+                  <th className="p-2">{name}</th>
+                ))}
+              </tr>
+            </thead>
+
+            <tbody>
+              {items.map(({ id, name, price, src, quantity }) => (
+                <tr key={id} className="last:border-b-0">
+                  <td className="p-2">
+                    <img
+                      src={src}
+                      alt={name}
+                      className="h-14 w-14 rounded-lg object-cover"
+                    />
+                  </td>
+                  <td className="p-2 font-medium">{name}</td>
+                  <td className="p-2">₹{price}</td>
+                  <td className="p-2">
+                    <QuantityControl
+                      isDisplay={false}
+                      id={id}
+                      name={name}
+                      price={price}
+                      src={src}
+                    />
+                  </td>
+                  <td className="p-2 font-semibold text-[#B88E2F]">
+                    ₹{price * quantity}
+                  </td>
+                  <td className="p-2 text-center">
+                    <input
+                      type="checkbox"
+                      checked={
+                        selectedCamparision.includes(+id) ||
+                        selectedCartIds[0]?.includes(+id)
+                      }
+                      onChange={(e) => handleChange(+id, e.target.checked)}
+                    />
+                  </td>
+                  <td className="p-2 text-center">
+                    <img
+                      src={Vector}
+                      alt="remove"
+                      className="mx-auto cursor-pointer"
+                      onClick={() => {
+                        dispatch(removeItem(id));
+                        if (selectedCartIds[0]?.includes(+id)) {
+                          dispatch(removeCompareItem(+id));
+                        }
+                      }}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <div className="fixed top-165">
+
+        <div className="fixed top-170">
           <div>
-            <span>Total:</span>
-            <span className="text-[#B88E2F]">{totalAmount}</span>
-            <hr className="text-[#D9D9D9]" />
-            <div className="flex gap-2 mt-3">
+            <span>Total Amount:</span>
+            <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
+
+            <div className="flex gap-2 mt-3 justify-between w-full">
               <button className="px-8 py-1.5 border rounded-2xl">Cart</button>
               <button className="px-8 py-1.5 border rounded-2xl">
                 Checkout
@@ -77,7 +121,7 @@ const ItemDrawer = ({ onClose }) => {
                 disabled={selectedCamparision?.length < 2}
                 onClick={() => {
                   dispatch(addToCompareItem(selectedCamparision));
-                  navigte("/compare");
+                  navigte("/compare", { state: { isDisplay: false } });
                   onClose();
                 }}
               >
