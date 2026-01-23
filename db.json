@@ -15,462 +15,1032 @@
       "name": "Dining",
       "url": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
     }
-  ],
+  ], 
   "Product": [
-      {
-        "id": "1",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-        "name": "Syltherine",
-        "subTitle": "Stylish cafe chair",
-        "price": "2500",
-        "originalPrice": "3500",
-        "tag": "-50%",
-        "SKU": "SS001",
-        "category": "Sofas",
-        "tags": "Sofa, Chair, Home, Shop",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
-        "description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
-        "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
+    {
+      "id": "1",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+      "name": "Syltherine",
+      "subTitle": "Stylish cafe chair",
+      "price": "2500",
+      "originalPrice": "3500",
+      "tag": "-50%",
+      "SKU": "SS001",
+      "category": "Sofas",
+      "tags": "Sofa, Chair, Home, Shop",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],     
+      "additionalInformation": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+      "description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+      "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Cafe Chair",
+        "modelNumber": "SYL-001",
+        "secondaryMaterial": "Solid Wood",
+        "configuration": "Straight",
+        "upholsteryMaterial": "Fabric",
+        "upholsteryColor": "Cloud Grey"
       },
-      {
-        "id": "2",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
-        "name": "Lolito",
-        "subTitle": "Luxury big sofa",
-        "price": "7000",
-        "originalPrice": "14000",
-        "tag": "-50%",
-        "SKU": "SS002",
-        "category": "Sofas",
-        "tags": "Sofa, Luxury, Living",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
+      "productSpecs": {
+        "fillingMaterial": "Foam",
+        "finishType": "Matte",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "120 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "60 cm",
+        "height": "85 cm",
+        "depth": "60 cm",
+        "weight": "7 KG",
+        "seatHeight": "45 cm",
+        "legHeight": "15 cm"
+      },
+      "warranty": {
+        "summary": "1 Year Manufacturing Warranty",
+        "serviceType": "On-site Service",
+        "covered": "Manufacturing Defects",
+        "notCovered": "Fabric wear and tear",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "2",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
+      "name": "Lolito",
+      "subTitle": "Luxury big sofa",
+      "price": "7000",
+      "originalPrice": "14000",
+      "tag": "-50%",
+      "SKU": "SS002",
+      "category": "Sofas",
+      "tags": "Sofa, Luxury, Living",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
         "additionalInformation": "Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.Luxury sofa with premium foam and fabric.",
         "description": "Designed for spacious living rooms with superior comfort.",
         "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 3-Seater Sofa",
+        "modelNumber": "LOL-BIG-02",
+        "secondaryMaterial": "Plywood",
+        "configuration": "L-Shape",
+        "upholsteryMaterial": "Premium Velvet",
+        "upholsteryColor": "Navy Blue"
       },
-      {
-        "id": "3",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
-        "name": "Respira",
-        "subTitle": "Outdoor bar table and stool",
-        "price": "500",
-        "tag": "New",
-        "SKU": "SS003",
-        "category": "Outdoor",
-        "tags": "Outdoor, Table, Stool",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.",
-        "description": "Perfect for gardens, balconies, and patios.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
+      "productSpecs": {
+        "fillingMaterial": "High Density Foam",
+        "finishType": "Glossy",
+        "adjustableHeadrest": "Yes",
+        "maximumLoadCapacity": "300 KG",
+        "originOfManufacture": "India"
       },
-      {
-        "id": "4",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo",
-        "subTitle": "Night lamp",
-        "price": "1500",
-        "tag": "-30%",
-        "SKU": "SS004",
-        "category": "Lighting",
-        "tags": "Lamp, Lighting, Bedroom",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.",
-        "description": "Minimal night lamp with warm illumination.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
+      "dimensions": {
+        "width": "210 cm",
+        "height": "95 cm",
+        "depth": "100 cm",
+        "weight": "45 KG",
+        "seatHeight": "48 cm",
+        "legHeight": "10 cm"
       },
-      {
-        "id": "5",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-        "name": "Muggo",
-        "subTitle": "Small mug",
-        "price": "1500",
-        "SKU": "SS005",
-        "category": "Kitchen",
-        "tags": "Mug, Kitchen, Ceramic",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Ceramic mug for everyday beverages.Ceramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beverages",
-        "description": "Simple and durable mug design.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "6",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-        "name": "Pingky",
-        "subTitle": "Cute bed set",
-        "price": "7000",
-        "originalPrice": "14000",
-        "SKU": "SS006",
-        "category": "Bedroom",
-        "tags": "Bed, Bedroom, Comfort",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.",
-        "description": "Designed for a cozy sleeping experience.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "7",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-        "name": "Potty",
-        "subTitle": "Minimalist flower pot",
-        "price": "500",
-        "tag": "New",
-        "SKU": "SS007",
-        "category": "Decor",
-        "tags": "Plant, Decor, Home",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Minimal pot for indoor plants.Minimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plants",
-        "description": "Perfect decorative addition for modern homes.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "8",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo Mini",
-        "subTitle": "Compact night lamp",
-        "price": "1200",
-        "tag": "-30%",
-        "SKU": "SS008",
-        "category": "Lighting",
-        "tags": "Lamp, Lighting",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.",
-        "description": "Soft lighting with minimalist design.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "9",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-        "name": "Muggo Plus",
-        "subTitle": "Large coffee mug",
-        "price": "250",
-        "SKU": "SS009",
-        "category": "Kitchen",
-        "tags": "Mug, Coffee",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.",
-        "description": "Ideal for coffee lovers.",
-        "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "10",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-        "name": "Pingky Deluxe",
-        "subTitle": "Premium bed set",
-        "price": "8500",
-        "originalPrice": "15.000.000",
-        "SKU": "SS010",
-        "category": "Bedroom",
-        "tags": "Bed, Premium",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Luxury comfort for better sleep.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "11",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-        "name": "Potty XL",
-        "subTitle": "Large flower pot",
-        "price": "700",
-        "tag": "New",
-        "SKU": "SS011",
-        "category": "Decor",
-        "tags": "Plant, Garden",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Large decorative flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Ideal for indoor and outdoor plants.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "12",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo Pro",
-        "subTitle": "Designer night lamp",
-        "price": "2000",
-        "tag": "New",
-        "SKU": "SS012",
-        "category": "Lighting",
-        "tags": "Lamp, Designer",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Premium designer lamp.",
-        "description": "Elegant lighting solution.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "13",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
-        "name": "Muggo Stone",
-        "subTitle": "Stone finish mug",
-        "price": "300",
-        "SKU": "SS013",
-        "category": "Kitchen",
-        "tags": "Mug, Stoneware",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Stoneware mug for durability.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Rustic and modern design.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "14",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
-        "name": "Pingky Soft",
-        "subTitle": "Comfort bed set",
-        "price": "6500",
-        "originalPrice": "12000",
-        "SKU": "SS014",
-        "category": "Bedroom",
-        "tags": "Bed, Soft",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Extra soft bedding set.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Comfort-focused bedroom solution.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "15",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
-        "name": "Potty Round",
-        "subTitle": "Round flower pot",
-        "price": "550",
-        "tag": "New",
-        "SKU": "SS015",
-        "category": "Decor",
-        "tags": "Plant, Decor",
-        "revies": "4",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Round modern flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Perfect for minimalist interiors.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "16",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
-        "name": "Respira Plus",
-        "subTitle": "Outdoor furniture set",
-        "price": "650",
-        "SKU": "SS016",
-        "category": "Outdoor",
-        "tags": "Outdoor, Furniture",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Improved outdoor furniture design.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
-        "description": "Built for durability and outdoor comfort.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "17",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo Pro",
-        "subTitle": "Designer night lamp",
-        "price": "2000",
-        "tag": "-5%",
-        "SKU": "SS012",
-        "category": "Lighting",
-        "tags": "Lamp, Designer",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Premium designer lamp.",
-        "description": "Elegant lighting solution.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "18",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo Pro",
-        "subTitle": "Designer night lamp",
-        "price": "2000",
-        "tag": "-60%",
-        "SKU": "SS012",
-        "category": "Lighting",
-        "tags": "Lamp, Designer",
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Premium designer lamp.",
-        "description": "Elegant lighting solution.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
-      },
-      {
-        "id": "19",
-        "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
-        "name": "Grifo Pro",
-        "subTitle": "Designer night lamp",
-        "price": "2000",
-        "tag": "New",
-        "SKU": "SS012",
-        "category": "Lighting",
-        "tags": "Lamp, Designer", 
-        "revies": "5",
-        "extraImages": [
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
-        ],
-        "additionalInformation": "Premium designer lamp.",
-        "description": "Elegant lighting solution.",
-          "detailImage":[
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
-          "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
-        ]
+      "warranty": {
+        "summary": "2 Year Limited Warranty",
+        "serviceType": "Off-site Service",
+        "covered": "Frame and Structure",
+        "notCovered": "Accidental Damage",
+        "domesticWarranty": "2 Years"
       }
+    },
+    {
+      "id": "3",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
+      "name": "Respira",
+      "subTitle": "Outdoor bar table and stool",
+      "price": "500",
+      "tag": "New",
+      "SKU": "SS003",
+      "category": "Outdoor",
+      "tags": "Outdoor, Table, Stool",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.Outdoor furniture with weather-resistant coating.",
+      "description": "Perfect for gardens, balconies, and patios.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Table, 2 Stools",
+        "modelNumber": "RES-OUT-03",
+        "secondaryMaterial": "Powder Coated Iron",
+        "configuration": "Round",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Matte Black"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Weather Resistant",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "80 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "70 cm",
+        "height": "110 cm",
+        "depth": "70 cm",
+        "weight": "15 KG",
+        "seatHeight": "75 cm",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Corrosion due to water",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "4",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo",
+      "subTitle": "Night lamp",
+      "price": "1500",
+      "tag": "-30%",
+      "SKU": "SS004",
+      "category": "Lighting",
+      "tags": "Lamp, Lighting, Bedroom",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.Soft ambient lighting for bedrooms.",
+      "description": "Minimal night lamp with warm illumination.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Lamp, 1 LED Bulb",
+        "modelNumber": "GRI-LMP-04",
+        "secondaryMaterial": "Polished Brass",
+        "configuration": "Cylindrical",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Gold"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Brushed Metal",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "15 cm",
+        "height": "35 cm",
+        "depth": "15 cm",
+        "weight": "1.2 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "6 Months Warranty",
+        "serviceType": "Replacement",
+        "covered": "Electrical Circuit",
+        "notCovered": "Glass breakage",
+        "domesticWarranty": "6 Months"
+      }
+    },
+    {
+      "id": "5",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+      "name": "Muggo",
+      "subTitle": "Small mug",
+      "price": "1500",
+      "SKU": "SS005",
+      "category": "Kitchen",
+      "tags": "Mug, Kitchen, Ceramic",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Ceramic mug for everyday beverages.Ceramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beveragesCeramic mug for everyday beverages",
+      "description": "Simple and durable mug design.",
+      "detailImage": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Ceramic Mug",
+        "modelNumber": "MUG-005",
+        "secondaryMaterial": "Clay",
+        "configuration": "Ergonomic Handle",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Cream White"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Glazed",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "500 ml",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "10 cm",
+        "height": "12 cm",
+        "depth": "10 cm",
+        "weight": "0.4 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Breakage",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "6",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+      "name": "Pingky",
+      "subTitle": "Cute bed set",
+      "price": "7000",
+      "originalPrice": "14000",
+      "SKU": "SS006",
+      "category": "Bedroom",
+      "tags": "Bed, Bedroom, Comfort",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.Soft bedding with premium fabric.",
+      "description": "Designed for a cozy sleeping experience.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Bed, 2 Pillows, 1 Duvet",
+        "modelNumber": "PIN-BED-06",
+        "secondaryMaterial": "MDF Wood",
+        "configuration": "Queen Size",
+        "upholsteryMaterial": "Cotton",
+        "upholsteryColor": "Pink & White"
+      },
+      "productSpecs": {
+        "fillingMaterial": "Microfiber",
+        "finishType": "Soft Touch",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "200 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "160 cm",
+        "height": "45 cm",
+        "depth": "200 cm",
+        "weight": "35 KG",
+        "seatHeight": "NA",
+        "legHeight": "10 cm"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "In-home repair",
+        "covered": "Manufacturing defects in frame",
+        "notCovered": "Stains on fabric",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "7",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+      "name": "Potty",
+      "subTitle": "Minimalist flower pot",
+      "price": "500",
+      "tag": "New",
+      "SKU": "SS007",
+      "category": "Decor",
+      "tags": "Plant, Decor, Home",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Minimal pot for indoor plants.Minimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plantsMinimal pot for indoor plants",
+      "description": "Perfect decorative addition for modern homes.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Medium Flower Pot",
+        "modelNumber": "FLR-07",
+        "secondaryMaterial": "Clay",
+        "configuration": "Round",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Terracotta"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Matte",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "10 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "25 cm",
+        "height": "30 cm",
+        "depth": "25 cm",
+        "weight": "3 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Breakage",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "8",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo Mini",
+      "subTitle": "Compact night lamp",
+      "price": "1200",
+      "tag": "-30%",
+      "SKU": "SS008",
+      "category": "Lighting",
+      "tags": "Lamp, Lighting",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.Compact lamp for bedside tables.",
+      "description": "Soft lighting with minimalist design.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Compact Lamp",
+        "modelNumber": "GRI-MINI-08",
+        "secondaryMaterial": "Aluminum",
+        "configuration": "Slim",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Silver"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Anodized",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "10 cm",
+        "height": "20 cm",
+        "depth": "10 cm",
+        "weight": "0.6 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "3 Months Warranty",
+        "serviceType": "Replacement",
+        "covered": "Sensor failure",
+        "notCovered": "External damage",
+        "domesticWarranty": "3 Months"
+      }
+    },
+    {
+      "id": "9",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+      "name": "Muggo Plus",
+      "subTitle": "Large coffee mug",
+      "price": "250",
+      "SKU": "SS009",
+      "category": "Kitchen",
+      "tags": "Mug, Coffee",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.Large ceramic mug.",
+      "description": "Ideal for coffee lovers.",
+        "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 XL Mug",
+        "modelNumber": "MUG-XL-09",
+        "secondaryMaterial": "Stone China",
+        "configuration": "Wide Rim",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Black Matte"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Textured",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "750 ml",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "12 cm",
+        "height": "15 cm",
+        "depth": "12 cm",
+        "weight": "0.6 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Breakage",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "10",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+      "name": "Pingky Deluxe",
+      "subTitle": "Premium bed set",
+      "price": "8500",
+      "originalPrice": "15000",
+      "SKU": "SS010",
+      "category": "Bedroom",
+      "tags": "Bed, Premium",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Luxury comfort for better sleep.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 King Bed, 4 Pillows, 1 Comforter",
+        "modelNumber": "PIN-DLX-10",
+        "secondaryMaterial": "Solid Oak",
+        "configuration": "King Size",
+        "upholsteryMaterial": "Egyptian Cotton",
+        "upholsteryColor": "Rose Gold"
+      },
+      "productSpecs": {
+        "fillingMaterial": "Goose Down",
+        "finishType": "Satin Finish",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "250 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "180 cm",
+        "height": "50 cm",
+        "depth": "210 cm",
+        "weight": "45 KG",
+        "seatHeight": "NA",
+        "legHeight": "15 cm"
+      },
+      "warranty": {
+        "summary": "3 Years Frame Warranty",
+        "serviceType": "In-home Service",
+        "covered": "Structural Termites & Manufacturing Defects",
+        "notCovered": "Fabric fading",
+        "domesticWarranty": "3 Years"
+      }
+    },
+    {
+      "id": "11",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+      "name": "Potty XL",
+      "subTitle": "Large flower pot",
+      "price": "700",
+      "tag": "New",
+      "SKU": "SS011",
+      "category": "Decor",
+      "tags": "Plant, Garden",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Large decorative flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Ideal for indoor and outdoor plants.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 large flower pot",
+        "modelNumber": "FLRXL01",
+        "secondaryMaterial": "Clay",
+        "configuration": "Round",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Terracotta"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Matte",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "25 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "35 cm",
+        "height": "45 cm",
+        "depth": "35 cm",
+        "weight": "9 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Breakage",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "12",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo Pro",
+      "subTitle": "Designer night lamp",
+      "price": "2000",
+      "tag": "New",
+      "SKU": "SS012",
+      "category": "Lighting",
+      "tags": "Lamp, Designer",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Premium designer lamp.",
+      "description": "Elegant lighting solution.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Designer Lamp",
+        "modelNumber": "GRI-PRO-12",
+        "secondaryMaterial": "Titanium Alloy",
+        "configuration": "Angular",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Obsidian"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Semi-Gloss",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "20 cm",
+        "height": "40 cm",
+        "depth": "20 cm",
+        "weight": "2 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "Pick & Drop",
+        "covered": "All electrical parts",
+        "notCovered": "Physical damage",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "13",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
+      "name": "Muggo Stone",
+      "subTitle": "Stone finish mug",
+      "price": "300",
+      "SKU": "SS013",
+      "category": "Kitchen",
+      "tags": "Mug, Stoneware",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Stoneware mug for durability.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Rustic and modern design.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Stoneware Mug",
+        "modelNumber": "MUG-STN-13",
+        "secondaryMaterial": "Stone",
+        "configuration": "Tapered",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Slate Grey"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Raw Stone",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "400 ml",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "9 cm",
+        "height": "11 cm",
+        "depth": "9 cm",
+        "weight": "0.7 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Breakage",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "14",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
+      "name": "Pingky Soft",
+      "subTitle": "Comfort bed set",
+      "price": "6500",
+      "originalPrice": "12000",
+      "SKU": "SS014",
+      "category": "Bedroom",
+      "tags": "Bed, Soft",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Extra soft bedding set.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Comfort-focused bedroom solution.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Bed, 2 Pillows",
+        "modelNumber": "PIN-SOFT-14",
+        "secondaryMaterial": "Pine Wood",
+        "configuration": "Single Bed",
+        "upholsteryMaterial": "Breathable Linen",
+        "upholsteryColor": "Lavender"
+      },
+      "productSpecs": {
+        "fillingMaterial": "Memory Foam",
+        "finishType": "Velvet Touch",
+        "adjustableHeadrest": "Yes",
+        "maximumLoadCapacity": "150 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "120 cm",
+        "height": "40 cm",
+        "depth": "190 cm",
+        "weight": "28 KG",
+        "seatHeight": "NA",
+        "legHeight": "8 cm"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "In-home",
+        "covered": "Manufacturing Defects",
+        "notCovered": "Water damage",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "15",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
+      "name": "Potty Round",
+      "subTitle": "Round flower pot",
+      "price": "550",
+      "tag": "New",
+      "SKU": "SS015",
+      "category": "Decor",
+      "tags": "Plant, Decor",
+      "revies": "4",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Round modern flower pot.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Perfect for minimalist interiors.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Round Pot",
+        "modelNumber": "FLR-RND-15",
+        "secondaryMaterial": "Ceramic",
+        "configuration": "Spherical",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Marble White"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "High Gloss",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "5 KG",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "20 cm",
+        "height": "20 cm",
+        "depth": "20 cm",
+        "weight": "1.5 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "No Warranty",
+        "serviceType": "NA",
+        "covered": "NA",
+        "notCovered": "Chipping or cracking",
+        "domesticWarranty": "NA"
+      }
+    },
+    {
+      "id": "16",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
+      "name": "Respira Plus",
+      "subTitle": "Outdoor furniture set",
+      "price": "650",
+      "SKU": "SS016",
+      "category": "Outdoor",
+      "tags": "Outdoor, Furniture",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Improved outdoor furniture design.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.Premium bedding material.",
+      "description": "Built for durability and outdoor comfort.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "2 Chairs, 1 Center Table",
+        "modelNumber": "RES-PLUS-16",
+        "secondaryMaterial": "Synthetic Rattan",
+        "configuration": "Bistro Set",
+        "upholsteryMaterial": "Waterproof Fabric",
+        "upholsteryColor": "Beige"
+      },
+      "productSpecs": {
+        "fillingMaterial": "Quick-dry Foam",
+        "finishType": "UV-Resistant",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "110 KG per chair",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "65 cm",
+        "height": "80 cm",
+        "depth": "65 cm",
+        "weight": "18 KG",
+        "seatHeight": "45 cm",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "Replacement",
+        "covered": "Wicker unraveling",
+        "notCovered": "Fading from sun",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "17",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo Pro",
+      "subTitle": "Designer night lamp",
+      "price": "2000",
+      "tag": "-5%",
+      "SKU": "SS012",
+      "category": "Lighting",
+      "tags": "Lamp, Designer",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Premium designer lamp.",
+      "description": "Elegant lighting solution.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Designer Lamp",
+        "modelNumber": "GRI-PRO-17",
+        "secondaryMaterial": "Stainless Steel",
+        "configuration": "Modern",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Chrome"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Polished",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "20 cm",
+        "height": "40 cm",
+        "depth": "20 cm",
+        "weight": "2.2 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "Replacement",
+        "covered": "Wiring defects",
+        "notCovered": "Glass cracks",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "18",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo Pro",
+      "subTitle": "Designer night lamp",
+      "price": "2000",
+      "tag": "-60%",
+      "SKU": "SS012",
+      "category": "Lighting",
+      "tags": "Lamp, Designer",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Premium designer lamp.",
+      "description": "Elegant lighting solution.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Designer Lamp",
+        "modelNumber": "GRI-PRO-18",
+        "secondaryMaterial": "Brushed Steel",
+        "configuration": "Modern",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Graphite"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Matte",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "20 cm",
+        "height": "40 cm",
+        "depth": "20 cm",
+        "weight": "2.2 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "Repair",
+        "covered": "Electrical issues",
+        "notCovered": "Physical damage",
+        "domesticWarranty": "1 Year"
+      }
+    },
+    {
+      "id": "19",
+      "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
+      "name": "Grifo Pro",
+      "subTitle": "Designer night lamp",
+      "price": "2000",
+      "tag": "New",
+      "SKU": "SS012",
+      "category": "Lighting",
+      "tags": "Lamp, Designer",
+      "revies": "5",
+      "extraImages": [
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969416/Group_96_jhquuf.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969518/Mask_group_alsiag.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png"
+      ],
+        "additionalInformation": "Premium designer lamp.",
+      "description": "Elegant lighting solution.",
+          "detailImage":[
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png",
+        "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_107_yv8p9f.png"
+      ],
+      "general": {
+        "salesPackage": "1 Designer Lamp",
+        "modelNumber": "GRI-PRO-19",
+        "secondaryMaterial": "Polished Brass",
+        "configuration": "Contemporary",
+        "upholsteryMaterial": "NA",
+        "upholsteryColor": "Bronze"
+      },
+      "productSpecs": {
+        "fillingMaterial": "NA",
+        "finishType": "Satin",
+        "adjustableHeadrest": "No",
+        "maximumLoadCapacity": "NA",
+        "originOfManufacture": "India"
+      },
+      "dimensions": {
+        "width": "20 cm",
+        "height": "40 cm",
+        "depth": "20 cm",
+        "weight": "2.2 KG",
+        "seatHeight": "NA",
+        "legHeight": "NA"
+      },
+      "warranty": {
+        "summary": "1 Year Warranty",
+        "serviceType": "Replacement",
+        "covered": "PCB and LED Module",
+        "notCovered": "Water exposure",
+        "domesticWarranty": "1 Year"
+      }
+    }
   ],
   "Shape": [
     {

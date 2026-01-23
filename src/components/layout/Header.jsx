@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
 
 import ItemDrawer from "../common/ItemDrawer";
@@ -8,6 +8,7 @@ import { ICON_LIST, LIST_ITEM } from "../../constant";
 import Logo from "../../assets/logo.svg";
 
 const Header = () => {
+  const navigate = useNavigate();
   const item = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
@@ -29,6 +30,7 @@ const Header = () => {
         <div className="space-x-9">
           {LIST_ITEM.map(({ name, path }) => (
             <NavLink
+              key={name}
               to={path}
               className={({ isActive }) =>
                 isActive ? "font-bold text-[#B88E2F]" : ""
@@ -38,8 +40,8 @@ const Header = () => {
             </NavLink>
           ))}
         </div>
-        <div className="flex flex-row gap-8 relative">
-          {ICON_LIST.map(({ src, isDisplay }) => (
+        <div className="flex flex-row gap-8 relative cursor-pointer">
+          {ICON_LIST.map(({ src, isDisplay, key }) => (
             <>
               {item.length ? (
                 <button
@@ -50,7 +52,16 @@ const Header = () => {
                   {isDisplay && item.length}
                 </button>
               ) : null}
-              <img src={src} width={25} height={25} />
+              <img
+                src={src}
+                width={25}
+                height={25}
+                onClick={() => {
+                  if (key === "compare") {
+                    navigate("/compare");
+                  }
+                }}
+              />
             </>
           ))}
         </div>
