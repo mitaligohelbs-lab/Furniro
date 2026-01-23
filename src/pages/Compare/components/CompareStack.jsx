@@ -1,13 +1,29 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router";
+
 import httpService from "../../../service/httpService";
+import { addToCart } from "../../../redux/features/cart/CartSlice";
+
 import RatingStars from "../../../components/common/RatingStars";
-import { useSelector } from "react-redux";
 
 const CompareStack = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [allProduct, steAllProduct] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([]);
+  const [addToCartInfo, setAddToCartInfo] = useState({});
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState([]);
+
+  const toggleSelect = (name, id) => {
+    setSelected((prev) => {
+      if (prev.includes(name)) {
+        return prev.filter((item) => item !== name);
+      }
+      if (prev.length === 2) return prev;
+      return [...prev, { name, id }];
+    });
+  };
 
   const DISPLAY_KEYS = [
     {
@@ -63,70 +79,113 @@ const CompareStack = () => {
     );
   };
 
+  const selectedProductInfo = (id) => {
+    const selectedProduct1 = selectedProduct.find((el) => el.id === id);
+    setAddToCartInfo(selectedProduct1);
+  };
+
   return (
     <>
       <div className="grid mb-10 place-items-center grid-cols-4">
-        <div className="text-[28px] max-w-56">
+        <Link className="text-[22px] max-w-56" to={"/shop"}>
           Go to Product page for more Products{" "}
-          <div
-            onClick={() => navigate("/shop")}
-            className="text-[#727272] text-[20px]"
-          >
-            View More
-          </div>
+          <div className="text-[#727272] text-sm cursor-pointer">View More</div>
+        </Link>
+
+        <div className="col-span-2 flex justify-between gap-4">
+          {selectedProduct.map((items) => (
+            <ImageDisplayCard {...items} key={items.id} />
+          ))}
         </div>
 
-        {selectedProduct.map((items) => (
-          <ImageDisplayCard {...items} />
-        ))}
-
         <div className="flex flex-col">
-          <div className="text-[24px]">Add a product</div>
-          <label className="bg-[#B88E2F] text-center font-semibold text-[14px]">
-            Select Product
-            <select className="focus:outline-none">
-              {allProduct.map(({ name }) => (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </label>
+          <div className="flex flex-col gap-3 relative w-75">
+            <div className="text-[24px] font-semibold">Add a Product</div>
+            <button
+              onClick={() => setOpen(!open)}
+              className="bg-[#B88E2F] text-white px-5 py-2 rounded-xl 
+               flex justify-between items-center font-semibold"
+            >
+              {selected.length
+                ? selected.map(({ name }) => name)?.join(",")
+                : "Choose a Product"}
+              <span className="text-2xl">⌄</span>
+            </button>
+
+            {open && (
+              <div
+                className="absolute top-full mt-2 w-full bg-white 
+                    border rounded-xl shadow-lg z-10 max-h-75 overflow-auto"
+              >
+                {allProduct.map(({ name, id }) => (
+                  <label
+                    key={id}
+                    className="flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-100"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selected.some((item) => item.id === id)}
+                      onChange={() => toggleSelect(name, id)}
+                      disabled={
+                        selected.length === 2 &&
+                        !selected.some((item) => item.id === id)
+                      }
+                    />
+                    <span>{name}</span>
+                  </label>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <hr className="text-[#E8E8E8]" />
       </div>
       <div className="grid mb-10 grid-cols-4 place-items-center">
         <div className="space-y-3">
-          {DISPLAY_KEYS.map(({ name, value }) => (
-            <div key={value}>
-              <h3 className="font-semibold text-lg">{name}</h3>
-              <div className="space-y-2">
-                {Object.entries(selectedProduct?.[0]?.[value] || {})?.map(
-                  ([key]) => (
-                    <div className="text-sm">{key}</div>
-                  ),
-                )}
-              </div>
-            </div>
-          ))}
+          {selectedProduct.length
+            ? DISPLAY_KEYS.map(({ name, value }) => (
+                <div key={value}>
+                  <h3 className="font-semibold text-lg">{name}</h3>
+                  <div className="space-y-2">
+                    {Object.entries(selectedProduct?.[0]?.[value] || {})?.map(
+                      ([key]) => (
+                        <div className="text-sm">{key}</div>
+                      ),
+                    )}
+                  </div>
+                </div>
+              ))
+            : null}
         </div>
 
         <div className="space-y-3 flex justify-around w-full col-span-2 ">
-          {selectedProduct.map((product, index) => (
-            <div key={index}>
-              {DISPLAY_KEYS.map(({ value }) => (
-                <div key={value}>
-                  <h3 className="leading-8">{"-"}</h3>
-                  {Object.values(product?.[value] || {}).map((val, i) => (
-                    <div key={i} className="text-sm py-1">
-                      {val}
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ))}
+          {selectedProduct.map((product, index) => {
+            const { name, id, price, src } = addToCartInfo;
+            return (
+              <div key={index}>
+                {DISPLAY_KEYS.map(({ value }) => (
+                  <div key={value}>
+                    <h3 className="leading-8">{"-"}</h3>
+                    {Object.values(product?.[value] || {}).map((val, i) => (
+                      <div key={i} className="text-sm py-1">
+                        {val}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+                <button
+                  className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
+                  onClick={() => {
+                    selectedProductInfo(product.id);
+                    dispatch(addToCart({ id, name, price, src, quantity: 1 }));
+                  }}
+                >
+                  Add To Cart
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

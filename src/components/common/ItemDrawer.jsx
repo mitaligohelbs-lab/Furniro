@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 import { removeItem } from "../../redux/features/cart/CartSlice";
-import { addToCompareItem } from "../../redux/features/cart/ComparisionSlice";
+import {
+  addToCompareItem,
+  removeCompareItem,
+} from "../../redux/features/cart/ComparisionSlice";
 
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
@@ -14,6 +17,7 @@ const ItemDrawer = ({ onClose }) => {
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const [selectedCamparision, setSelectedComparision] = useState([]);
+  const selectedCartIds = useSelector((state) => state.compareItem.item);
 
   const handleChange = (id, checked) => {
     setSelectedComparision((prev) => {
@@ -51,11 +55,19 @@ const ItemDrawer = ({ onClose }) => {
                 src={Vector}
                 className="cursor-pointer"
                 alt="remove"
-                onClick={() => dispatch(removeItem(id))}
+                onClick={() => {
+                  dispatch(removeItem(id));
+                  if (selectedCartIds[0]?.includes(+id)) {
+                    dispatch(removeCompareItem(+id));
+                  }
+                }}
               />
               <input
                 type="checkbox"
-                checked={selectedCamparision?.includes(+id)}
+                checked={
+                  selectedCamparision.includes(+id) ||
+                  selectedCartIds[0]?.includes(+id)
+                }
                 value={+id}
                 onChange={(e) => handleChange(+id, e.target.checked)}
               />
