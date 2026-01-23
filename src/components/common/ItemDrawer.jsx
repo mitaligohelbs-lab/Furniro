@@ -46,7 +46,7 @@ const ItemDrawer = ({ onClose }) => {
         <div className="overflow-auto max-h-140">
           <table className="w-full border-collapse text-sm">
             <thead className="sticky top-0 bg-gray-100">
-              <tr className="text-left">
+              <tr className="text-left bg-[#F9F1E7]">
                 {CART_HEADER.map(({ name }) => (
                   <th className="p-2">{name}</th>
                 ))}
@@ -112,7 +112,6 @@ const ItemDrawer = ({ onClose }) => {
             <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
 
             <div className="flex gap-2 mt-3 justify-between w-full">
-              <button className="px-8 py-1.5 border rounded-2xl">Cart</button>
               <button className="px-8 py-1.5 border rounded-2xl">
                 Checkout
               </button>
