@@ -69,16 +69,16 @@ export const ICON_LIST = [
     isDisplay: false,
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/account-alert_gulflu.svg",
   },
-  {
-    key: "search",
-    isDisplay: false,
-    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/search_pftbde.svg",
-  },
-  {
-    key: "like",
-    isDisplay: false,
-    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
-  },
+  // {
+  //   key: "search",
+  //   isDisplay: false,
+  //   src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/search_pftbde.svg",
+  // },
+  // {
+  //   key: "like",
+  //   isDisplay: false,
+  //   src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
+  // },
   {
     key: "compare",
     isDisplay: false,
@@ -131,5 +131,23 @@ export const CART_HEADER = [
   },
   {
     name: "Remove",
+  },
+];
+
+export const CONTACT_INFO = [
+  {
+    name: "Address",
+    info: "236 5th SE Avenue, New York NY10000, United States",
+    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165734/location_cdcodp.png",
+  },
+  {
+    name: "Phone",
+    info: "Mobile: +(84) 546-6789",
+    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165735/phone_ukhvo5.png",
+  },
+  {
+    name: "Working Time",
+    info: "Monday-Friday: 9:00 - 22:00",
+    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165734/time_newtm4.png",
   },
 ];
