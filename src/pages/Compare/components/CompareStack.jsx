@@ -49,8 +49,6 @@ const CompareStack = () => {
     setSelectedProduct(selectedProducts);
   }, [allProduct, selectedProductId]);
 
-  console.log("selectedProduct", selectedProduct);
-
   const ImageDisplayCard = ({ name, price, revies }) => {
     return (
       <div className="flex flex-col gap-2 justify-center items-center">
@@ -63,10 +61,6 @@ const CompareStack = () => {
         </div>
       </div>
     );
-  };
-
-  const gridStyle = {
-    gridTemplateColumns: `250px repeat(${selectedProduct.length + 1}, 1fr)`,
   };
 
   return (
