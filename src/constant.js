@@ -65,19 +65,28 @@ export const LIST_ITEM = [
 
 export const ICON_LIST = [
   {
+    key: "account_alert",
     isDisplay: false,
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/account-alert_gulflu.svg",
   },
   {
+    key: "search",
     isDisplay: false,
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/search_pftbde.svg",
   },
   {
+    key: "like",
     isDisplay: false,
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
   },
   {
+    key: "compare",
+    isDisplay: false,
+    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769063967/noun-balance-8129242_fal36s.svg",
+  },
+  {
     isDisplay: true,
+    key: "cart",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/cart_ripi72.svg",
   },
 ];

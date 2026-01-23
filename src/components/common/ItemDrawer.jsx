@@ -1,13 +1,29 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
+
 import { removeItem } from "../../redux/features/cart/CartSlice";
+import { addToCompareItem } from "../../redux/features/cart/ComparisionSlice";
 
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
+  const navigte = useNavigate();
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const [selectedCamparision, setSelectedComparision] = useState([]);
+
+  const handleChange = (id, checked) => {
+    setSelectedComparision((prev) => {
+      if (checked) {
+        return [...prev, +id];
+      } else {
+        return prev.filter((itemId) => itemId !== id);
+      }
+    });
+  };
 
   return (
     <div className="fixed inset-0 z-50">
@@ -37,6 +53,12 @@ const ItemDrawer = ({ onClose }) => {
                 alt="remove"
                 onClick={() => dispatch(removeItem(id))}
               />
+              <input
+                type="checkbox"
+                checked={selectedCamparision?.includes(+id)}
+                value={+id}
+                onChange={(e) => handleChange(+id, e.target.checked)}
+              />
             </div>
           ))}
         </div>
@@ -50,7 +72,15 @@ const ItemDrawer = ({ onClose }) => {
               <button className="px-8 py-1.5 border rounded-2xl">
                 Checkout
               </button>
-              <button className="px-6 py-1.5 border rounded-2xl">
+              <button
+                className={`px-6 py-1.5 border rounded-2xl ${selectedCamparision?.length < 2 ? "text-gray-400" : ""}`}
+                disabled={selectedCamparision?.length < 2}
+                onClick={() => {
+                  dispatch(addToCompareItem(selectedCamparision));
+                  navigte("/compare");
+                  onClose();
+                }}
+              >
                 Comparision
               </button>
             </div>
