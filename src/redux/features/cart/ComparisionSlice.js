@@ -8,10 +8,8 @@ export const comparisionSlice = createSlice({
       state.item.push(action.payload);
     },
     removeCompareItem: (state, action) => {
-      const selectedIds = state.item.find(({ id }) => +id === action.payload);
-      if (selectedIds) {
-        state.item.filter(({ id }) => +id !== action.payload);
-      }
+      if (!state.item.length) return;
+      state.item[0] = state.item[0].filter((id) => id !== action.payload);
     },
   },
 });

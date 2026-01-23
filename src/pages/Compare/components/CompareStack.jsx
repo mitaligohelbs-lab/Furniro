@@ -1,19 +1,32 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import httpService from "../../../service/httpService";
 import { addToCart } from "../../../redux/features/cart/CartSlice";
+import { removeCompareItem } from "../../../redux/features/cart/ComparisionSlice";
 
 import RatingStars from "../../../components/common/RatingStars";
+import ConfirmationDialog from "../../../components/common/ConfirmationDialog";
+
+import { DISPLAY_KEYS } from "../../../constant";
+import Vector from "../../../assets/Vector.png";
 
 const CompareStack = () => {
+  const location = useLocation();
   const dispatch = useDispatch();
+  const { isDisplay } = location.state;
+
+  const selectedProductId = useSelector((state) => state.compareItem.item);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [removeId, setRemoveId] = useState(false);
   const [allProduct, steAllProduct] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([]);
   const [addToCartInfo, setAddToCartInfo] = useState({});
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState([]);
+  const [removeProductData, setRemoveProductData] = useState([]);
 
   const toggleSelect = (name, id) => {
     setSelected((prev) => {
@@ -25,24 +38,16 @@ const CompareStack = () => {
     });
   };
 
-  const DISPLAY_KEYS = [
-    {
-      name: "General",
-      value: "general",
-    },
-    {
-      name: "Product",
-      value: "productSpecs",
-    },
-    {
-      name: "Dimensions",
-      value: "dimensions",
-    },
-    {
-      name: "Warranty",
-      value: "warranty",
-    },
-  ];
+  useEffect(() => {
+    (async () => {
+      const res = await httpService.get("/Product", {
+        params: {
+          id: removeId,
+        },
+      });
+      setRemoveProductData(res.data);
+    })();
+  }, [removeId]);
 
   useEffect(() => {
     (async () => {
@@ -52,8 +57,6 @@ const CompareStack = () => {
       } catch (error) {}
     })();
   }, []);
-
-  const selectedProductId = useSelector((state) => state.compareItem.item);
 
   useEffect(() => {
     if (!allProduct || !selectedProductId?.length) return;
@@ -65,11 +68,22 @@ const CompareStack = () => {
     setSelectedProduct(selectedProducts);
   }, [allProduct, selectedProductId]);
 
-  const ImageDisplayCard = ({ name, price, revies }) => {
+  const ImageDisplayCard = ({ name, price, revies, id }) => {
     return (
       <div className="flex flex-col gap-2 justify-center items-center">
         <img src={selectedProduct[0]?.src} className="h-45 w-70" />
-        <span className="text-[24px]">{name}</span>
+        <div className="flex gap-3 justify-center items-center">
+          <span className="text-[24px]">{name}</span>
+          <img
+            src={Vector}
+            className="cursor-pointer h-5 w-5"
+            alt="remove"
+            onClick={() => {
+              setRemoveId(id);
+              setIsOpen(true);
+            }}
+          />
+        </div>
         <span className="text-[18px]">Rs: {price}</span>
         <div className="flex gap-1">
           <RatingStars rating={revies} />
@@ -84,6 +98,13 @@ const CompareStack = () => {
     setAddToCartInfo(selectedProduct1);
   };
 
+  const handleConfirm = () => {
+    if (removeId) {
+      dispatch(removeCompareItem(+removeId));
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
       <div className="grid mb-10 place-items-center grid-cols-4">
@@ -92,51 +113,53 @@ const CompareStack = () => {
           <div className="text-[#727272] text-sm cursor-pointer">View More</div>
         </Link>
 
-        <div className="col-span-2 flex justify-between gap-4">
+        <div className="space-y-3 flex justify-around w-full col-span-2">
           {selectedProduct.map((items) => (
             <ImageDisplayCard {...items} key={items.id} />
           ))}
         </div>
 
         <div className="flex flex-col">
-          <div className="flex flex-col gap-3 relative w-75">
-            <div className="text-[24px] font-semibold">Add a Product</div>
-            <button
-              onClick={() => setOpen(!open)}
-              className="bg-[#B88E2F] text-white px-5 py-2 rounded-xl 
+          {selectedProductId[0]?.length < 2 ? (
+            <div className="flex flex-col gap-3 relative w-75">
+              <div className="text-[24px] font-semibold">Add a Product</div>
+              <button
+                onClick={() => setOpen(!open)}
+                className="bg-[#B88E2F] text-white px-5 py-2 rounded-xl 
                flex justify-between items-center font-semibold"
-            >
-              {selected.length
-                ? selected.map(({ name }) => name)?.join(",")
-                : "Choose a Product"}
-              <span className="text-2xl">⌄</span>
-            </button>
-
-            {open && (
-              <div
-                className="absolute top-full mt-2 w-full bg-white 
-                    border rounded-xl shadow-lg z-10 max-h-75 overflow-auto"
               >
-                {allProduct.map(({ name, id }) => (
-                  <label
-                    key={id}
-                    className="flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-100"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selected.some((item) => item.id === id)}
-                      onChange={() => toggleSelect(name, id)}
-                      disabled={
-                        selected.length === 2 &&
-                        !selected.some((item) => item.id === id)
-                      }
-                    />
-                    <span>{name}</span>
-                  </label>
-                ))}
-              </div>
-            )}
-          </div>
+                {selected.length
+                  ? selected.map(({ name }) => name)?.join(",")
+                  : "Choose a Product"}
+                <span className="text-2xl">⌄</span>
+              </button>
+
+              {open && (
+                <div
+                  className="absolute top-full mt-2 w-full bg-white 
+                    border rounded-xl shadow-lg z-10 max-h-75 overflow-auto"
+                >
+                  {allProduct.map(({ name, id }) => (
+                    <label
+                      key={id}
+                      className="flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-100"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selected.some((item) => item.id === id)}
+                        onChange={() => toggleSelect(name, id)}
+                        disabled={
+                          selected.length === 2 &&
+                          !selected.some((item) => item.id === id)
+                        }
+                      />
+                      <span>{name}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : null}
         </div>
 
         <hr className="text-[#E8E8E8]" />
@@ -174,20 +197,32 @@ const CompareStack = () => {
                     ))}
                   </div>
                 ))}
-                <button
-                  className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
-                  onClick={() => {
-                    selectedProductInfo(product.id);
-                    dispatch(addToCart({ id, name, price, src, quantity: 1 }));
-                  }}
-                >
-                  Add To Cart
-                </button>
+                {isDisplay ? (
+                  <button
+                    className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
+                    onClick={() => {
+                      selectedProductInfo(product.id);
+                      dispatch(
+                        addToCart({ id, name, price, src, quantity: 1 }),
+                      );
+                    }}
+                  >
+                    Add To Cart
+                  </button>
+                ) : null}
               </div>
             );
           })}
         </div>
       </div>
+      {isOpen && (
+        <ConfirmationDialog
+          isOpen={isOpen}
+          isClose={() => setIsOpen(false)}
+          onConfirm={handleConfirm}
+          name={removeProductData[0]?.name}
+        />
+      )}
     </>
   );
 };
