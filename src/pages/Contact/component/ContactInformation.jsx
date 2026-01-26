@@ -1,5 +1,5 @@
-import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 
 import CommonInput from "../../../components/common/CommonInput";
 import CommonTextArea from "../../../components/common/CommonTextArea";
@@ -7,24 +7,16 @@ import CommonTextArea from "../../../components/common/CommonTextArea";
 import { CONTACT_INFO } from "../../../constant";
 
 const ContactInformation = () => {
-  const [contactInfo, setContactInfo] = useState({
-    title: "",
-    name: "",
-    message: "",
-    email: "",
-  });
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
-  const handleSetInfo = (value, label) => {
-    setContactInfo((prev) => ({
-      ...prev,
-      [label]: value,
-    }));
-  };
-
-  const sendEmail = (e) => {
+  const sendEmail = (data, e) => {
     e.preventDefault();
     emailjs
-      .send("service_7d8rioa", "template_eojcwjw", contactInfo, {
+      .send("service_7d8rioa", "template_eojcwjw", data, {
         publicKey: "xM9tRAD-J39YMzCMO",
       })
       .then(
@@ -59,29 +51,65 @@ const ContactInformation = () => {
             </div>
           ))}
         </div>
-        <form className="space-y-4" onSubmit={sendEmail}>
+        <form className="space-y-4" onSubmit={handleSubmit(sendEmail)}>
           <CommonInput
             label="Title"
             type="text"
-            value={contactInfo.title}
-            onChange={(e) => handleSetInfo(e.target.value, "title")}
+            name="title"
+            placeholder="Title"
+            {...register("title", {
+              required: true,
+            })}
+            error={
+              errors.title && errors.title.type == "required"
+                ? "Title is required"
+                : ""
+            }
           />
           <CommonInput
             label="Name"
             type="text"
-            value={contactInfo.name}
-            onChange={(e) => handleSetInfo(e.target.value, "name")}
+            name="name"
+            placeholder="ABC"
+            {...register("name", {
+              required: true,
+            })}
+            error={
+              errors.name && errors.name.type === "required"
+                ? "Name is required"
+                : ""
+            }
           />
           <CommonTextArea
+            title="Message"
             type="text"
-            value={contactInfo.message}
-            onChange={(e) => handleSetInfo(e.target.value, "message")}
+            name="message"
+            placeholder="Hi! i’d like to ask about"
+            {...register("message", {
+              required: true,
+            })}
+            error={
+              errors.message && errors.message.type === "required"
+                ? "Message is required"
+                : ""
+            }
           />
           <CommonInput
             label="Email"
             type="email"
-            value={contactInfo.email}
-            onChange={(e) => handleSetInfo(e.target.value, "email")}
+            name="emial"
+            placeholder="Abc@def.com"
+            {...register("email", {
+              required: true,
+              pattern: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+            })}
+            error={
+              errors.email && errors.email.type === "required"
+                ? "Email is required"
+                : errors.email && errors.email.type === "pattern"
+                  ? "Email is not valid."
+                  : ""
+            }
           />
           <button className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white">
             Submit

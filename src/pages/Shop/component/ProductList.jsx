@@ -65,7 +65,7 @@ const ProductList = () => {
             value={limit}
             onChange={(e) => {
               setLimit(Number(e.target.value));
-              setCurrentPage(1);
+              setCurrentPage(0);
             }}
             className="border border-gray-500 rounded-lg px-2"
           />
@@ -78,7 +78,7 @@ const ProductList = () => {
             value={sortValue}
             onChange={(e) => {
               setSortValue(e.target.value);
-              setCurrentPage(1);
+              setCurrentPage(0);
             }}
           >
             <option value="Default">Default</option>
@@ -102,16 +102,16 @@ const ProductList = () => {
           Prev
         </button>
 
-        {[1, 2, 3].map((p) => (
+        {[0, 1, 2].map((p) => (
           <button
             key={p}
             onClick={() => setCurrentPage(p)}
             className={clsx("h-10 w-10 cursor-pointer", {
-              "bg-[#B88E2F] font-bold": currPage === p - 1,
-              "bg-[#F9F1EF]": currPage !== p - 1,
+              "bg-[#B88E2F] font-bold": currPage === p,
+              "bg-[#F9F1EF]": currPage !== p,
             })}
           >
-            {p}
+            {p + 1}
           </button>
         ))}
 
