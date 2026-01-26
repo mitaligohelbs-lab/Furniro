@@ -112,7 +112,13 @@ const ItemDrawer = ({ onClose }) => {
             <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
 
             <div className="flex gap-2 mt-3 justify-between w-full">
-              <button className="px-8 py-1.5 border rounded-2xl">
+              <button
+                className="px-8 py-1.5 border rounded-2xl"
+                onClick={() => {
+                  navigte("/checkout");
+                  onClose();
+                }}
+              >
                 Checkout
               </button>
               <button

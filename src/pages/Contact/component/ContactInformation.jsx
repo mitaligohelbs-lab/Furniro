@@ -54,45 +54,30 @@ const ContactInformation = () => {
         <form className="space-y-4" onSubmit={handleSubmit(sendEmail)}>
           <CommonInput
             label="Title"
-            type="text"
             name="title"
             placeholder="Title"
             {...register("title", {
-              required: true,
+              required: "Title is required",
             })}
-            error={
-              errors.title && errors.title.type == "required"
-                ? "Title is required"
-                : ""
-            }
+            error={errors.title?.message}
           />
           <CommonInput
             label="Name"
-            type="text"
             name="name"
             placeholder="ABC"
             {...register("name", {
-              required: true,
+              required: "Name is required",
             })}
-            error={
-              errors.name && errors.name.type === "required"
-                ? "Name is required"
-                : ""
-            }
+            error={errors.name?.message}
           />
           <CommonTextArea
             title="Message"
-            type="text"
             name="message"
             placeholder="Hi! i’d like to ask about"
             {...register("message", {
-              required: true,
+              required: "Message is required",
             })}
-            error={
-              errors.message && errors.message.type === "required"
-                ? "Message is required"
-                : ""
-            }
+            error={errors.message?.message}
           />
           <CommonInput
             label="Email"
@@ -100,16 +85,13 @@ const ContactInformation = () => {
             name="emial"
             placeholder="Abc@def.com"
             {...register("email", {
-              required: true,
-              pattern: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+              required: "Email is required",
+              pattern: {
+                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                message: "Email is not valid.",
+              },
             })}
-            error={
-              errors.email && errors.email.type === "required"
-                ? "Email is required"
-                : errors.email && errors.email.type === "pattern"
-                  ? "Email is not valid."
-                  : ""
-            }
+            error={errors.email?.message}
           />
           <button className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white">
             Submit
