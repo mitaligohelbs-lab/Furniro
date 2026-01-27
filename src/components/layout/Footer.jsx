@@ -1,7 +1,34 @@
+import { useState } from "react";
 import { Link } from "react-router";
+import emailjs from "@emailjs/browser";
+
 import { HELP_LINKS, NAV_LINKS } from "../../constant";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleClick = () => {
+    emailjs
+      .send(
+        "service_7d8rioa",
+        "template_ozcrblk",
+        {
+          name: "Furniro",
+          email,
+        },
+        { publicKey: "xM9tRAD-J39YMzCMO" },
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        },
+      );
+    setEmail("");
+  };
+
   return (
     <>
       <hr className="text-[#CCCCCC] mt-2 p-2 h-8" />
@@ -36,8 +63,15 @@ const Footer = () => {
             <input
               placeholder="Enter your Email Address"
               className="underline focus:outline-0"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button className="underline">Subscribe</button>
+            <button
+              className="underline cursor-pointer focus:outline-none"
+              onClick={handleClick}
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
