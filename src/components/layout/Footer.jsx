@@ -16,7 +16,9 @@ const Footer = () => {
           <div className="text-[#9F9F9F]">Links</div>
           <div className="flex flex-col gap-6">
             {NAV_LINKS.map(({ name, path }) => (
-              <Link to={path}>{name}</Link>
+              <Link to={path} key={path}>
+                {name}
+              </Link>
             ))}
           </div>
         </div>
@@ -24,7 +26,7 @@ const Footer = () => {
           <div className="text-[#9F9F9F]">Help</div>
           <div className="flex flex-col gap-6">
             {HELP_LINKS.map(({ name }) => (
-              <div>{name}</div>
+              <div key={name}>{name}</div>
             ))}
           </div>
         </div>

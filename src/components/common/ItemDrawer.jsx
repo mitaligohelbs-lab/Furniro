@@ -57,7 +57,7 @@ const ItemDrawer = ({ onClose }) => {
         <div className="flex justify-between items-center mb-4">
           <span className="font-semibold text-[24px]">Shopping Cart</span>
           <button onClick={onClose} className="text-xl cursor-pointer">
-            <img src={Cancel} />
+            <img src={Cancel} alt="Cancel Image" />
           </button>
         </div>
         <hr className="mb-4 border-[#D9D9D9]" />

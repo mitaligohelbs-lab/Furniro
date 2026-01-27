@@ -21,7 +21,7 @@ const Browse = () => {
       <div className="flex gap-4 justify-center">
         {browseData.map(({ url, name, id }) => (
           <div key={id}>
-            <img src={url} />
+            <img src={url} alt="Browse Image"/>
             <span className="font-semibold text-[24px] flex justify-center pt-1">
               {name}
             </span>

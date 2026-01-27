@@ -71,7 +71,11 @@ const CompareStack = () => {
   const ImageDisplayCard = ({ name, price, revies, id }) => {
     return (
       <div className="flex flex-col gap-2 justify-center items-center">
-        <img src={selectedProduct[0]?.src} className="h-45 w-70" />
+        <img
+          src={selectedProduct[0]?.src}
+          className="h-45 w-70"
+          alt="Product Image"
+        />
         <div className="flex gap-3 justify-center items-center">
           <span className="text-[24px]">{name}</span>
           <img

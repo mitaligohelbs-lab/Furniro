@@ -22,6 +22,7 @@ const ShapeSetup = () => {
               className={`w-full block ${
                 id === "1" ? "h-125 object-cover" : "h-auto"
               }`}
+              alt="Shape Image"
             />
           </div>
         ))}
