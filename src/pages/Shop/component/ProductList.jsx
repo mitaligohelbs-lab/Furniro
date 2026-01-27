@@ -33,12 +33,15 @@ const ProductList = () => {
       if (search) {
         params.name = search;
       }
-      params._sort =
-        sortingKeyName === "price"
-          ? sortingValue === "asc"
-            ? sortingKeyName
-            : `-${sortingKeyName}`
-          : sortingKeyName;
+
+      if (sortingKeyName) {
+        params._sort =
+          sortingKeyName === "price"
+            ? sortingValue === "asc"
+              ? sortingKeyName
+              : `-${sortingKeyName}`
+            : sortingKeyName;
+      }
 
       const res = await httpService.get("/Product", { params });
       setTotalPages(Math.ceil(res.data.items / limit));
