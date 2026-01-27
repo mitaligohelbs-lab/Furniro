@@ -8,10 +8,6 @@ export const NAV_LINKS = [
     path: "/shop",
   },
   {
-    name: "About",
-    path: "/about",
-  },
-  {
     name: "Contact",
     path: "/contact",
   },
