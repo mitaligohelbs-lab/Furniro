@@ -20,9 +20,9 @@ const RoomInspiration = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <img src={BedRoom} />
+        <img src={BedRoom} alt="BedRoom Image"/>
         <div className="flex flex-col">
-          <img src={Living} className="h-121.5" />
+          <img src={Living} className="h-121.5" alt="LivingRoom Image" />
           <div className="flex pt-3 gap-1">
             {[0, 1, 2, 3].map((_, idx) => (
               <span

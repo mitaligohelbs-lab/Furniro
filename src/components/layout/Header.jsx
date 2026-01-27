@@ -30,7 +30,7 @@ const Header = () => {
         <div className="space-x-9">
           {LIST_ITEM.map(({ name, path }) => (
             <NavLink
-              key={name}
+              key={path}
               to={path}
               className={({ isActive }) =>
                 isActive ? "font-bold text-[#B88E2F]" : ""
@@ -42,7 +42,7 @@ const Header = () => {
         </div>
         <div className="flex flex-row gap-8 relative cursor-pointer">
           {ICON_LIST.map(({ src, isDisplay, key }) => (
-            <>
+            <div key={key}>
               {item.length ? (
                 <button
                   key={src}
@@ -53,6 +53,7 @@ const Header = () => {
                 </button>
               ) : null}
               <img
+                key={src}
                 src={src}
                 width={25}
                 height={25}
@@ -61,8 +62,9 @@ const Header = () => {
                     navigate("/compare");
                   }
                 }}
+                alt="Icon Image"
               />
-            </>
+            </div>
           ))}
         </div>
       </div>

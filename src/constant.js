@@ -151,3 +151,25 @@ export const CONTACT_INFO = [
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165734/time_newtm4.png",
   },
 ];
+
+export const SORTING_LIST = [
+  {
+    name: "Name",
+    value: "name",
+  },
+  {
+    name: "Price",
+    value: "price",
+  },
+];
+
+export const SORTING_TYPE = [
+  {
+    name: "Ascending",
+    value: "asc",
+  },
+  {
+    name: "Descending",
+    value: "desc",
+  },
+];

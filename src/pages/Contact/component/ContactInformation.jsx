@@ -43,7 +43,11 @@ const ContactInformation = () => {
         <div className="flex flex-col gap-6 justify-start">
           {CONTACT_INFO.map(({ name, info, src }) => (
             <div className="flex space-y-3 gap-4">
-              <img src={src} className="w-5 h-5" />
+              <img
+                src={src}
+                className="w-5 h-5"
+                alt="Contact Information Image"
+              />
               <div className="flex flex-col">
                 <div>{name}</div>
                 <div>{info}</div>

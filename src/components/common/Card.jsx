@@ -15,7 +15,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
       }}
     >
       <div className="relative">
-        <img src={src} className="h-72" />
+        <img src={src} className="h-72" alt="Card Image" />
         <span
           className={clsx(
             "absolute",
