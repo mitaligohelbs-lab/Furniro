@@ -1,5 +1,2 @@
-const HeaderImage = ({ src }) => {
-  return <img src={src} className="w-full" />;
-};
-
+const HeaderImage = ({ src }) => <img src={src} className="w-full" />;
 export default HeaderImage;

@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router";
 
-import About from "../pages/About/About";
 import Checkout from "../pages/Checkout/Checkout";
 import Contact from "../pages/Contact/Contact";
 import Compare from "../pages/Compare/Compare";
@@ -31,10 +30,6 @@ const Route = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
-      },
-      {
-        path: "about",
-        element: <About />,
       },
       {
         path: "compare",
