@@ -66,7 +66,9 @@ const ItemDrawer = ({ onClose }) => {
             <thead className="sticky top-0 bg-gray-100">
               <tr className="text-left bg-[#F9F1E7]">
                 {CART_HEADER.map(({ name }) => (
-                  <th className="p-2">{name}</th>
+                  <th className="p-2" key={name}>
+                    {name}
+                  </th>
                 ))}
               </tr>
             </thead>
@@ -76,6 +78,7 @@ const ItemDrawer = ({ onClose }) => {
                 <tr key={id} className="last:border-b-0">
                   <td className="p-2">
                     <img
+                      key={id}
                       src={src}
                       alt={name}
                       className="h-14 w-14 rounded-lg object-cover"
@@ -107,6 +110,7 @@ const ItemDrawer = ({ onClose }) => {
                   </td>
                   <td className="p-2 text-center">
                     <img
+                      key={id}
                       src={Vector}
                       alt="remove"
                       className="mx-auto cursor-pointer"

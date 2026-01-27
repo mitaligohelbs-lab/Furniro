@@ -53,7 +53,7 @@ const Header = () => {
                 </button>
               ) : null}
               <img
-                key={src}
+                key={`${key}_${src}`}
                 src={src}
                 width={25}
                 height={25}
