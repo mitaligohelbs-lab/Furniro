@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import CommonPage from "../../../components/common/CommonPage";
 import httpService from "../../../service/httpService";
+
+import CommonPage from "../../../components/common/CommonPage";
 
 const Browse = () => {
   const [browseData, setBrowseData] = useState([]);

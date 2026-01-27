@@ -32,6 +32,24 @@ const ItemDrawer = ({ onClose }) => {
     });
   };
 
+  const handleRemoveItem = (id) => {
+    dispatch(removeItem(id));
+    if (selectedCartIds[0]?.includes(+id)) {
+      dispatch(removeCompareItem(+id));
+    }
+  };
+
+  const handleCheckout = () => {
+    navigte("/checkout");
+    onClose();
+  };
+
+  const handleComparison = () => {
+    dispatch(addToCompareItem(selectedCamparision));
+    navigte("/compare", { state: { isDisplay: false } });
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
@@ -92,12 +110,7 @@ const ItemDrawer = ({ onClose }) => {
                       src={Vector}
                       alt="remove"
                       className="mx-auto cursor-pointer"
-                      onClick={() => {
-                        dispatch(removeItem(id));
-                        if (selectedCartIds[0]?.includes(+id)) {
-                          dispatch(removeCompareItem(+id));
-                        }
-                      }}
+                      onClick={() => handleRemoveItem(id)}
                     />
                   </td>
                 </tr>
@@ -114,21 +127,14 @@ const ItemDrawer = ({ onClose }) => {
             <div className="flex gap-2 mt-3 justify-between w-full">
               <button
                 className="px-8 py-1.5 border rounded-2xl"
-                onClick={() => {
-                  navigte("/checkout");
-                  onClose();
-                }}
+                onClick={handleCheckout}
               >
                 Checkout
               </button>
               <button
                 className={`px-6 py-1.5 border rounded-2xl ${selectedCamparision?.length < 2 ? "text-gray-400" : ""}`}
                 disabled={selectedCamparision?.length < 2}
-                onClick={() => {
-                  dispatch(addToCompareItem(selectedCamparision));
-                  navigte("/compare", { state: { isDisplay: false } });
-                  onClose();
-                }}
+                onClick={handleComparison}
               >
                 Comparision
               </button>

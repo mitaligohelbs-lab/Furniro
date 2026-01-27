@@ -105,6 +105,11 @@ const CompareStack = () => {
     }
   };
 
+  const handleAddToCart = (productId, id, name, price, src) => {
+    selectedProductInfo(productId);
+    dispatch(addToCart({ id, name, price, src, quantity: 1 }));
+  };
+
   return (
     <>
       <div className="grid mb-10 place-items-center grid-cols-4">
@@ -201,10 +206,7 @@ const CompareStack = () => {
                   <button
                     className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
                     onClick={() => {
-                      selectedProductInfo(product.id);
-                      dispatch(
-                        addToCart({ id, name, price, src, quantity: 1 }),
-                      );
+                      handleAddToCart(product.id, id, name, price, src);
                     }}
                   >
                     Add To Cart
