@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -20,7 +20,16 @@ const ItemDrawer = ({ onClose }) => {
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const [selectedCamparision, setSelectedComparision] = useState([]);
-  const selectedCartIds = useSelector((state) => state.compareItem.item);
+  const selectedProductId = useSelector((state) => state.compareItem.item);
+
+  useEffect(() => {
+    if (
+      selectedProductId.length &&
+      !!selectedProductId.includes(selectedProductId[0])
+    ) {
+      setSelectedComparision(() => [selectedProductId[0]]);
+    }
+  }, [selectedProductId]);
 
   const handleChange = (id, checked) => {
     setSelectedComparision((prev) => {
@@ -34,7 +43,7 @@ const ItemDrawer = ({ onClose }) => {
 
   const handleRemoveItem = (id) => {
     dispatch(removeItem(id));
-    if (selectedCartIds[0]?.includes(+id)) {
+    if (selectedProductId?.includes(+id)) {
       dispatch(removeCompareItem(+id));
     }
   };
@@ -102,8 +111,8 @@ const ItemDrawer = ({ onClose }) => {
                     <input
                       type="checkbox"
                       checked={
-                        selectedCamparision.includes(+id) ||
-                        selectedCartIds[0]?.includes(+id)
+                        selectedCamparision?.includes(+id) ||
+                        selectedProductId?.includes(+id)
                       }
                       onChange={(e) => handleChange(+id, e.target.checked)}
                     />
@@ -124,6 +133,11 @@ const ItemDrawer = ({ onClose }) => {
         </div>
 
         <div className="fixed top-170">
+          {selectedCamparision.length > 2 && (
+            <div className="text-red-400 text-sm">
+              You can only select 2 items for comparision
+            </div>
+          )}
           <div>
             <span>Total Amount:</span>
             <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
@@ -136,8 +150,8 @@ const ItemDrawer = ({ onClose }) => {
                 Checkout
               </button>
               <button
-                className={`px-6 py-1.5 border rounded-2xl ${selectedCamparision?.length < 2 ? "text-gray-400" : ""}`}
-                disabled={selectedCamparision?.length < 2}
+                className={`px-6 py-1.5 border rounded-2xl ${selectedCamparision.length !== 2 ? "text-gray-400" : ""}`}
+                disabled={selectedCamparision.length !== 2}
                 onClick={handleComparison}
               >
                 Comparision

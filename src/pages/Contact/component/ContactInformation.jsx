@@ -11,6 +11,7 @@ const ContactInformation = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
   const sendEmail = (data, e) => {
@@ -27,6 +28,7 @@ const ContactInformation = () => {
           console.log("FAILED...", error);
         },
       );
+    reset();
   };
 
   return (

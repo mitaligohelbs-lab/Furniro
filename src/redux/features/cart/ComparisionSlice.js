@@ -5,11 +5,11 @@ export const comparisionSlice = createSlice({
   initialState: { item: [] },
   reducers: {
     addToCompareItem: (state, action) => {
-      state.item.push(action.payload);
+      state.item = [...action.payload];
     },
     removeCompareItem: (state, action) => {
       if (!state.item.length) return;
-      state.item[0] = state.item[0].filter((id) => id !== action.payload);
+      state.item = state.item.filter((id) => id !== action.payload);
     },
   },
 });
