@@ -11,6 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
   const item = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const totalCompareItem = useSelector((state) => state.compareItem.item);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,6 +20,12 @@ const Header = () => {
       setIsOpen(false);
     }
   }, [totalAmount]);
+
+  const getCountByKey = (key) => {
+    if (key === "cart") return item.length;
+    if (key === "compare") return totalCompareItem.length;
+    return 0;
+  };
 
   return (
     <>
@@ -41,31 +48,41 @@ const Header = () => {
           ))}
         </div>
         <div className="flex flex-row gap-8 relative cursor-pointer">
-          {ICON_LIST.map(({ src, isDisplay, key }) => (
-            <div key={key}>
-              {item.length ? (
-                <button
-                  key={src}
-                  className={`absolute ${isDisplay ? "h-5 w-5 rounded-full bg-red-400 -top-3 -right-3 text-center leading-5" : ""}`}
-                  onClick={() => setIsOpen(true)}
-                >
-                  {isDisplay && item.length}
-                </button>
-              ) : null}
-              <img
-                key={`${key}_${src}`}
-                src={src}
-                width={25}
-                height={25}
-                onClick={() => {
-                  if (key === "compare") {
-                    navigate("/compare");
-                  }
-                }}
-                alt="Icon Image"
-              />
-            </div>
-          ))}
+          {ICON_LIST.map(({ src, isDisplay, key, badgeClass }) => {
+            const count = getCountByKey(key);
+            return (
+              <div key={key}>
+                {isDisplay && count ? (
+                  <button
+                    key={src}
+                    className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white text-center leading-5`}
+                    onClick={() =>
+                      key === "cart" ? setIsOpen(true) : setIsOpen(false)
+                    }
+                  >
+                    {isDisplay &&
+                      (key === "compare"
+                        ? totalCompareItem.length
+                        : key === "cart"
+                          ? item.length
+                          : null)}
+                  </button>
+                ) : null}
+                <img
+                  key={`${key}_${src}`}
+                  src={src}
+                  width={25}
+                  height={25}
+                  onClick={() => {
+                    if (key === "compare") {
+                      navigate("/compare");
+                    }
+                  }}
+                  alt="Icon Image"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
       {isOpen && <ItemDrawer onClose={() => setIsOpen(false)} />}

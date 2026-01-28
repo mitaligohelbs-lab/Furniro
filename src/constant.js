@@ -77,12 +77,14 @@ export const ICON_LIST = [
   // },
   {
     key: "compare",
-    isDisplay: false,
+    isDisplay: true,
+    badgeClass: "-top-3 right-11",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769063967/noun-balance-8129242_fal36s.svg",
   },
   {
-    isDisplay: true,
     key: "cart",
+    isDisplay: true,
+    badgeClass: "-top-3 -right-4",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/cart_ripi72.svg",
   },
 ];
