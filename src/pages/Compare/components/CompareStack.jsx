@@ -54,7 +54,7 @@ const CompareStack = () => {
     if (!allProduct || !selectedProductId?.length) return;
 
     const selectedProducts = allProduct.filter(({ id }) =>
-      selectedProductId?.includes(id),
+      selectedProductId?.includes(+id),
     );
 
     setSelectedProduct(selectedProducts);
