@@ -54,7 +54,7 @@ const ItemDetails = () => {
   );
 
   const finalData = useMemo(
-    () => (showAllDetails ? relatedProduct : relatedProduct.slice(0, 4)),
+    () => (showAllDetails ? relatedProduct : relatedProduct.slice(1, 5)),
     [showAllDetails, relatedProduct],
   );
 
@@ -88,7 +88,11 @@ const ItemDetails = () => {
                 />
               ))}
           </div>
-          <img src={src} className="rounded-xl h-100" alt="Product Main Image"/>
+          <img
+            src={src}
+            className="rounded-xl h-100"
+            alt="Product Main Image"
+          />
         </div>
         <div className="flex flex-col space-y-2">
           <span className="text-[42px]">{name}</span>
@@ -131,7 +135,9 @@ const ItemDetails = () => {
         <div className="text-[#9F9F9F] max-w-5xl">{additionalInformation}</div>
         <div className="flex max-w-5xl  gap-3 items-center">
           {detailImage &&
-            detailImage.map((el) => <img src={el} className="w-150" alt="Product Dettail Image"/>)}
+            detailImage.map((image) => (
+              <img src={image} className="w-150" alt="Product Dettail Image" />
+            ))}
         </div>
       </div>
 

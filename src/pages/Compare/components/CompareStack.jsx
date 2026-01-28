@@ -62,7 +62,7 @@ const CompareStack = () => {
     if (!allProduct || !selectedProductId?.length) return;
 
     const selectedProducts = allProduct.filter((data) =>
-      selectedProductId[0]?.includes(+data.id),
+      selectedProductId?.includes(+data.id),
     );
 
     setSelectedProduct(selectedProducts);
@@ -118,7 +118,7 @@ const CompareStack = () => {
     <>
       <div className="grid mb-10 place-items-center grid-cols-4">
         <Link className="text-[22px] max-w-56" to={"/shop"}>
-          Go to Product page for more Products{" "}
+          Go to Product page for more Products
           <div className="text-[#727272] text-sm cursor-pointer">View More</div>
         </Link>
 
@@ -129,7 +129,7 @@ const CompareStack = () => {
         </div>
 
         <div className="flex flex-col">
-          {selectedProductId[0]?.length < 2 || selectedProductId.length < 2 ? (
+          {selectedProductId?.length < 2 ? (
             <div className="flex flex-col gap-3 relative w-75">
               <div className="text-[24px] font-semibold">Add a Product</div>
               <button
