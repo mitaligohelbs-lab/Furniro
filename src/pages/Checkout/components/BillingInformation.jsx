@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
@@ -11,6 +12,17 @@ const BillingInformation = () => {
 
   const selectedItem = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+
+  const [country, setCountry] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("https://ipapi.co/json").then((res) =>
+        res.json(),
+      );
+      setCountry(res.country_name);
+    })();
+  }, []);
 
   const ItemDisplay = ({ name, displayText, label }) => {
     return (
@@ -71,6 +83,7 @@ const BillingInformation = () => {
         <CommonInput
           label="Country/Region"
           placeholder="Country/Region"
+          value={country}
           name="country"
           {...register("country", {
             required: "Country is required",

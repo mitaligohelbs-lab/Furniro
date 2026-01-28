@@ -1,24 +1,24 @@
 {
   "Browse": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Dining",
       "url": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Living",
       "url": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881332/LivingRoom_q4cvpy.png"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Dining",
       "url": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
     }
   ], 
   "Product": [
     {
-      "id": "1",
+      "id": 1,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
       "name": "Syltherine",
       "subTitle": "Stylish cafe chair",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "id": "2",
+      "id": 2,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product2_nyy3jq.png",
       "name": "Lolito",
       "subTitle": "Luxury big sofa",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "3",
+      "id": 3,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
       "name": "Respira",
       "subTitle": "Outdoor bar table and stool",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "id": "4",
+      "id": 4,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo",
       "subTitle": "Night lamp",
@@ -236,7 +236,7 @@
       }
     },
     {
-      "id": "5",
+      "id": 5,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
       "name": "Muggo",
       "subTitle": "Small mug",
@@ -289,7 +289,7 @@
       }
     },
     {
-      "id": "6",
+      "id": 6,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
       "name": "Pingky",
       "subTitle": "Cute bed set",
@@ -343,7 +343,7 @@
       }
     },
     {
-      "id": "7",
+      "id": 7,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
       "name": "Pot",
       "subTitle": "Minimalist flower pot",
@@ -397,7 +397,7 @@
       }
     },
     {
-      "id": "8",
+      "id": 8,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Mini",
       "subTitle": "Compact night lamp",
@@ -451,7 +451,7 @@
       }
     },
     {
-      "id": "9",
+      "id": 9,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
       "name": "Muggo Plus",
       "subTitle": "Large coffee mug",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "10",
+      "id": 10,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
       "name": "Pingky Deluxe",
       "subTitle": "Premium bed set",
@@ -558,7 +558,7 @@
       }
     },
     {
-      "id": "11",
+      "id": 11,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
       "name": "Pot",
       "subTitle": "Large flower pot",
@@ -612,7 +612,7 @@
       }
     },
     {
-      "id": "12",
+      "id": 12,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro9",
       "subTitle": "Designer night lamp",
@@ -666,7 +666,7 @@
       }
     },
     {
-      "id": "13",
+      "id": 13,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product5_ppcvs3.png",
       "name": "Muggo Stone",
       "subTitle": "Stone finish mug",
@@ -719,7 +719,7 @@
       }
     },
     {
-      "id": "14",
+      "id": 14,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product6_gy98yc.png",
       "name": "Armchair",
       "subTitle": "Comfort bed set",
@@ -773,7 +773,7 @@
       }
     },
     {
-      "id": "15",
+      "id": 15,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881848/Product7_s7mgli.png",
       "name": "Bar stool",
       "subTitle": "Round flower pot",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "id": "16",
+      "id": 16,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
       "name": "Respira Plus",
       "subTitle": "Outdoor furniture set",
@@ -880,7 +880,7 @@
       }
     },
     {
-      "id": "17",
+      "id": 17,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro1",
       "subTitle": "Designer night lamp",
@@ -934,7 +934,7 @@
       }
     },
     {
-      "id": "18",
+      "id": 18,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro2",
       "subTitle": "Designer night lamp",
@@ -988,7 +988,7 @@
       }
     },
     {
-      "id": "19",
+      "id": 19,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo",
       "subTitle": "Designer night lamp",
@@ -1042,7 +1042,7 @@
       }
     },
      {
-      "id": "20",
+      "id": 20,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product3_pfejpa.png",
       "name": "Respira Plus",
       "subTitle": "Outdoor furniture set",
@@ -1095,7 +1095,7 @@
       }
     },
     {
-      "id": "21",
+      "id": 21,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro3",
       "subTitle": "Designer night lamp",
@@ -1149,7 +1149,7 @@
       }
     },
     {
-      "id": "22",
+      "id": 22,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro4",
       "subTitle": "Designer night lamp",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "id": "23",
+      "id": 23,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro5",
       "subTitle": "Designer night lamp",
@@ -1257,7 +1257,7 @@
       }
     },
     {
-      "id": "24",
+      "id": 24,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro6",
       "subTitle": "Designer night lamp",
@@ -1311,7 +1311,7 @@
       }
     },
     {
-      "id": "25",
+      "id": 25,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro7",
       "subTitle": "Designer night lamp",
@@ -1365,7 +1365,7 @@
       }
     },
     {
-      "id": "26",
+      "id": 26,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881847/Product4_ygjyss.png",
       "name": "Grifo Pro8",
       "subTitle": "Designer night lamp",
@@ -1421,39 +1421,39 @@
   ],
   "Shape": [
     {
-      "id": "1",
+      "id": 1,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape1_dguljz.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape2_kgxvho.png"
     },
     {
-      "id": "3",
+      "id": 3,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape3_prhgws.png"
     },
     {
-      "id": "4",
+      "id": 4,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape4_dbm5qr.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape5_uk1g1f.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882446/shape6_m8acro.png"
     },
     {
-      "id": "7",
+      "id": 7,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882447/shape7_izltka.png"
     },
     {
-      "id": "8",
+      "id": 8,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882451/shape8_attown.png"
     },
     {
-      "id": "9",
+      "id": 9,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882452/shape9_ziy6h4.png"
     }
   ]

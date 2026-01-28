@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -10,52 +9,39 @@ import { CART_HEADER } from "../../constant";
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
 import {
-  addToCompareItem,
+  addCompareItem,
   removeCompareItem,
 } from "../../redux/features/cart/ComparisionSlice";
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
-  const navigte = useNavigate();
+  const navigate = useNavigate();
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-  const [selectedCamparision, setSelectedComparision] = useState([]);
   const selectedProductId = useSelector((state) => state.compareItem.item);
-
-  useEffect(() => {
-    if (
-      selectedProductId.length &&
-      !!selectedProductId.includes(selectedProductId[0])
-    ) {
-      setSelectedComparision(() => [selectedProductId[0]]);
-    }
-  }, [selectedProductId]);
-
-  const handleChange = (id, checked) => {
-    setSelectedComparision((prev) => {
-      if (checked) {
-        return [...prev, +id];
-      } else {
-        return prev.filter((itemId) => itemId !== id);
-      }
-    });
-  };
 
   const handleRemoveItem = (id) => {
     dispatch(removeItem(id));
-    if (selectedProductId?.includes(+id)) {
+    if (selectedProductId?.includes(id)) {
       dispatch(removeCompareItem(+id));
     }
   };
 
   const handleCheckout = () => {
-    navigte("/checkout");
+    navigate("/checkout");
     onClose();
   };
 
-  const handleComparison = () => {
-    dispatch(addToCompareItem(selectedCamparision));
-    navigte("/compare", { state: { isDisplay: false } });
+  const handleChange = (value, id) => {
+    if (value === true) {
+      dispatch(addCompareItem(id));
+    } else {
+      dispatch(removeCompareItem(id));
+    }
+  };
+
+  const handleComparision = () => {
+    navigate("/compare", { state: { isDisplay: false } });
     onClose();
   };
 
@@ -110,11 +96,8 @@ const ItemDrawer = ({ onClose }) => {
                   <td className="p-2 text-center">
                     <input
                       type="checkbox"
-                      checked={
-                        selectedCamparision?.includes(+id) ||
-                        selectedProductId?.includes(+id)
-                      }
-                      onChange={(e) => handleChange(+id, e.target.checked)}
+                      checked={selectedProductId?.includes(+id)}
+                      onChange={(e) => handleChange(e.target.checked, +id)}
                     />
                   </td>
                   <td className="p-2 text-center">
@@ -133,15 +116,14 @@ const ItemDrawer = ({ onClose }) => {
         </div>
 
         <div className="fixed top-170">
-          {selectedCamparision.length > 2 && (
+          {selectedProductId.length > 5 && (
             <div className="text-red-400 text-sm">
-              You can only select 2 items for comparision
+              {`You can maximum 5 items for comparision`}
             </div>
           )}
           <div>
             <span>Total Amount:</span>
             <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
-
             <div className="flex gap-2 mt-3 justify-between w-full">
               <button
                 className="px-8 py-1.5 border rounded-2xl"
@@ -150,9 +132,9 @@ const ItemDrawer = ({ onClose }) => {
                 Checkout
               </button>
               <button
-                className={`px-6 py-1.5 border rounded-2xl ${selectedCamparision.length !== 2 ? "text-gray-400" : ""}`}
-                disabled={selectedCamparision.length !== 2}
-                onClick={handleComparison}
+                className={`px-6 py-1.5 border rounded-2xl ${selectedProductId.length > 5 ? "text-gray-400" : ""}`}
+                disabled={selectedProductId.length > 5}
+                onClick={handleComparision}
               >
                 Comparision
               </button>
