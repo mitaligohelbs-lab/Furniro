@@ -1,0 +1,43 @@
+{
+  "title": "Order Cancellation & Return Policy",
+
+  "cancellation": {
+    "heading": "Cancellation Policy",
+    "content": "Orders can be cancelled free of charge before dispatch. Once dispatched, cancellation is not allowed, though delivery may be rejected at the doorstep. Refunds for seller-initiated cancellations are processed within 5–7 business days."
+  },
+
+  "returns": {
+    "heading": "Return Policy",
+    "content": "Returns are accepted for damaged, defective, or incorrect products reported within the return window and subject to inspection."
+  },
+
+  "furniture": {
+    "heading": "Furniture Returns",
+    "content": "Furniture products are eligible for return within 10 days of delivery or installation. Installation must be completed by Furniro-authorized personnel. Only one replacement is allowed per order."
+  },
+
+  "nonReturnable": {
+    "heading": "Non-Returnable Items",
+    "content": "Customized furniture, made-to-order items, and products damaged due to misuse are not eligible for return."
+  },
+
+  "refunds": {
+    "heading": "Refunds",
+    "content": "Refunds are initiated after product verification and credited to the original payment method within 5–7 business days."
+  },
+
+  "support": {
+    "heading": "Customer Support",
+    "content": "For return or cancellation assistance, contact us at support@furniro.com."
+  },
+
+  "scope": {
+    "heading": "Scope of Policy",
+    "content": "This policy applies to all furniture products sold by Furniro on the platform, including deliveries made through third-party logistics providers and installation services. Exceptions for specific items are listed under 'Non-Returnable Items'."
+  },
+
+  "pickup": {
+    "heading": "Product Pickup",
+    "content": "For eligible returns, Furniro arranges product pickup from your delivery address. Items must be in original condition, with all accessories, manuals, and packaging intact. Pickup scheduling will be coordinated via email or phone."
+  }
+}

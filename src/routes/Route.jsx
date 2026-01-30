@@ -6,6 +6,9 @@ import Compare from "../pages/Compare/Compare";
 import Home from "../pages/Home/Home";
 import ItemDetails from "../pages/Shop/component/ItemDetails";
 import Layout from "../components/layout/Layout";
+import Payment from "../pages/Payment/Payment";
+import Privacypolicy from "../pages/PrivacyPolicy/Privacypolicy";
+import Return from "../pages/Return/Return";
 import Shop from "../pages/Shop/Shop";
 
 const Route = createBrowserRouter([
@@ -38,6 +41,18 @@ const Route = createBrowserRouter([
       {
         path: "checkout",
         element: <Checkout />,
+      },
+      {
+        path: "privacypolicy",
+        element: <Privacypolicy />,
+      },
+      {
+        path: "/return",
+        element: <Return />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
       },
     ],
   },

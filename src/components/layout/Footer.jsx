@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="text-[#9F9F9F]">Links</div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             {NAV_LINKS.map(({ name, path }) => (
               <Link to={path} key={path}>
                 {name}
@@ -52,11 +52,11 @@ const Footer = () => {
         </div>
         <div>
           <div className="text-[#9F9F9F]">Help</div>
-          <div className="flex flex-col gap-6">
-            {HELP_LINKS.map(({ name }) => (
-              <div key={name} className="cursor-pointer">
+          <div className="flex flex-col gap-2">
+            {HELP_LINKS.map(({ name, path }) => (
+              <Link key={name} className="cursor-pointer" to={path}>
                 {name}
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,0 +1,43 @@
+{
+  "title": "Payment Policy",
+
+  "methods": {
+    "heading": "Payment Methods",
+    "content": "Furniro offers multiple payment methods including Internet Banking, Credit/Debit Cards, Wallet, and Cash on Delivery (C-o-D). All transactions are secured via trusted payment gateways using encryption technology."
+  },
+
+  "hiddenCharges": {
+    "heading": "Hidden Charges",
+    "content": "There are no hidden charges. Product prices are final and inclusive of applicable taxes. Delivery charges may vary depending on the seller policy."
+  },
+
+  "cashOnDelivery": {
+    "heading": "Cash on Delivery (C-o-D)",
+    "content": "With C-o-D, you pay in cash at the time of delivery. Maximum order value allowed is ₹50,000. Gift Cards, store credits, or foreign currency cannot be used."
+  },
+
+  "cardPayments": {
+    "heading": "Credit/Debit Card Payments",
+    "content": "Furniro accepts payments via Visa, MasterCard, Maestro, and American Express cards. International cards cannot be used for Wallet, Flyte, or eGV payments."
+  },
+
+  "internetBanking": {
+    "heading": "Internet Banking",
+    "content": "Payments via Internet Banking are accepted from multiple banks for direct fund transfers. Transactions are highly secure with encryption."
+  },
+
+  "security": {
+    "heading": "Transaction Security",
+    "content": "All online transactions are protected with 256-bit encryption. 3D Secure password and bank verification add an extra layer of security."
+  },
+
+  "emi": {
+    "heading": "Credit Card EMI",
+    "content": "Furniro offers EMI options for select banks with 3, 6, 9, 12, 18, or 24-month tenures. No processing fee is charged, and interest is managed by the respective bank."
+  },
+
+  "support": {
+    "heading": "Customer Support",
+    "content": "For payment-related queries, contact support@furniro.com."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Privacy Policy",
+  "disclaimer": "Disclaimer: In case of any discrepancy or difference, the English version will take precedence over the translation.",
+
+  "intro": {
+    "heading": "Introduction",
+    "content": "At Furniro, we value the trust you place in us and recognize the importance of secure transactions and information privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal data when you access or use our platform, products, and services."
+  },
+
+  "collection": {
+    "heading": "Collection of Your Information",
+    "content": "We collect personal information such as your name, contact details, delivery address, and payment information when you browse our platform, place an order, request installation, or contact customer support. You may browse certain sections of the platform without providing personal information."
+  },
+
+  "usage": {
+    "heading": "Use of Your Information",
+    "content": "Your information is used to process and fulfill orders, deliver products, arrange installation services, communicate order updates, improve customer experience, personalize product recommendations, and share relevant offers and updates."
+  },
+
+  "cookies": {
+    "heading": "Cookies",
+    "content": "We use cookies and similar technologies to improve website functionality, analyze traffic patterns, enhance security, and personalize your browsing experience. You may choose to disable cookies through your browser settings; however, some features of the platform may not function properly."
+  },
+
+  "sharing": {
+    "heading": "Sharing of Personal Data",
+    "content": "We may share your information with delivery and installation partners, payment gateway providers, analytics service providers, and legal or regulatory authorities when required to provide our services or comply with applicable laws."
+  },
+
+  "security": {
+    "heading": "Security Precautions",
+    "content": "We implement reasonable technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of data transmission over the internet is completely secure."
+  },
+
+  "rights": {
+    "heading": "Your Rights",
+    "content": "You have the right to access, update, correct, or delete your personal data, withdraw your consent where applicable, and opt out of non-essential communications, subject to applicable laws."
+  },
+
+  "contact": {
+    "heading": "Contact Us",
+    "content": "If you have any questions, concerns, or requests related to this Privacy Policy or the handling of your personal data, please contact us at privacy@furniro.com."
+  },
+
+  "lastUpdated": "Last Updated: July 2025"
+}

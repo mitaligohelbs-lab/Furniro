@@ -15,13 +15,16 @@ export const NAV_LINKS = [
 
 export const HELP_LINKS = [
   {
-    name: "Payment Option",
+    name: "Payments",
+    path: "/payment",
   },
   {
     name: "Return",
+    path: "/return",
   },
   {
     name: "Privacy Policy",
+    path: "/privacypolicy",
   },
 ];
 
@@ -169,5 +172,72 @@ export const SORTING_TYPE = [
   {
     name: "Descending",
     value: "desc",
+  },
+];
+
+export const languageOptions = [
+  {
+    language: "English",
+    code: "en",
+  },
+  { language: "Hindi", code: "hi" },
+  { language: "Gujrati", code: "gu" },
+];
+
+export const POLICY_SECTION = [
+  { title: "intro" },
+  { title: "collection" },
+  { title: "usage" },
+  { title: "cookies" },
+  { title: "sharing" },
+  { title: "security" },
+  { title: "rights" },
+  { title: "contact" },
+];
+
+export const RETURN_SECTION = [
+  { title: "scope", icon: "📦" },
+  { title: "cancellation", icon: "❌" },
+  { title: "returns", icon: "🔄" },
+  { title: "furniture", icon: "🪑" },
+  { title: "nonReturnable", icon: "🚫" },
+  {
+    title: "pickup",
+    icon: "🚚",
+  },
+  {
+    title: "refunds",
+    icon: "💰 ",
+  },
+  {
+    title: "support",
+    icon: "📞",
+  },
+];
+
+export const PAYMENT_SECTION = [
+  {
+    title: "methods",
+  },
+  {
+    title: "hiddenCharges",
+  },
+  {
+    title: "cashOnDelivery",
+  },
+  {
+    title: "cardPayments",
+  },
+  {
+    title:"internetBanking"
+  },
+  {
+    title: "emi",
+  },
+  {
+    title: "security",
+  },
+  {
+    title: "support",
   },
 ];
