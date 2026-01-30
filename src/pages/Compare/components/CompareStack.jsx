@@ -10,7 +10,7 @@ import {
 } from "../../../redux/features/cart/ComparisionSlice";
 
 import RatingStars from "../../../components/common/RatingStars";
-import ConfirmationDialog from "../../../components/common/ConfirmationDialog";
+import ConfirmationDialog from "../../../components/modal/ConfirmationDialog";
 
 import { DISPLAY_KEYS } from "../../../constant";
 import Vector from "../../../assets/Vector.png";
@@ -18,9 +18,10 @@ import Vector from "../../../assets/Vector.png";
 const CompareStack = () => {
   const location = useLocation();
   const dispatch = useDispatch();
-  const { isDisplay } = location.state ?? { isDisplay: false };
 
   const selectedProductId = useSelector((state) => state.compareItem.item);
+  const cartItem = useSelector((state) => state.cart.items);
+  const cartItemsIds = cartItem.map(({ id }) => +id);
 
   const [isOpen, setIsOpen] = useState(false);
   const [removeId, setRemoveId] = useState(false);
@@ -53,9 +54,12 @@ const CompareStack = () => {
   useEffect(() => {
     if (!allProduct || !selectedProductId?.length) return;
 
-    const selectedProducts = allProduct.filter(({ id }) =>
-      selectedProductId?.includes(+id),
-    );
+    const selectedProducts = allProduct
+      .filter(({ id }) => selectedProductId?.includes(+id))
+      ?.map((product) => ({
+        ...product,
+        isDisplayCartItem: !!cartItemsIds.includes(+product.id),
+      }));
 
     setSelectedProduct(selectedProducts);
   }, [allProduct, selectedProductId]);
@@ -204,7 +208,8 @@ const CompareStack = () => {
                         ))}
                       </div>
                     ))}
-                    {isDisplay ? (
+                    {!product?.isDisplayCartItem ||
+                    !!location.state?.isDisplay ? (
                       <button
                         className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
                         onClick={() => {

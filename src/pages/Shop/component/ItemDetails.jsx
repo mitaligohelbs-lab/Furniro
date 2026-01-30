@@ -7,6 +7,9 @@ import RatingStars from "../../../components/common/RatingStars";
 import CommonPage from "../../../components/common/CommonPage";
 import Card from "../../../components/common/Card";
 import QuantityControl from "../../../components/common/QuantityControl";
+import ShareModal from "../../../components/modal/ShareModal";
+
+import { IoMdShareAlt } from "react-icons/io";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -14,6 +17,7 @@ const ItemDetails = () => {
   const [productDetail, setProductDetail] = useState([]);
   const [allProduct, setAllProduct] = useState([]);
   const [showAllDetails, setShowAllDetails] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -95,7 +99,15 @@ const ItemDetails = () => {
           />
         </div>
         <div className="flex flex-col space-y-2">
-          <span className="text-[42px]">{name}</span>
+          <div className="flex w-full items-center justify-between">
+            <span className="text-[42px]">{name}</span>
+            <span
+              className="text-gray-400 hover:text-blue-500 flex gap-1 pe-5 cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            >
+              <IoMdShareAlt size={26} /> Share
+            </span>
+          </div>
           <span className="text-[#9F9F9F] font-bold">Rs: {price}</span>
           <div className="flex gap-3">
             <div className="flex items-center">
@@ -165,6 +177,15 @@ const ItemDetails = () => {
           )
         ) : (
           ""
+        )}
+
+        {isOpen && (
+          <ShareModal
+            isOpen={isOpen}
+            isClose={() => setIsOpen(false)}
+            name={name}
+            id={id}
+          />
         )}
       </CommonPage>
     </>
