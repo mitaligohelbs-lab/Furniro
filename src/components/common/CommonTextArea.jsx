@@ -1,13 +1,17 @@
 const CommonTextArea = ({
+  id,
   title,
   type = "text",
   placeholder,
   name,
   error,
+  required,
   ...props
 }) => (
   <div className="flex flex-col">
-    <label>{title}</label>
+    <label className="flex gap-1 items-center" htmlFor={id}>
+      {title} {required ? <span className="text-red-500">*</span> : ""}
+    </label>
     <textarea
       type={type}
       className="border border-[#9F9F9F] rounded-sm h-20 placeholder:text-start p-5 leading-10 focus:outline-none"

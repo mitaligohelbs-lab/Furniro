@@ -55,6 +55,7 @@ const BillingInformation = () => {
               },
             })}
             error={errors.firstName?.message}
+            required
           />
           <CommonInput
             label="Last Name"
@@ -72,6 +73,7 @@ const BillingInformation = () => {
               },
             })}
             error={errors.lastName?.message}
+            required
           />
         </div>
         <CommonInput
@@ -89,6 +91,7 @@ const BillingInformation = () => {
             required: "Country is required",
           })}
           error={errors.country?.message}
+          required
         />
         <CommonInput
           label="Street Address"
@@ -102,6 +105,7 @@ const BillingInformation = () => {
             },
           })}
           error={errors.adress?.message}
+          required
         />
         <CommonInput
           label="Zip Code"
@@ -123,6 +127,7 @@ const BillingInformation = () => {
             },
           })}
           error={errors.zipCode?.message}
+          required
         />
         <CommonInput
           label="Phone"
@@ -140,6 +145,7 @@ const BillingInformation = () => {
             },
           })}
           error={errors.phone?.message}
+          required
         />
         <CommonInput
           label="Email Adrress"
@@ -153,6 +159,7 @@ const BillingInformation = () => {
             },
           })}
           error={errors.email?.message}
+          required
         />
       </form>
       <div className="p-2">

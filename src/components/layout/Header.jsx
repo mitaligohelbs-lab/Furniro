@@ -57,7 +57,11 @@ const Header = () => {
                     key={src}
                     className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white text-center leading-5`}
                     onClick={() =>
-                      key === "cart" ? setIsOpen(true) : setIsOpen(false)
+                      key === "cart"
+                        ? setIsOpen(true)
+                        : key === "compare"
+                          ? navigate("/compare")
+                          : setIsOpen(false)
                     }
                   >
                     {isDisplay &&
@@ -73,11 +77,6 @@ const Header = () => {
                   src={src}
                   width={25}
                   height={25}
-                  onClick={() => {
-                    if (key === "compare") {
-                      navigate("/compare");
-                    }
-                  }}
                   alt="Icon Image"
                 />
               </div>

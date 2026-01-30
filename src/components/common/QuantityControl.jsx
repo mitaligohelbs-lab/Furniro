@@ -20,7 +20,7 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
     }
   }, [currItem]);
 
-  const decreaseQuantity = () => {
+  const decreaseProductQuantity = () => {
     if (currItem) {
       dispatch(decreaseQuantity(id));
     } else {
@@ -28,7 +28,7 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
     }
   };
 
-  const increaseQuantity = () => {
+  const increaseProductQuantity = () => {
     if (currItem) {
       dispatch(increseQuantity(id));
     } else {
@@ -40,14 +40,14 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
     <div className="flex gap-1 ">
       <div className="border px-3 py-2 flex w-30 justify-around rounded-md border-[#9F9F9F] ">
         <button
-          onClick={decreaseQuantity}
+          onClick={decreaseProductQuantity}
           disabled={quantity < 1}
           className={`cursor-pointer ${quantity < 1 ? "text-gray-400" : ""}`}
         >
           -
         </button>
         <button>{quantity}</button>
-        <button onClick={increaseQuantity} className="cursor-pointer">
+        <button onClick={increaseProductQuantity} className="cursor-pointer">
           +
         </button>
       </div>

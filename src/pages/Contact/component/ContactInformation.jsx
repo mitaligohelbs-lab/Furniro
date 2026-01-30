@@ -59,6 +59,7 @@ const ContactInformation = () => {
         </div>
         <form className="space-y-4" onSubmit={handleSubmit(sendEmail)}>
           <CommonInput
+            id="title"
             label="Title"
             name="title"
             placeholder="Title"
@@ -66,8 +67,10 @@ const ContactInformation = () => {
               required: "Title is required",
             })}
             error={errors.title?.message}
+            required
           />
           <CommonInput
+            id="name"
             label="Name"
             name="name"
             placeholder="ABC"
@@ -75,8 +78,10 @@ const ContactInformation = () => {
               required: "Name is required",
             })}
             error={errors.name?.message}
+            required
           />
           <CommonTextArea
+            id="message"
             title="Message"
             name="message"
             placeholder="Hi! i’d like to ask about"
@@ -84,8 +89,10 @@ const ContactInformation = () => {
               required: "Message is required",
             })}
             error={errors.message?.message}
+            required
           />
           <CommonInput
+            id="email"
             label="Email"
             type="email"
             name="emial"
@@ -98,6 +105,7 @@ const ContactInformation = () => {
               },
             })}
             error={errors.email?.message}
+            required
           />
           <button className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white">
             Submit
