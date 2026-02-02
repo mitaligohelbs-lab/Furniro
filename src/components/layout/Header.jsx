@@ -48,37 +48,27 @@ const Header = () => {
           ))}
         </div>
         <div className="flex flex-row gap-8 relative cursor-pointer">
-          {ICON_LIST.map(({ src, isDisplay, key, badgeClass }) => {
+          {ICON_LIST.map(({ isDisplay, key, badgeClass, icon }) => {
             const count = getCountByKey(key);
             return (
-              <div key={key}>
-                {isDisplay && count ? (
+              <div key={key} className="relative">
+                {isDisplay && count > 0 && (
                   <button
-                    key={src}
-                    className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white text-center leading-5`}
-                    onClick={() =>
-                      key === "cart"
-                        ? setIsOpen(true)
-                        : key === "compare"
-                          ? navigate("/compare")
-                          : setIsOpen(false)
-                    }
+                    className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white text-center leading-5 cursor-pointer`}
+                    onClick={() => {
+                      if (key === "cart") setIsOpen(true);
+                      if (key === "compare") navigate("/compare");
+                    }}
                   >
-                    {isDisplay &&
-                      (key === "compare"
-                        ? totalCompareItem.length
-                        : key === "cart"
-                          ? item.length
-                          : null)}
+                    {key === "compare"
+                      ? totalCompareItem.length
+                      : key === "cart"
+                        ? item.length
+                        : null}
                   </button>
-                ) : null}
-                <img
-                  key={`${key}_${src}`}
-                  src={src}
-                  width={25}
-                  height={25}
-                  alt="Icon Image"
-                />
+                )}
+
+                {icon}
               </div>
             );
           })}

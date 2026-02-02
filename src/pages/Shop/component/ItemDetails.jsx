@@ -18,6 +18,7 @@ const ItemDetails = () => {
   const [allProduct, setAllProduct] = useState([]);
   const [showAllDetails, setShowAllDetails] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [image, setImage] = useState();
 
   useEffect(() => {
     (async () => {
@@ -53,6 +54,10 @@ const ItemDetails = () => {
     description = "",
   } = productDetail;
 
+  useEffect(() => {
+    setImage(src);
+  }, [src]);
+
   const relatedProduct = allProduct.filter(
     (product) => product.category === category,
   );
@@ -84,16 +89,17 @@ const ItemDetails = () => {
         <div className="flex gap-4 justify-center mr-5">
           <div className="flex flex-col justify-around h-100 ">
             {extraImages &&
-              extraImages.map((el) => (
+              [...extraImages, src].map((el) => (
                 <img
                   src={el}
-                  className="h-20 object-fill bg-[#F9F1E7] rounded-xl"
+                  className={`w-20 h-20 object-cover cursor-pointer border bg-[#F9F1E7] rounded-xl  ${image === el ? "border-black" : "border-gray-300"}`}
                   alt="Product Image"
+                  onClick={() => setImage(el)}
                 />
               ))}
           </div>
           <img
-            src={src}
+            src={image}
             className="rounded-xl h-100"
             alt="Product Main Image"
           />

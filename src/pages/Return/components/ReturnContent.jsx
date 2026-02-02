@@ -1,6 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 import { RETURN_SECTION } from "../../../constant";
 import JsonContentDisplay from "../../../components/common/JsonContentDisplay";
-import { useTranslation } from "react-i18next";
 
 const ReturnContent = () => {
   const { t } = useTranslation(["return"]);
