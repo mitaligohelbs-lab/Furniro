@@ -1,3 +1,6 @@
+import { BiGitCompare } from "react-icons/bi";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
 export const NAV_LINKS = [
   {
     name: "Home",
@@ -64,9 +67,16 @@ export const LIST_ITEM = [
 
 export const ICON_LIST = [
   {
-    key: "account_alert",
-    isDisplay: false,
-    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/account-alert_gulflu.svg",
+    key: "compare",
+    isDisplay: true,
+    badgeClass: "-top-3 -right-3",
+    icon: <BiGitCompare size={22} />,
+  },
+  {
+    key: "cart",
+    isDisplay: true,
+    badgeClass: "-top-3 -right-4",
+    icon: <MdOutlineShoppingCart size={22} />,
   },
   // {
   //   key: "search",
@@ -78,18 +88,6 @@ export const ICON_LIST = [
   //   isDisplay: false,
   //   src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
   // },
-  {
-    key: "compare",
-    isDisplay: true,
-    badgeClass: "-top-3 right-11",
-    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769063967/noun-balance-8129242_fal36s.svg",
-  },
-  {
-    key: "cart",
-    isDisplay: true,
-    badgeClass: "-top-3 -right-4",
-    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/cart_ripi72.svg",
-  },
 ];
 
 export const DISPLAY_KEYS = [
@@ -229,7 +227,7 @@ export const PAYMENT_SECTION = [
     title: "cardPayments",
   },
   {
-    title:"internetBanking"
+    title: "internetBanking",
   },
   {
     title: "emi",

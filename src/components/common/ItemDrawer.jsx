@@ -4,8 +4,8 @@ import { useNavigate } from "react-router";
 import { removeItem } from "../../redux/features/cart/CartSlice";
 
 import QuantityControl from "./QuantityControl";
-
 import { CART_HEADER } from "../../constant";
+
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
 import {

@@ -11,8 +11,8 @@ import {
 
 import RatingStars from "../../../components/common/RatingStars";
 import ConfirmationDialog from "../../../components/modal/ConfirmationDialog";
-
 import { DISPLAY_KEYS } from "../../../constant";
+
 import Vector from "../../../assets/Vector.png";
 
 const CompareStack = () => {

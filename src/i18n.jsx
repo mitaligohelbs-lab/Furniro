@@ -10,7 +10,7 @@ i18next
   .init({
     returnObjects: true,
     fallbackLng: "en",
-    debug: true,
+    // debug: true,
     lng: "en",
     ns: ["policy", "return", "payment"],
     defaultNS: "policy",
