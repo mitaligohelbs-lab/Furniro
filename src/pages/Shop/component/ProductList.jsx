@@ -29,25 +29,22 @@ const ProductList = () => {
     try {
       const params = {
         _page: currPage,
-        _per_page: limit,
+        _limit: limit,
       };
 
       if (search) {
-        params.name = search;
+        params.q = search;
       }
 
       if (sortingKeyName) {
-        params._sort =
-          sortingKeyName === "price"
-            ? sortingValue === "asc"
-              ? sortingKeyName
-              : `-${sortingKeyName}`
-            : sortingKeyName;
+        params._sort = sortingKeyName;
+        params._order = sortingValue;
       }
 
-      const res = await httpService.get("/Product", { params });
-      setTotalPages(Math.ceil(res.data.items / limit));
-      setProducts(res.data.data);
+      const res = await httpService.get("/product", { params });
+      const totalCount = res.headers["x-total-count"];
+      setTotalPages(Math.ceil(totalCount / limit));
+      setProducts(res.data);
     } catch (error) {
       console.error(error);
     }

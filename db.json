@@ -1,5 +1,5 @@
 {
-  "Browse": [
+  "browse": [
     {
       "id": 1,
       "name": "Dining",
@@ -16,7 +16,7 @@
       "url": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768881156/Dining_rwpuso.png"
     }
   ], 
-  "Product": [
+  "product": [
     {
       "id": 1,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768969417/Group_95_bwzpsg.png",
@@ -1393,7 +1393,7 @@
       }
     }
   ],
-  "Shape": [
+  "shape": [
     {
       "id": 1,
       "src": "https://res.cloudinary.com/dbfad05pd/image/upload/v1768882445/shape1_dguljz.png"

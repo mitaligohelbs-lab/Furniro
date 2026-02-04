@@ -10,7 +10,7 @@ const Product = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await httpService.get("/Product", {
+      const res = await httpService.get("/product", {
         params: {
           _limit: 8,
         },

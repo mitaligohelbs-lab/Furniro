@@ -23,7 +23,7 @@ const ItemDetails = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await httpService.get("/Product");
+        const res = await httpService.get("/product");
         setAllProduct(res.data);
       } catch (error) {}
     })();
@@ -32,7 +32,7 @@ const ItemDetails = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await httpService.get("/Product", {
+        const res = await httpService.get("/product", {
           params: { id },
         });
         setProductDetail(res.data[0]);
