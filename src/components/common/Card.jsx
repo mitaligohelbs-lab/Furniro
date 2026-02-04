@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Activity, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import clsx from "clsx";
@@ -45,7 +45,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
             className="h-35 md:h-72 w-full object-cover"
             alt="Card Image"
           />
-          {tag && (
+          <Activity mode={tag ? "visible" : "hidden"}>
             <span
               className={clsx(
                 "absolute top-2.5 right-2.5 h-9 md:h-10 w-9 md:w-10 rounded-full flex items-center justify-center text-white",
@@ -57,7 +57,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
             >
               {tag}
             </span>
-          )}
+          </Activity>
 
           <div
             className="
@@ -100,22 +100,22 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
           <div className="text-[#898989] text-sm  md:text-lg">{subTitle}</div>
           <div className="flex justify-between">
             <span className="text-[#3A3A3A]">Rs {price}</span>
-            {originalPrice && (
+            <Activity mode={originalPrice ? "visible" : "hidden"}>
               <span className="text-[#B0B0B0] line-through text-sm md:text-lg">
                 Rs {originalPrice}
               </span>
-            )}
+            </Activity>
           </div>
         </div>
       </button>
-      {openShareModal && (
+      <Activity mode={openShareModal ? "visible" : "hidden"}>
         <ShareModal
           isOpen={openShareModal}
           isClose={() => setShareModal(false)}
           name={name}
           id={id}
         />
-      )}
+      </Activity>
     </>
   );
 };

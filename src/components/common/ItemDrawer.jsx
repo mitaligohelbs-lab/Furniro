@@ -1,3 +1,4 @@
+import { Activity } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -158,11 +159,11 @@ const ItemDrawer = ({ onClose }) => {
             </div>
           ))}
         </div>
-        {selectedProductId.length > 4 && (
+        <Activity mode={selectedProductId.length > 4 ? "visible" : "hidden"}>
           <div className="text-red-400 text-sm px-4">
             You can select maximum 4 items for comparison
           </div>
-        )}
+        </Activity>
         <div className="p-4 border-t">
           <div className="flex justify-between font-medium">
             <span>Total Amount</span>

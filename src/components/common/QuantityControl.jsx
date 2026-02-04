@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -53,7 +53,7 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
           +
         </button>
       </div>
-      {isDisplay && (
+      <Activity mode={isDisplay ? "visible" : "hidden"}>
         <button
           className="px-3 py-2 rounded-md border cursor-pointer h-10 md:h-auto"
           onClick={() =>
@@ -65,7 +65,7 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
             <FaShoppingCart />
           </span>
         </button>
-      )}
+      </Activity>
     </div>
   );
 };

@@ -1,7 +1,11 @@
+import { Activity } from "react";
+
 const JsonContentDisplay = ({ heading, content, icon }) => (
   <section className="space-y-2">
     <div className="flex gap-2">
-      {icon && <span>{icon}</span>}
+      <Activity mode={icon ? "visible" : "hidden"}>
+        <span>{icon}</span>
+      </Activity>
       <h3 className="text-lg font-semibold text-gray-900">{heading}</h3>
     </div>
     <p className="text-sm leading-6 text-gray-700">{content}</p>
