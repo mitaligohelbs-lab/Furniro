@@ -70,13 +70,13 @@ export const ICON_LIST = [
     key: "compare",
     isDisplay: true,
     badgeClass: "-top-3 -right-3",
-    icon: <BiGitCompare size={22} />,
+    icon: <BiGitCompare size={26} />,
   },
   {
     key: "cart",
     isDisplay: true,
     badgeClass: "-top-3 -right-4",
-    icon: <MdOutlineShoppingCart size={22} />,
+    icon: <MdOutlineShoppingCart size={26} />,
   },
   // {
   //   key: "search",

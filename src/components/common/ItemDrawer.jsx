@@ -2,16 +2,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 import { removeItem } from "../../redux/features/cart/CartSlice";
+import {
+  addCompareItem,
+  removeCompareItem,
+} from "../../redux/features/cart/ComparisionSlice";
 
 import QuantityControl from "./QuantityControl";
 import { CART_HEADER } from "../../constant";
 
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
-import {
-  addCompareItem,
-  removeCompareItem,
-} from "../../redux/features/cart/ComparisionSlice";
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -31,13 +31,8 @@ const ItemDrawer = ({ onClose }) => {
     navigate("/checkout");
     onClose();
   };
-
-  const handleChange = (value, id) => {
-    if (value === true) {
-      dispatch(addCompareItem(id));
-    } else {
-      dispatch(removeCompareItem(id));
-    }
+  const handleChange = (checked, id) => {
+    checked ? dispatch(addCompareItem(id)) : dispatch(removeCompareItem(id));
   };
 
   const handleComparision = () => {
@@ -48,20 +43,20 @@ const ItemDrawer = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
-      <div className="ml-auto h-200 w-150 bg-white p-4 shadow-xl relative">
-        <div className="flex justify-between items-center mb-4">
-          <span className="font-semibold text-[24px]">Shopping Cart</span>
-          <button onClick={onClose} className="text-xl cursor-pointer">
-            <img src={Cancel} alt="Cancel Image" />
+      <div className="absolute right-0 top-0 h-200 w-full sm:w-150 bg-white shadow-xl flex flex-col">
+        <div className="flex justify-between items-center p-4">
+          <span className="font-semibold text-xl">Shopping Cart</span>
+          <button onClick={onClose}>
+            <img src={Cancel} alt="close" />
           </button>
         </div>
-        <hr className="mb-4 border-[#D9D9D9]" />
-        <div className="overflow-auto max-h-140">
-          <table className="w-full border-collapse text-sm">
-            <thead className="sticky top-0 bg-gray-100">
-              <tr className="text-left bg-[#F9F1E7]">
+
+        <div className="block max-[500px]:hidden overflow-auto flex-1">
+          <table className="w-full text-sm">
+            <thead className="sticky top-0 bg-[#F9F1E7]">
+              <tr>
                 {CART_HEADER.map(({ name }) => (
-                  <th className="p-2" key={name}>
+                  <th key={name} className="p-2 text-left">
                     {name}
                   </th>
                 ))}
@@ -70,42 +65,41 @@ const ItemDrawer = ({ onClose }) => {
 
             <tbody>
               {items.map(({ id, name, price, src, quantity }) => (
-                <tr key={id} className="last:border-b-0">
+                <tr key={id} className="border-b">
                   <td className="p-2">
                     <img
-                      key={id}
                       src={src}
                       alt={name}
-                      className="h-14 w-14 rounded-lg object-cover"
+                      className="h-14 w-14 rounded object-cover"
                     />
                   </td>
-                  <td className="p-2 font-medium">{name}</td>
-                  <td className="p-2">₹{price}</td>
-                  <td className="p-2">
+                  <td>{name}</td>
+                  <td>₹{price}</td>
+                  <td>
                     <QuantityControl
-                      isDisplay={false}
                       id={id}
                       name={name}
                       price={price}
                       src={src}
+                      isDisplay={false}
                     />
                   </td>
-                  <td className="p-2 font-semibold text-[#B88E2F]">
+                  <td className="font-semibold text-[#B88E2F]">
                     ₹{price * quantity}
                   </td>
-                  <td className="p-2 text-center">
+                  <td>
                     <input
                       type="checkbox"
-                      checked={selectedProductId?.includes(+id)}
+                      checked={selectedProductId.includes(+id)}
                       onChange={(e) => handleChange(e.target.checked, +id)}
                     />
                   </td>
-                  <td className="p-2 text-center">
+                  <td>
                     <img
                       key={id}
                       src={Vector}
                       alt="remove"
-                      className="mx-auto cursor-pointer"
+                      className="cursor-pointer"
                       onClick={() => handleRemoveItem(id)}
                     />
                   </td>
@@ -115,30 +109,83 @@ const ItemDrawer = ({ onClose }) => {
           </table>
         </div>
 
-        <div className="fixed top-170">
-          {selectedProductId.length > 5 && (
-            <div className="text-red-400 text-sm">
-              {`You can maximum 5 items for comparision`}
+        <div className="hidden max-[500px]:block overflow-auto flex-1 p-4 space-y-4">
+          {items.map(({ id, name, price, src, quantity }) => (
+            <div
+              key={id}
+              className="border border-[#9F9F9F] rounded-lg p-3 flex flex-col gap-3"
+            >
+              <div className="flex gap-3">
+                <img
+                  src={src}
+                  alt={name}
+                  className="h-24 w-24 rounded object-cover"
+                />
+
+                <div className="flex flex-col flex-1">
+                  <div className="flex justify-between font-medium">
+                    <span>{name}</span>
+                    <img
+                      src={Vector}
+                      alt="remove"
+                      className="cursor-pointer w-5 h-5"
+                      onClick={() => handleRemoveItem(id)}
+                    />
+                  </div>
+                  <span className="text-sm">₹{price}</span>
+                  <QuantityControl
+                    id={id}
+                    name={name}
+                    price={price}
+                    src={src}
+                    isDisplay={false}
+                  />
+                  <div className="flex justify-between items-center mt-2">
+                    <span className="font-semibold text-[#B88E2F]">
+                      ₹{price * quantity}
+                    </span>
+                    <label className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={selectedProductId.includes(+id)}
+                        onChange={(e) => handleChange(e.target.checked, +id)}
+                      />
+                      Compare
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
-          )}
-          <div>
-            <span>Total Amount:</span>
-            <span className="text-[#B88E2F]  font-bold">{totalAmount}</span>
-            <div className="flex gap-2 mt-3 justify-between w-full">
-              <button
-                className="px-8 py-1.5 border rounded-2xl"
-                onClick={handleCheckout}
-              >
-                Checkout
-              </button>
-              <button
-                className={`px-6 py-1.5 border rounded-2xl ${selectedProductId.length > 5 ? "text-gray-400" : ""}`}
-                disabled={selectedProductId.length > 5}
-                onClick={handleComparision}
-              >
-                Comparision
-              </button>
-            </div>
+          ))}
+        </div>
+        {selectedProductId.length > 4 && (
+          <div className="text-red-400 text-sm px-4">
+            You can select maximum 4 items for comparison
+          </div>
+        )}
+        <div className="p-4 border-t">
+          <div className="flex justify-between font-medium">
+            <span>Total Amount</span>
+            <span className="text-[#B88E2F] font-bold">₹{totalAmount}</span>
+          </div>
+          <div className="flex gap-2 mt-3">
+            <button
+              className="flex-1 px-6 py-2 border rounded-2xl"
+              onClick={handleCheckout}
+            >
+              Checkout
+            </button>
+            <button
+              className={`flex-1 px-6 py-2 border rounded-2xl ${
+                selectedProductId.length > 4
+                  ? "text-gray-400 cursor-not-allowed"
+                  : ""
+              }`}
+              disabled={selectedProductId.length > 4}
+              onClick={handleComparision}
+            >
+              Comparison
+            </button>
           </div>
         </div>
       </div>

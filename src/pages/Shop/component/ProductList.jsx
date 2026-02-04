@@ -60,66 +60,68 @@ const ProductList = () => {
   return (
     <>
       <div className="bg-[#F9F1E7] p-5 flex gap-6">
-        <div className="flex gap-2 h-8">
-          Search:
-          <input
-            className="border border-gray-500 rounded-lg px-2"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-
-        <div className="flex gap-2 h-8">
-          Show:
-          <input
-            type="number"
-            min={1}
-            value={limit}
-            onChange={(e) => {
-              setLimit(Number(e.target.value));
-              setCurrentPage(1);
-            }}
-            className="border border-gray-500 rounded-lg px-2"
-          />
-        </div>
-
-        <div className="flex gap-2 h-8">
-          Sort By:
-          <select
-            className="px-3 border border-gray-500 rounded-lg cursor-pointer focus:outline-none "
-            value={sortingKeyName}
-            onChange={(e) => {
-              setSortingKeyName(e.target.value);
-              setSortingValue("asc");
-            }}
-          >
-            <option value="" disabled hidden></option>
-            {SORTING_LIST.map(({ name, value }) => (
-              <option value={value} key={value}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {sortingKeyName && sortingKeyName !== "name" && (
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           <div className="flex gap-2 h-8">
-            <select
-              className="px-3 border border-gray-500 rounded-lg cursor-pointer focus:outline-none "
-              value={sortingValue}
-              onChange={(e) => setSortingValue(e.target.value)}
-            >
-              <option value="" disabled hidden></option>
-              {SORTING_TYPE.map(({ name, value }) => (
-                <option value={value} key={value}>
-                  {name}
-                </option>
-              ))}
-            </select>
+            Search:
+            <input
+              className="border px-0.5 md:px-2 border-gray-500 rounded-lg w-35 focus:outline-none"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
-        )}
+          <div className="flex gap-2 h-8">
+            Show:
+            <input
+              type="number"
+              min={1}
+              value={limit}
+              onChange={(e) => {
+                setLimit(Number(e.target.value));
+                setCurrentPage(1);
+              }}
+              className="px-2 border border-gray-500 rounded-lg w-20 focus:outline-none"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="flex gap-2 h-8">
+              Sort By:
+              <select
+                className="px-0.5 border border-gray-500 rounded-lg cursor-pointer focus:outline-none "
+                value={sortingKeyName}
+                onChange={(e) => {
+                  setSortingKeyName(e.target.value);
+                  setSortingValue("asc");
+                }}
+              >
+                <option value="" disabled hidden></option>
+                {SORTING_LIST.map(({ name, value }) => (
+                  <option value={value} key={value}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {sortingKeyName && sortingKeyName !== "name" && (
+              <div className="flex gap-2 h-8">
+                <select
+                  className="px-3 border border-gray-500 rounded-lg cursor-pointer focus:outline-none "
+                  value={sortingValue}
+                  onChange={(e) => setSortingValue(e.target.value)}
+                >
+                  <option value="" disabled hidden></option>
+                  {SORTING_TYPE.map(({ name, value }) => (
+                    <option value={value} key={value}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      <div className="grid grid-cols-4 mx-auto place-items-center gap-5 max-w-350 py-4">
+      <div className="grid  grid-cols-2 md:grid-cols-4  mx-auto place-items-center gap-1 max-w-350 py-4">
         {products.map((item) => (
           <Card key={item.id} {...item} />
         ))}

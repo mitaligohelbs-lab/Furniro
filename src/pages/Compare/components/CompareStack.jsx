@@ -15,222 +15,234 @@ import { DISPLAY_KEYS } from "../../../constant";
 
 import Vector from "../../../assets/Vector.png";
 
+const MAX_COMPARE = 4;
+
 const CompareStack = () => {
-  const location = useLocation();
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const selectedProductId = useSelector((state) => state.compareItem.item);
-  const cartItem = useSelector((state) => state.cart.items);
-  const cartItemsIds = cartItem.map(({ id }) => +id);
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItemIds = cartItems.map(({ id }) => +id);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [removeId, setRemoveId] = useState(false);
-  const [allProduct, steAllProduct] = useState([]);
+  const [allProduct, setAllProduct] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([]);
-  const [addToCartInfo, setAddToCartInfo] = useState({});
-  const [open, setOpen] = useState(false);
+
+  const [isOpenItemList, setIsOpenItemList] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [removeId, setRemoveId] = useState(null);
   const [removeProductData, setRemoveProductData] = useState([]);
 
   useEffect(() => {
     (async () => {
+      const res = await httpService.get("/Product");
+      setAllProduct(res.data);
+    })();
+  }, []);
+
+  useEffect(() => {
+    if (!removeId) return;
+    (async () => {
       const res = await httpService.get("/Product", {
-        params: {
-          id: removeId,
-        },
+        params: { id: removeId },
       });
       setRemoveProductData(res.data);
     })();
   }, [removeId]);
 
   useEffect(() => {
-    (async () => {
-      try {
-        const res = await httpService.get("/Product");
-        steAllProduct(res.data);
-      } catch (error) {}
-    })();
-  }, []);
-
-  useEffect(() => {
-    if (!allProduct || !selectedProductId?.length) return;
-
-    const selectedProducts = allProduct
-      .filter(({ id }) => selectedProductId?.includes(+id))
-      ?.map((product) => ({
+    if (!allProduct.length || !selectedProductId.length) return;
+    const products = allProduct
+      .filter((product) => selectedProductId.includes(+product.id))
+      .map((product) => ({
         ...product,
-        isDisplayCartItem: !!cartItemsIds.includes(+product.id),
+        isDisplayCartItem: cartItemIds.includes(+product.id),
       }));
-
-    setSelectedProduct(selectedProducts);
+    setSelectedProduct(products);
   }, [allProduct, selectedProductId]);
 
-  const ImageDisplayCard = ({ name, price, revies, id, src }) => {
-    return (
-      <div className="flex flex-col gap-2 justify-center items-center">
-        <img src={src} className="h-45 w-70" alt="Product Image" />
-        <div className="flex gap-3 justify-center items-center">
-          <span className="text-[24px]">{name}</span>
-          <img
-            src={Vector}
-            className="cursor-pointer h-5 w-5"
-            alt="remove"
-            onClick={() => {
-              setRemoveId(id);
-              setIsOpen(true);
-            }}
-          />
-        </div>
-        <span className="text-[18px]">Rs: {price}</span>
-        <div className="flex gap-1">
-          <RatingStars rating={revies} />
-          <span className="text-[#9F9F9F] text-[13px]">{`| ${revies} Review`}</span>
-        </div>
-      </div>
+  const handleAddToCart = (product) => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        src: product.src,
+        quantity: 1,
+      }),
     );
   };
 
-  const selectedProductInfo = (id) => {
-    const selectedCartProduct = selectedProduct.find((el) => el.id === id);
-    setAddToCartInfo(selectedCartProduct);
+  const handleAddItem = (checked, id) => {
+    checked ? dispatch(addCompareItem(+id)) : dispatch(removeCompareItem(+id));
   };
 
-  const handleConfirm = () => {
-    if (removeId) {
-      dispatch(removeCompareItem(+removeId));
-      setIsOpen(false);
-    }
-  };
-
-  const handleAddToCart = (productId, id, name, price, src) => {
-    selectedProductInfo(productId);
-    dispatch(addToCart({ id, name, price, src, quantity: 1 }));
-  };
-
-  const handleAddItem = (value, id) => {
-    if (value === true) {
-      dispatch(addCompareItem(+id));
-    } else {
-      dispatch(removeCompareItem(+id));
-    }
+  const handleConfirmRemove = () => {
+    dispatch(removeCompareItem(+removeId));
+    setIsOpen(false);
   };
 
   return (
     <>
-      <div className="grid mb-10 place-items-center grid-cols-5">
-        <Link className="text-[22px] max-w-50" to={"/shop"}>
-          Go to Product page for more Products
-          <div className="text-[#727272] text-sm cursor-pointer">View More</div>
+      <div className="mb-6">
+        <Link to="/shop" className="text-blue-600 text-sm ps-4">
+          ← Go to Product page
         </Link>
-
-        <div
-          className={`space-y-3 flex justify-around w-full ${selectedProductId?.length < 5 ? "col-span-3" : "col-span-4"} `}
-        >
-          {selectedProductId.length
-            ? selectedProduct.map((items) => (
-                <ImageDisplayCard {...items} key={items.id} />
-              ))
-            : null}
-        </div>
-
-        <div className="flex flex-col">
-          {selectedProductId?.length < 5 ? (
-            <div className="flex flex-col gap-3 relative w-75">
-              <div className="text-[24px] font-semibold">Add a Product</div>
-              <button
-                onClick={() => setOpen(!open)}
-                className="bg-[#B88E2F] text-white px-5 py-2 rounded-xl 
-               flex justify-between items-center font-semibold"
-              >
-                Choose a Product
-                <span className="text-2xl">⌄</span>
-              </button>
-
-              {open && (
-                <div
-                  className="absolute top-full mt-2 w-full bg-white 
-                    border rounded-xl shadow-lg z-10 max-h-75 overflow-auto"
-                >
-                  <span className="text-sm text-red-400 p-2">{`You can select maximum ${5 - selectedProductId.length} product`}</span>
-                  {allProduct.map(({ name, id }) => (
-                    <label
-                      key={id}
-                      className="flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-100"
-                    >
-                      <input
-                        type="checkbox"
-                        checked={selectedProductId?.includes(+id)}
-                        onChange={(e) => handleAddItem(e.target.checked, id)}
-                      />
-                      <span>{name}</span>
-                    </label>
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : null}
-        </div>
-
-        <hr className="text-[#E8E8E8]" />
       </div>
-      <div className="grid mb-10 grid-cols-5 place-items-center">
-        <div className="space-y-3">
-          {selectedProduct.length && selectedProductId.length
-            ? DISPLAY_KEYS.map(({ name, value }) => (
+
+      <div className="w-full overflow-x-auto">
+        <div className="min-w-300">
+          <div className="grid grid-cols-5 border-b border-[#9F9F9F] bg-white">
+            <div className="p-4 font-semibold">Compare</div>
+
+            {selectedProduct.map((item) => (
+              <div
+                key={item.id}
+                className="p-4 border-[#9F9F9F] relative flex flex-col items-center gap-2"
+              >
+                <img
+                  src={Vector}
+                  className="absolute top-3 right-3 w-4 cursor-pointer"
+                  onClick={() => {
+                    setRemoveId(item.id);
+                    setIsOpen(true);
+                  }}
+                />
+
+                <img src={item.src} alt={item.name} className="w-70 h-45" />
+
+                <p className="text-[24px] font-medium text-center line-clamp-2">
+                  {item.name}
+                </p>
+
+                <p className="font-semibold">Rs. {item.price}</p>
+
+                <div className="flex gap-1">
+                  <RatingStars rating={item.revies} />
+                  <span className="text-[#9F9F9F] text-[13px]">{`| ${item.revies} Review`}</span>
+                </div>
+              </div>
+            ))}
+
+            {Array.from({ length: MAX_COMPARE - selectedProduct.length }).map(
+              (_, i) => (
+                <div
+                  key={i}
+                  className="border-[#9F9F9F] p-4 flex items-center justify-center"
+                >
+                  <button
+                    onClick={() => setIsOpenItemList(true)}
+                    className="border border-dashed  border-[#9F9F9F] px-4 py-3 text-sm rounded cursor-pointer"
+                  >
+                    + Add a product
+                  </button>
+                </div>
+              ),
+            )}
+          </div>
+
+          {DISPLAY_KEYS.map(({ name, value }) => (
+            <div key={value} className="grid grid-cols-5  border-[#9F9F9F]">
+              <div className="p-4 text-sm">
                 <div key={value}>
                   <h3 className="font-semibold text-lg">{name}</h3>
-                  <div className="space-y-2">
+                  <div className="space-y-2 ">
                     {Object.entries(selectedProduct?.[0]?.[value] || {})?.map(
                       ([key]) => (
-                        <div className="text-sm">{key}</div>
+                        <div className="text-sm py-1">{key}</div>
                       ),
                     )}
                   </div>
                 </div>
-              ))
-            : null}
-        </div>
+              </div>
 
-        <div
-          className={`space-y-3 flex justify-around w-full  ${selectedProductId?.length < 5 ? "col-span-3" : "col-span-4"}`}
-        >
-          {selectedProductId.length
-            ? selectedProduct.map((product, index) => {
-                const { name, id, price, src } = addToCartInfo;
-                return (
-                  <div key={index}>
-                    {DISPLAY_KEYS.map(({ value }) => (
-                      <div key={value}>
-                        <h3 className="leading-8">{"-"}</h3>
-                        {Object.values(product?.[value] || {}).map((val, i) => (
-                          <div key={i} className="text-sm py-1">
-                            {val}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                    {!product?.isDisplayCartItem ||
-                    !!location.state?.isDisplay ? (
-                      <button
-                        className="px-5 py-2 rounded-sm border cursor-pointer bg-[#B88E2F] text-white"
-                        onClick={() => {
-                          handleAddToCart(product.id, id, name, price, src);
-                        }}
-                      >
-                        Add To Cart
-                      </button>
-                    ) : null}
+              {selectedProduct.map((product) => (
+                <div
+                  key={product.id}
+                  className="p-4 border-l border-[#9F9F9F] text-sm"
+                >
+                  <div key={product.id}>
+                    <h3 className="font-semibold text-lg">{"-"}</h3>
+                    <div className="space-y-2 ">
+                      {Object.values(product?.[value] || {}).map((val, i) => (
+                        <div key={i} className="py-1">
+                          {val || "-"}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                );
-              })
-            : null}
+                </div>
+              ))}
+
+              {Array.from({
+                length: MAX_COMPARE - selectedProduct.length,
+              }).map((_, i) => (
+                <div key={i} className="border-l border-[#9F9F9F]" />
+              ))}
+            </div>
+          ))}
+
+          <div className="grid grid-cols-5">
+            <div></div>
+
+            {selectedProduct.map((product) => (
+              <div key={product.id} className="p-4 border-l border-[#9F9F9F]">
+                {(!product?.isDisplayCartItem ||
+                  !!location.state?.isDisplay) && (
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="w-full bg-[#B88E2F] text-white py-2 rounded"
+                  >
+                    Add to Cart
+                  </button>
+                )}
+              </div>
+            ))}
+            {Array.from({
+              length: MAX_COMPARE - selectedProduct.length,
+            }).map((_, i) => (
+              <div key={i} className="border-l border-[#9F9F9F]" />
+            ))}
+          </div>
         </div>
       </div>
+
+      {isOpenItemList && (
+        <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-50">
+          <div className="bg-white p-5 rounded-xl w-100 max-h-[80vh] overflow-auto">
+            <h3 className="font-semibold mb-3">Add Products</h3>
+
+            <p className="text-xs text-red-500 mb-2">
+              You can select max {MAX_COMPARE - selectedProduct.length} products
+            </p>
+
+            {allProduct.map(({ id, name }) => (
+              <label key={id} className="flex gap-3 py-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={selectedProductId.includes(+id)}
+                  onChange={(e) => handleAddItem(e.target.checked, id)}
+                />
+                <span>{name}</span>
+              </label>
+            ))}
+
+            <button
+              onClick={() => setIsOpenItemList(false)}
+              className="mt-4 w-full bg-black text-white py-2 rounded"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      )}
+
       {isOpen && (
         <ConfirmationDialog
           isOpen={isOpen}
           isClose={() => setIsOpen(false)}
-          onConfirm={handleConfirm}
-          name={removeProductData[0]?.name}
+          onConfirm={handleConfirmRemove}
+          name={removeProductData?.[0]?.name}
         />
       )}
     </>
