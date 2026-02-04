@@ -6,7 +6,7 @@ const ConfirmationDialog = ({ isOpen, isClose, onConfirm, name }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={isClose} />
 
-      <div className="relative w-full max-w-md rounded-lg bg-white shadow-xl p-6">
+      <div className="relative w-80 sm:w-full max-w-md rounded-lg bg-white shadow-xl p-6">
         <img
           src={Vector}
           alt="remove"

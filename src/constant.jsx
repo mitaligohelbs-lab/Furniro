@@ -1,4 +1,7 @@
 import { BiGitCompare } from "react-icons/bi";
+import { FaPhone } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
+import { IoTime } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 export const NAV_LINKS = [
@@ -138,16 +141,19 @@ export const CONTACT_INFO = [
     name: "Address",
     info: "236 5th SE Avenue, New York NY10000, United States",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165734/location_cdcodp.png",
+    icon: <IoLocationSharp size={24} />,
   },
   {
     name: "Phone",
     info: "Mobile: +(84) 546-6789",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165735/phone_ukhvo5.png",
+    icon: <FaPhone size={20} />,
   },
   {
     name: "Working Time",
     info: "Monday-Friday: 9:00 - 22:00",
     src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1769165734/time_newtm4.png",
+    icon: <IoTime size={24} />,
   },
 ];
 
