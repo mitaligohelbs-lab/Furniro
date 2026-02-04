@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import clsx from "clsx";
 
 import httpService from "../../../service/httpService";
@@ -101,8 +101,13 @@ const ProductList = () => {
                 ))}
               </select>
             </div>
-
-            {sortingKeyName && sortingKeyName !== "name" && (
+            <Activity
+              mode={
+                sortingKeyName && sortingKeyName !== "name"
+                  ? "visible"
+                  : "hidden"
+              }
+            >
               <div className="flex gap-2 h-8">
                 <select
                   className="px-3 border border-gray-500 rounded-lg cursor-pointer focus:outline-none "
@@ -117,7 +122,7 @@ const ProductList = () => {
                   ))}
                 </select>
               </div>
-            )}
+            </Activity>
           </div>
         </div>
       </div>

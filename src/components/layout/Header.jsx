@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
 
@@ -59,7 +59,9 @@ const Header = () => {
               const count = getCountByKey(key);
               return (
                 <div key={key} className="relative">
-                  {isDisplay && count > 0 && (
+                  <Activity
+                    mode={isDisplay && count > 0 ? "visible" : "hidden"}
+                  >
                     <button
                       className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white leading-5`}
                       onClick={() => {
@@ -69,7 +71,7 @@ const Header = () => {
                     >
                       {count}
                     </button>
-                  )}
+                  </Activity>
                   {icon}
                 </div>
               );
@@ -84,8 +86,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-
-      {isMenuOpen && (
+      <Activity mode={isMenuOpen ? "visible" : "hidden"}>
         <div className="fixed inset-0 z-30 md:hidden">
           <div
             className="absolute inset-0 bg-black/40"
@@ -109,9 +110,11 @@ const Header = () => {
             </div>
           </div>
         </div>
-      )}
+      </Activity>
 
-      {isOpen && <ItemDrawer onClose={() => setIsOpen(false)} />}
+      <Activity mode={isOpen ? "visible" : "hidden"}>
+        <ItemDrawer onClose={() => setIsOpen(false)} />
+      </Activity>
     </>
   );
 };

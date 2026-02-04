@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { Activity, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
 import httpService from "../../../service/httpService";
@@ -83,13 +83,15 @@ const ItemDetails = () => {
           Shop &gt;
         </button>
         <span>{id}</span>
-        {productDetail && <span className="ml-2 mr-2">| {name}</span>}
+        <Activity mode={productDetail ? "visible" : "hidden"}>
+          <span className="ml-2 mr-2">| {name}</span>
+        </Activity>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 my-3">
         <div className="flex flex-col md:flex-row gap-4 justify-center px-3 md:px-0 md:mr-5">
           <div className="flex md:flex-col gap-1 flex-row flex-wrap md:flex-nowrap justify-around md:h-100">
-            {extraImages &&
-              [...extraImages, src].map((el) => (
+            <Activity mode={extraImages ? "visible" : "hidden"}>
+              {[...extraImages, src].map((el) => (
                 <img
                   src={el}
                   className={`w-20 h-20 object-cover cursor-pointer border bg-[#F9F1E7] rounded-xl  ${image === el ? "border-black" : "border-gray-300"}`}
@@ -97,6 +99,7 @@ const ItemDetails = () => {
                   onClick={() => setImage(el)}
                 />
               ))}
+            </Activity>
           </div>
           <img
             src={image}
@@ -152,10 +155,11 @@ const ItemDetails = () => {
         </div>
         <div className="text-[#9F9F9F] max-w-5xl">{additionalInformation}</div>
         <div className="flex flex-col md:flex-row max-w-5xl gap-3 items-center">
-          {detailImage &&
-            detailImage.map((image) => (
+          <Activity mode={detailImage ? "visible" : "hidden"}>
+            {detailImage.map((image) => (
               <img src={image} className="w-150" alt="Product Dettail Image" />
             ))}
+          </Activity>
         </div>
       </div>
 
@@ -184,15 +188,14 @@ const ItemDetails = () => {
         ) : (
           ""
         )}
-
-        {isOpen && (
+        <Activity mode={isOpen ? "visible" : "hidden"}>
           <ShareModal
             isOpen={isOpen}
             isClose={() => setIsOpen(false)}
             name={name}
             id={id}
           />
-        )}
+        </Activity>
       </CommonPage>
     </>
   );

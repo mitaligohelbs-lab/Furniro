@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router";
 
@@ -187,15 +187,20 @@ const CompareStack = () => {
 
             {selectedProduct.map((product) => (
               <div key={product.id} className="p-4 border-l border-[#9F9F9F]">
-                {(!product?.isDisplayCartItem ||
-                  !!location.state?.isDisplay) && (
+                <Activity
+                  mode={
+                    !product?.isDisplayCartItem || !!location.state?.isDisplay
+                      ? "visible"
+                      : "hidden"
+                  }
+                >
                   <button
                     onClick={() => handleAddToCart(product)}
                     className="w-full bg-[#B88E2F] text-white py-2 rounded"
                   >
                     Add to Cart
                   </button>
-                )}
+                </Activity>
               </div>
             ))}
             {Array.from({
@@ -207,7 +212,7 @@ const CompareStack = () => {
         </div>
       </div>
 
-      {isOpenItemList && (
+      <Activity mode={isOpenItemList ? "visible" : "hidden"}>
         <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-50">
           <div className="bg-white p-5 rounded-xl w-100 max-h-[80vh] overflow-auto">
             <h3 className="font-semibold mb-3">Add Products</h3>
@@ -235,16 +240,16 @@ const CompareStack = () => {
             </button>
           </div>
         </div>
-      )}
+      </Activity>
 
-      {isOpen && (
+      <Activity mode={isOpen ? "visible" : "hidden"}>
         <ConfirmationDialog
           isOpen={isOpen}
           isClose={() => setIsOpen(false)}
           onConfirm={handleConfirmRemove}
           name={removeProductData?.[0]?.name}
         />
-      )}
+      </Activity>
     </>
   );
 };
