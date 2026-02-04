@@ -87,7 +87,7 @@ const ItemDetails = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 my-3">
         <div className="flex flex-col md:flex-row gap-4 justify-center px-3 md:px-0 md:mr-5">
-          <div className="flex md:flex-col gap-1 flex-row flex-wrap md:flex-nowrap justify-around h-50 md:h-100">
+          <div className="flex md:flex-col gap-1 flex-row flex-wrap md:flex-nowrap justify-around md:h-100">
             {extraImages &&
               [...extraImages, src].map((el) => (
                 <img
