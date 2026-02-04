@@ -7,7 +7,7 @@ const ShapeSetup = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await httpService.get("/Shape");
+      const res = await httpService.get("/shape");
       setShapeImage(res.data);
     })();
   }, []);

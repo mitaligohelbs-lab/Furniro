@@ -35,7 +35,7 @@ const CompareStack = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await httpService.get("/Product");
+      const res = await httpService.get("/product");
       setAllProduct(res.data);
     })();
   }, []);
@@ -43,7 +43,7 @@ const CompareStack = () => {
   useEffect(() => {
     if (!removeId) return;
     (async () => {
-      const res = await httpService.get("/Product", {
+      const res = await httpService.get("/product", {
         params: { id: removeId },
       });
       setRemoveProductData(res.data);

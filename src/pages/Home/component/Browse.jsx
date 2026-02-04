@@ -8,7 +8,7 @@ const Browse = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await httpService.get("/Browse");
+      const res = await httpService.get("/browse");
       setBrowseData(res.data);
     })();
   }, []);
