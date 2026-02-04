@@ -36,19 +36,19 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
   return (
     <>
       <button
-        className="group relative cursor-pointer"
+        className="group relative cursor-pointer w-full md:w-auto px-2 md:px-0"
         onClick={handleCardClick}
       >
         <div className="relative">
           <img
             src={src}
-            className="h-72 w-full object-cover"
+            className="h-35 md:h-72 w-full object-cover"
             alt="Card Image"
           />
           {tag && (
             <span
               className={clsx(
-                "absolute top-2.5 right-2.5 h-12 w-12 rounded-full flex items-center justify-center text-white",
+                "absolute top-2.5 right-2.5 h-9 md:h-10 w-9 md:w-10 rounded-full flex items-center justify-center text-white",
                 {
                   "bg-[#2EC1AC]": tag === "New",
                   "bg-[#E97171]": tag !== "New",
@@ -65,12 +65,12 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
         bg-black/60
         opacity-0 group-hover:opacity-100
         transition duration-300
-        flex flex-col items-center justify-center gap-4
+        flex flex-col items-center justify-center gap-4 
       "
           >
-            <button
+            <div
               className="px-5 py-2 bg-white text-[#B88E2F] font-semibold 
-              disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:hover:bg-gray-200 disabled:hover:text-gray-400"
+              disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:hover:bg-gray-200 disabled:hover:text-gray-400 cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 dispatch(addToCart({ id, name, price, src, quantity: 1 }));
@@ -78,17 +78,10 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
               disabled={itemAlreadyAddedInCart}
             >
               Add To Cart
-            </button>
+            </div>
 
             <div className="flex gap-4 text-white">
-              {/* <button
-                className="flex gap-1 items-center cursor-pointer"
-                onClick={handleShare}
-              >
-                <img src="https://res.cloudinary.com/dbfad05pd/image/upload/v1769571567/gridicons_share_nvm11w.svg" />
-                <span>Share</span>
-              </button> */}
-              <button
+              <div
                 className="flex gap-1 items-center disabled:cursor-not-allowed disabled:text-gray-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -98,17 +91,17 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
               >
                 <img src="https://res.cloudinary.com/dbfad05pd/image/upload/v1769571586/Group_pf6z04.svg" />
                 <span>Compare</span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
         <div className="bg-[#F4F5F7] p-2">
-          <div className="font-semibold text-[24px]">{name}</div>
-          <div className="text-[#898989]">{subTitle}</div>
+          <div className="font-semibold text-[18px] md:text-[24px]">{name}</div>
+          <div className="text-[#898989] text-sm  md:text-lg">{subTitle}</div>
           <div className="flex justify-between">
             <span className="text-[#3A3A3A]">Rs {price}</span>
             {originalPrice && (
-              <span className="text-[#B0B0B0] line-through">
+              <span className="text-[#B0B0B0] line-through text-sm md:text-lg">
                 Rs {originalPrice}
               </span>
             )}

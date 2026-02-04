@@ -85,9 +85,9 @@ const ItemDetails = () => {
         <span>{id}</span>
         {productDetail && <span className="ml-2 mr-2">| {name}</span>}
       </div>
-      <div className="grid grid-cols-2 my-3">
-        <div className="flex gap-4 justify-center mr-5">
-          <div className="flex flex-col justify-around h-100 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 my-3">
+        <div className="flex flex-col md:flex-row gap-4 justify-center px-3 md:px-0 md:mr-5">
+          <div className="flex md:flex-col gap-1 flex-row flex-wrap md:flex-nowrap justify-around h-50 md:h-100">
             {extraImages &&
               [...extraImages, src].map((el) => (
                 <img
@@ -104,9 +104,9 @@ const ItemDetails = () => {
             alt="Product Main Image"
           />
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-1 md:space-y-2 px-3 md:px-0">
           <div className="flex w-full items-center justify-between">
-            <span className="text-[42px]">{name}</span>
+            <span className="text-[30px] md:text-[42px]">{name}</span>
             <span
               className="text-gray-400 hover:text-blue-500 flex gap-1 pe-5 cursor-pointer"
               onClick={() => setIsOpen(true)}
@@ -123,7 +123,7 @@ const ItemDetails = () => {
           </div>
           <div className="text-[13px] max-w-100">{description}</div>
 
-          <div className="flex gap-1 mb-10">
+          <div className="flex gap-1 mb-2 md:mb-10">
             <QuantityControl id={id} name={name} price={price} src={src} />
           </div>
 
@@ -140,18 +140,18 @@ const ItemDetails = () => {
         </div>
       </div>
       <hr className="text-[#D9D9D9]" />
-      <div className="space-y-3 flex flex-col items-center p-5 justify-center">
-        <div className="flex gap-13">
-          <span className="text-[24px]">Description</span>
-          <span className="text-[#9F9F9F] text-[24px]">
+      <div className="space-y-3 flex flex-col items-center p-2 md:p-5 justify-center">
+        <div className="flex gap-3 md:text-13">
+          <span className="text-[15px] md:text-[24px]">Description</span>
+          <span className="text-[#9F9F9F] text-[15px] md:text-[24px]">
             Additional Information
           </span>
-          <span className="flex items-center text-[#9F9F9F] text-[24px]">
+          <span className="flex items-center text-[#9F9F9F] text-[15px] md:text-[24px]">
             Reviews [{`${revies}`}]
           </span>
         </div>
         <div className="text-[#9F9F9F] max-w-5xl">{additionalInformation}</div>
-        <div className="flex max-w-5xl  gap-3 items-center">
+        <div className="flex flex-col md:flex-row max-w-5xl gap-3 items-center">
           {detailImage &&
             detailImage.map((image) => (
               <img src={image} className="w-150" alt="Product Dettail Image" />
@@ -160,7 +160,7 @@ const ItemDetails = () => {
       </div>
 
       <CommonPage title="Related Products">
-        <div className="grid grid-cols-4 mx-auto place-items-center space-y-5 max-w-350">
+        <div className="grid grid-cols-1 md:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350">
           {finalData?.map((item, index) => (
             <Card {...item} key={index} />
           ))}
@@ -168,14 +168,14 @@ const ItemDetails = () => {
         {relatedProduct.length > 4 ? (
           showAllDetails ? (
             <div
-              className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer"
+              className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer mt-2 md:mt-0"
               onClick={() => setShowAllDetails(false)}
             >
               Show Less
             </div>
           ) : (
             <div
-              className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer"
+              className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer mt-2 md:mt-0"
               onClick={() => setShowAllDetails(true)}
             >
               Show More

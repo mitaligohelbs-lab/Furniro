@@ -34,14 +34,16 @@ const ContactInformation = () => {
   return (
     <div className="p-3 max-w-200  mx-auto">
       <div className="flex flex-col items-center justify-center space-y-3 mb-15">
-        <div className="font-semibold text-lg">Get In Touch With Us</div>
-        <div className="text-[#9F9F9F] text-sm max-w-160">
+        <div className="font-semibold text-md md:text-lg">
+          Get In Touch With Us
+        </div>
+        <div className="text-[#9F9F9F] text-sm max-w-160 text-center">
           For More Information About Our Product & Services. Please Feel Free To
           Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
           Hesitate!
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col gap-6 justify-start">
           {CONTACT_INFO.map(({ name, info, src }) => (
             <div className="flex space-y-3 gap-4">
@@ -57,7 +59,10 @@ const ContactInformation = () => {
             </div>
           ))}
         </div>
-        <form className="space-y-4" onSubmit={handleSubmit(sendEmail)}>
+        <form
+          className="space-y-2 md:space-y-4"
+          onSubmit={handleSubmit(sendEmail)}
+        >
           <CommonInput
             id="title"
             label="Title"

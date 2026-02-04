@@ -21,13 +21,13 @@ const Product = () => {
 
   return (
     <CommonPage title="Our Products">
-      <div className="grid grid-cols-4 mx-auto place-items-center space-y-5 max-w-350">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350 ">
         {product?.map((item, index) => (
           <Card key={index} {...item} />
         ))}
       </div>
       <div
-        className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 text-center mx-auto mb-2 cursor-pointer"
+        className="text-[#B88E2F] border border-[1px solid #B88E2F] p-2 w-50 mt-2 md:mt-2 text-center mx-auto mb-2 cursor-pointer"
         onClick={() => navigate("/shop")}
       >
         Show More

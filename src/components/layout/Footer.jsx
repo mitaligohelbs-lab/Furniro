@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <>
       <hr className="text-[#CCCCCC] mt-2 p-2 h-8" />
-      <div className="grid grid-cols-4 w-full gap-6 mx-auto  max-w-7xl ">
+      <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-6 mx-auto px-5 md:px-0 max-w-7xl ">
         <div onClick={() => navigate("/")} className="cursor-pointer">
           <div className="font-bold text-[24px]">Funiro.</div>
           <div className="text-[#9F9F9F]">
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="text-[#9F9F9F]">Links</div>
+          <div className="md:text-[#9F9F9F] text-black font-bold">Links</div>
           <div className="flex flex-col gap-2">
             {NAV_LINKS.map(({ name, path }) => (
               <Link to={path} key={path}>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="text-[#9F9F9F]">Help</div>
+          <div className="md:text-[#9F9F9F] text-black font-bold">Help</div>
           <div className="flex flex-col gap-2">
             {HELP_LINKS.map(({ name, path }) => (
               <Link key={name} className="cursor-pointer" to={path}>
@@ -61,11 +61,13 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="text-[#9F9F9F]">Newsletter</div>
+          <div className="md:text-[#9F9F9F] text-black font-bold">
+            Newsletter
+          </div>
           <div className="flex">
             <input
-              placeholder="Enter your Email Address"
-              className="underline focus:outline-0"
+              placeholder="Enter your Email Address "
+              className="underline focus:outline-0 w-50"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -79,7 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="text-[#CCCCCC] mt-2  p-2 max-w-4xl mx-auto" />
-      <div className="max-w-4xl mx-auto text-[16px]">
+      <div className="max-w-4xl mx-auto text-[16px] text-center">
         2023 furino. All rights reverved{" "}
       </div>
     </>

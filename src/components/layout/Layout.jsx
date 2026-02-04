@@ -4,11 +4,11 @@ import Header from "./Header";
 
 const Layout = () => {
   return (
-    <>
+    <div className="w-full">
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

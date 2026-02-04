@@ -7,7 +7,7 @@ export const comparisionSlice = createSlice({
     addCompareItem: (state, action) => {
       const id = action.payload;
       if (state.item.includes(id)) return;
-      if (state.item.length > 5) {
+      if (state.item.length >= 4) {
         return;
       }
       state.item.push(+id);

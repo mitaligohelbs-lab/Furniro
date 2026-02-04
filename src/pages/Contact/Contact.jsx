@@ -5,8 +5,8 @@ import Service from "../Shop/component/Service";
 import ContactImage from "../../assets/contact.png";
 
 const Contact = () => (
-  <div>
-    <HeaderImage src={ContactImage} />
+  <div className="w-full">
+    <HeaderImage src={ContactImage} className="w-full" />
     <ContactInformation />
     <Service />
   </div>

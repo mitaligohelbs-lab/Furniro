@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="mt-1 relative ">
       <img src={LandingImage} alt="Home Page Image" className="w-full"/>
-      <NewArrival />
+      <span className="hidden md:block"><NewArrival /></span>
     </div>
   );
 };
