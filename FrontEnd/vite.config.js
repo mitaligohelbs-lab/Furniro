@@ -8,4 +8,7 @@ export default defineConfig({
   server: {
     allowedHosts: ["trustless-louisa-voluptuously.ngrok-free.dev"],
   },
+  preview: {
+    allowedHosts: "all",
+  },
 });
