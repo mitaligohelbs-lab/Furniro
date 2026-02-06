@@ -21,7 +21,7 @@ const Product = () => {
 
   return (
     <CommonPage title="Our Products">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350 ">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350  gap-1 xl:gap-0">
         {product?.map((item, index) => (
           <Card key={index} {...item} />
         ))}

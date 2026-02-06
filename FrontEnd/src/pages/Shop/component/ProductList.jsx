@@ -123,7 +123,7 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-      <div className="grid  grid-cols-2 md:grid-cols-4  mx-auto place-items-center gap-1 max-w-350 py-4">
+      <div className="grid  grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  mx-auto place-items-center max-w-350 py-4 gap-1">
         {products.map((item) => (
           <Card key={item.id} {...item} />
         ))}

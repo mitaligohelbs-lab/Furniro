@@ -10,6 +10,7 @@ import Payment from "../pages/Payment/Payment";
 import Privacypolicy from "../pages/PrivacyPolicy/Privacypolicy";
 import Return from "../pages/Return/Return";
 import Shop from "../pages/Shop/Shop";
+import App from "../App";
 
 const Route = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const Route = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <App />,
       },
       {
         path: "shop",
