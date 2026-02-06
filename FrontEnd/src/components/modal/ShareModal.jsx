@@ -15,8 +15,6 @@ import { FaRegClipboard } from "react-icons/fa";
 
 import Vector from "../../assets/Vector.png";
 
-const NGROK_URL = "https://trustless-louisa-voluptuously.ngrok-free.dev";
-
 const ShareModal = ({ isOpen, isClose, name, id }) => {
   const shareUrl = `${import.meta.env.VITE_APP_URL}/shop/${id}`;
   const shareText = `Check out ${name}`;
