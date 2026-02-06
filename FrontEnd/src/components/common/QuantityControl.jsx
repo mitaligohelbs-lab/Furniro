@@ -17,8 +17,6 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
   useEffect(() => {
     if (currItem) {
       setQuantity(currItem.quantity);
-    } else {
-      setQuantity(0);
     }
   }, [currItem]);
 

@@ -82,7 +82,7 @@ const Footer = () => {
       </div>
       <hr className="text-[#CCCCCC] mt-2  p-2 max-w-4xl mx-auto" />
       <div className="max-w-4xl mx-auto text-[16px] text-center">
-        2023 furino. All rights reverved{" "}
+        2026 furino. All rights reverved
       </div>
     </>
   );

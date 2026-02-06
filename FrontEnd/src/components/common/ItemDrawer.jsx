@@ -1,4 +1,3 @@
-import { Activity } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -13,6 +12,8 @@ import { CART_HEADER } from "../../constant";
 
 import Vector from "../../assets/Vector.png";
 import Cancel from "../../assets/Group.png";
+
+const MAX_COMPARE = 4;
 
 const ItemDrawer = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -159,11 +160,10 @@ const ItemDrawer = ({ onClose }) => {
             </div>
           ))}
         </div>
-        <Activity mode={selectedProductId.length > 4 ? "visible" : "hidden"}>
-          <div className="text-red-400 text-sm px-4">
-            You can select maximum 4 items for comparison
-          </div>
-        </Activity>
+        <div className="text-red-400 text-sm px-4">
+          You can select max {MAX_COMPARE - selectedProductId.length} products.
+          Remove one to continue.
+        </div>
         <div className="p-4 border-t">
           <div className="flex justify-between font-medium">
             <span>Total Amount</span>

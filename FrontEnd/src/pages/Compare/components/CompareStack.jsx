@@ -14,6 +14,7 @@ import ConfirmationDialog from "../../../components/modal/ConfirmationDialog";
 import { DISPLAY_KEYS } from "../../../constant";
 
 import Vector from "../../../assets/Vector.png";
+import Cancel from "../../../assets/Group.png";
 
 const MAX_COMPARE = 4;
 
@@ -27,11 +28,17 @@ const CompareStack = () => {
 
   const [allProduct, setAllProduct] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([]);
+  const [allSearchProduct, setAllSearchProduct] = useState([]);
 
   const [isOpenItemList, setIsOpenItemList] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [removeId, setRemoveId] = useState(null);
   const [removeProductData, setRemoveProductData] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (allProduct.length) setAllSearchProduct(allProduct);
+  }, [allProduct]);
 
   useEffect(() => {
     (async () => {
@@ -82,6 +89,17 @@ const CompareStack = () => {
     setIsOpen(false);
   };
 
+  const handleChange = (value) => {
+    setSearchValue(value.trim());
+    const filtered = value
+      ? allProduct.filter(({ name }) =>
+          name.toLowerCase().includes(value.toLowerCase()),
+        )
+      : allProduct;
+
+    setAllSearchProduct(filtered);
+  };
+
   return (
     <>
       <div className="mb-6">
@@ -98,7 +116,7 @@ const CompareStack = () => {
             {selectedProduct.map((item) => (
               <div
                 key={item.id}
-                className="p-4 border-[#9F9F9F] relative flex flex-col items-center gap-2"
+                className="p-4 relative flex flex-col items-center gap-2"
               >
                 <img
                   src={Vector}
@@ -214,21 +232,39 @@ const CompareStack = () => {
 
       <Activity mode={isOpenItemList ? "visible" : "hidden"}>
         <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-50">
-          <div className="bg-white p-5 rounded-xl w-100 max-h-[80vh] overflow-auto">
+          <div className="bg-white p-5 rounded-xl w-100 max-h-[80vh] overflow-auto relative">
+            <button
+              onClick={() => setIsOpenItemList(false)}
+              className="absolute top-3 right-3 p-2"
+            >
+              <img src={Cancel} alt="close" className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
+
             <h3 className="font-semibold mb-3">Add Products</h3>
+
+            <input
+              className="border px-2 py-1 border-gray-500 rounded-lg w-full mb-2"
+              onChange={(e) => handleChange(e.target.value)}
+              value={searchValue}
+              placeholder="Search product"
+            />
 
             <p className="text-xs text-red-500 mb-2">
               You can select max {MAX_COMPARE - selectedProduct.length} products
             </p>
 
-            {allProduct.map(({ id, name }) => (
-              <label key={id} className="flex gap-3 py-2 cursor-pointer">
+            {allSearchProduct.map(({ id, name, src }) => (
+              <label
+                key={id}
+                className="flex gap-3 py-2 cursor-pointer items-center"
+              >
                 <input
                   type="checkbox"
                   checked={selectedProductId.includes(+id)}
                   onChange={(e) => handleAddItem(e.target.checked, id)}
                 />
                 <span>{name}</span>
+                <img src={src} className="h-12 w-12" />
               </label>
             ))}
 
