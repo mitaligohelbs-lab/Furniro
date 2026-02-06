@@ -5,7 +5,7 @@ export const comparisionSlice = createSlice({
   initialState: { item: [] },
   reducers: {
     addCompareItem: (state, action) => {
-      const id = action.payload;
+      const id = +action.payload;
       if (state.item.includes(id)) return;
       if (state.item.length >= 4) {
         return;
@@ -16,8 +16,12 @@ export const comparisionSlice = createSlice({
       if (!state.item.length) return;
       state.item = state.item.filter((id) => id !== action.payload);
     },
+    removeAllItems: (state) => {
+      state.item = [];
+    },
   },
 });
 
-export const { addCompareItem, removeCompareItem } = comparisionSlice.actions;
+export const { addCompareItem, removeCompareItem, removeAllItems } =
+  comparisionSlice.actions;
 export default comparisionSlice.reducer;

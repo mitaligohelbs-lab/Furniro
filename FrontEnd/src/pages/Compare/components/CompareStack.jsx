@@ -6,6 +6,7 @@ import httpService from "../../../service/httpService";
 import { addToCart } from "../../../redux/features/cart/CartSlice";
 import {
   addCompareItem,
+  removeAllItems,
   removeCompareItem,
 } from "../../../redux/features/cart/ComparisionSlice";
 
@@ -58,7 +59,9 @@ const CompareStack = () => {
   }, [removeId]);
 
   useEffect(() => {
-    if (!allProduct.length || !selectedProductId.length) return;
+    if (!allProduct.length) {
+      return;
+    }
     const products = allProduct
       .filter((product) => selectedProductId.includes(+product.id))
       .map((product) => ({
@@ -102,10 +105,16 @@ const CompareStack = () => {
 
   return (
     <>
-      <div className="mb-6">
+      <div className="mb-6 flex justify-between mx-5 mt-1">
         <Link to="/shop" className="text-blue-600 text-sm ps-4">
           ← Go to Product page
         </Link>
+        <button
+          className="text-sm text-gray-500 me-5 hover:text-red-500"
+          onClick={() => dispatch(removeAllItems())}
+        >
+          Clear All
+        </button>
       </div>
 
       <div className="w-full overflow-x-auto">

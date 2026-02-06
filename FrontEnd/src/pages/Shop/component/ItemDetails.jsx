@@ -1,7 +1,10 @@
 import { Activity, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import { useDispatch } from "react-redux";
 
 import httpService from "../../../service/httpService";
+
+import { addToRecentlyViewCard } from "../../../redux/features/RecentlyView/RecentlyViewSlice";
 
 import RatingStars from "../../../components/common/RatingStars";
 import CommonPage from "../../../components/common/CommonPage";
@@ -13,6 +16,7 @@ import { IoMdShareAlt } from "react-icons/io";
 
 const ItemDetails = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [productDetail, setProductDetail] = useState([]);
   const [allProduct, setAllProduct] = useState([]);
@@ -35,6 +39,7 @@ const ItemDetails = () => {
         const res = await httpService.get("/product", {
           params: { id },
         });
+        dispatch(addToRecentlyViewCard(res.data[0]));
         setProductDetail(res.data[0]);
       } catch (error) {}
     })();
@@ -164,7 +169,7 @@ const ItemDetails = () => {
       </div>
 
       <CommonPage title="Related Products">
-        <div className="grid grid-cols-1 md:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center space-y-5 max-w-350 gap-1 xl:gap-0">
           {finalData?.map((item, index) => (
             <Card {...item} key={index} />
           ))}

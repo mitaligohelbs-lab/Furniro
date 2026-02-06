@@ -2,6 +2,7 @@ import { Activity, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import clsx from "clsx";
+import { toast } from "react-toastify";
 
 import { addToCard } from "../../redux/features/card/CardSlice";
 import { addToCart } from "../../redux/features/cart/CartSlice";
@@ -59,21 +60,14 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
             </span>
           </Activity>
 
-          <div
-            className="
-        absolute inset-0
-        bg-black/60
-        opacity-0 group-hover:opacity-100
-        transition duration-300
-        flex flex-col items-center justify-center gap-4 
-      "
-          >
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-4">
             <div
               className="px-5 py-2 bg-white text-[#B88E2F] font-semibold 
               disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:hover:bg-gray-200 disabled:hover:text-gray-400 cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 dispatch(addToCart({ id, name, price, src, quantity: 1 }));
+                toast.success("Item added to card");
               }}
               disabled={itemAlreadyAddedInCart}
             >
@@ -86,6 +80,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
                 onClick={(e) => {
                   e.stopPropagation();
                   dispatch(addCompareItem([id]));
+                  toast.success("Item added to compare list");
                 }}
                 disabled={itemLareadyAddedInComparisionList}
               >
