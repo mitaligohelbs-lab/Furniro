@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
 
-import { deleteRecentlyViewCard } from "../../../redux/features/RecentlyView/RecentlyViewSlice";
+import { deleteRecentlyViewCard } from "@/redux/features/RecentlyView/RecentlyViewSlice";
 
-import Card from "../../../components/common/Card";
-import CommonPage from "../../../components/common/CommonPage";
+import Card from "@/components/common/Card";
+import CommonPage from "@/components/common/CommonPage";
 
 const RecentlyView = ({ items }) => {
   const dispatch = useDispatch();

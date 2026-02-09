@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
-import CommonInput from "../../../components/common/CommonInput";
+import CommonInput from "@/components/common/CommonInput";
 
 const BillingInformation = () => {
   const {

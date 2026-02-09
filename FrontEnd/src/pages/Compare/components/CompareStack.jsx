@@ -3,21 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router";
 import { toast } from "react-toastify";
 
-import httpService from "../../../service/httpService";
-import { addToCart } from "../../../redux/features/cart/CartSlice";
+import httpService from "@/service/httpService";
+
+import { addToCart } from "@/redux/features/cart/CartSlice";
 import {
   addCompareItem,
   removeAllItems,
   removeCompareItem,
-} from "../../../redux/features/cart/ComparisionSlice";
+} from "@/redux/features/cart/ComparisionSlice";
 
-import { CompareStackSkeleton } from "../../../components/Skalaton";
-import RatingStars from "../../../components/common/RatingStars";
-import ConfirmationDialog from "../../../components/modal/ConfirmationDialog";
-import { DISPLAY_KEYS } from "../../../constant";
+import { CompareStackSkeleton } from "@/components/Skalaton";
+import RatingStars from "@/components/common/RatingStars";
+import ConfirmationDialog from "@/components/modal/ConfirmationDialog";
 
-import Vector from "../../../assets/Vector.png";
-import Cancel from "../../../assets/Group.png";
+import { DISPLAY_KEYS } from "@/constant";
+
+import Vector from "@/assets/Vector.png";
+import Cancel from "@/assets/Group.png";
 
 const MAX_COMPARE = 4;
 

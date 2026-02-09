@@ -1,4 +1,4 @@
-import PolicyLayout from "../../components/common/PolicyLayout";
+import PolicyLayout from "@/components/common/PolicyLayout";
 import PaymentContent from "./components/PaymentContent";
 
 const Payment = () => {

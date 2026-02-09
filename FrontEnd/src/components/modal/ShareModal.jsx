@@ -13,7 +13,7 @@ import {
 import { FaClipboardCheck } from "react-icons/fa";
 import { FaRegClipboard } from "react-icons/fa";
 
-import Vector from "../../assets/Vector.png";
+import Vector from "@/assets/Vector.png";
 
 const ShareModal = ({ isOpen, isClose, name, id }) => {
   const shareUrl = `${import.meta.env.VITE_APP_URL}/shop/${id}`;

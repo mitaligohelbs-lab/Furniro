@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
-import { HELP_LINKS, NAV_LINKS } from "../../constant";
+import { HELP_LINKS, NAV_LINKS } from "@/constant";
 
 const Footer = () => {
   const navigate = useNavigate();

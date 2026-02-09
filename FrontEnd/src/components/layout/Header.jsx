@@ -3,8 +3,8 @@ import { NavLink, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
 
 import ItemDrawer from "../common/ItemDrawer";
-import { ICON_LIST, LIST_ITEM } from "../../constant";
-import Logo from "../../assets/logo.svg";
+import { ICON_LIST, LIST_ITEM } from "@/constant";
+import Logo from "@/assets/logo.svg";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 

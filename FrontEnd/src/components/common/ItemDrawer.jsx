@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
-import { removeItem } from "../../redux/features/cart/CartSlice";
+import { removeItem } from "@/redux/features/cart/CartSlice";
 import {
   addCompareItem,
   removeCompareItem,
-} from "../../redux/features/cart/ComparisionSlice";
+} from "@/redux/features/cart/ComparisionSlice";
 
 import QuantityControl from "./QuantityControl";
-import { CART_HEADER } from "../../constant";
+import { CART_HEADER } from "@/constant";
 
-import Vector from "../../assets/Vector.png";
-import Cancel from "../../assets/Group.png";
+import Vector from "@/assets/Vector.png";
+import Cancel from "@/assets/Group.png";
 
 const MAX_COMPARE = 4;
 

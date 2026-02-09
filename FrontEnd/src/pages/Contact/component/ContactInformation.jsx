@@ -1,11 +1,11 @@
-import emailjs from "@emailjs/browser";
-import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
-import CommonInput from "../../../components/common/CommonInput";
-import CommonTextArea from "../../../components/common/CommonTextArea";
+import CommonInput from "@/components/common/CommonInput";
+import CommonTextArea from "@/components/common/CommonTextArea";
 
-import { CONTACT_INFO } from "../../../constant";
+import { CONTACT_INFO } from "@/constant";
 
 const ContactInformation = () => {
   const {

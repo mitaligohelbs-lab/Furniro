@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import i18next from "i18next";
 
-import { languageOptions } from "../../constant";
+import { languageOptions } from "@/constant";
 
 const LanguageSelector = () => {
   const [language, setLanguage] = useState("");

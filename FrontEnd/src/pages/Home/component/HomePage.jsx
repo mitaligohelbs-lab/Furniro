@@ -1,11 +1,13 @@
 import NewArrival from "./NewArrival";
-import LandingImage from "../../../assets/Home.svg";
+import LandingImage from "@/assets/Home.svg";
 
 const HomePage = () => {
   return (
     <div className="mt-1 relative ">
-      <img src={LandingImage} alt="Home Page Image" className="w-full"/>
-      <span className="hidden md:block"><NewArrival /></span>
+      <img src={LandingImage} alt="Home Page Image" className="w-full" />
+      <span className="hidden md:block">
+        <NewArrival />
+      </span>
     </div>
   );
 };

@@ -1,6 +1,5 @@
-import clsx from "clsx";
-import BedRoom from "../../../assets/BedRoom.png";
-import Living from "../../../assets/Living.png";
+import BedRoom from "@/assets/BedRoom.png";
+import Living from "@/assets/Living.png";
 
 const RoomInspiration = () => {
   return (
