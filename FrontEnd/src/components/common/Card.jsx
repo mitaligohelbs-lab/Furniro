@@ -72,7 +72,7 @@ const Card = ({ src, name, subTitle, price, originalPrice, tag, id }) => {
             </span>
           </Activity>
 
-          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center gap-4">
+          <div className="hidden min-[501px]:flex absolute inset-0 bg-black/60 opacity-0 min-[501px]:group-hover:opacity-100 transition duration-300 flex-col items-center justify-center gap-4">
             <div
               className="px-5 py-2 bg-white text-[#B88E2F] font-semibold 
               disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:hover:bg-gray-200 disabled:hover:text-gray-400 cursor-pointer"
