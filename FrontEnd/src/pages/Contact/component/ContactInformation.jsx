@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 import CommonInput from "../../../components/common/CommonInput";
 import CommonTextArea from "../../../components/common/CommonTextArea";
@@ -22,10 +23,10 @@ const ContactInformation = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          toast.success("Your details send successfully");
         },
-        (error) => {
-          console.log("FAILED...", error);
+        () => {
+          toast.error("FAILED");
         },
       );
     reset();

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 import { HELP_LINKS, NAV_LINKS } from "../../constant";
@@ -21,10 +22,10 @@ const Footer = () => {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
+          toast.success("Your subscription Added successfully");
         },
-        (error) => {
-          console.log("FAILED...", error);
+        () => {
+          toast.error("FAILED");
         },
       );
     setEmail("");
