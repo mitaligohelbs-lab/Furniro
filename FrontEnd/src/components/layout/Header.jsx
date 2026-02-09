@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 import ItemDrawer from "../common/ItemDrawer";
 import { ICON_LIST, LIST_ITEM } from "@/constant";
+
 import Logo from "@/assets/logo.svg";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
@@ -13,6 +14,7 @@ const Header = () => {
   const item = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const totalCompareItem = useSelector((state) => state.compareItem.item);
+  const totalWishlistItem = useSelector((state) => state.wishlist.items);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,12 +26,13 @@ const Header = () => {
   const getCountByKey = (key) => {
     if (key === "cart") return item.length;
     if (key === "compare") return totalCompareItem.length;
+    if (key === "like") return totalWishlistItem.length;
     return 0;
   };
 
   return (
     <>
-      <div className="relative flex items-center justify-between px-6 py-3 bg-white z-40">
+      <div className="relative flex items-center justify-between px-2 sm:px-6 py-3 bg-white z-40">
         <NavLink
           className="flex items-center gap-1"
           to="/"
@@ -63,10 +66,11 @@ const Header = () => {
                     mode={isDisplay && count > 0 ? "visible" : "hidden"}
                   >
                     <button
-                      className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white leading-5`}
+                      className={`absolute ${badgeClass} h-5 w-5 rounded-full bg-red-400 text-xs text-white leading-4`}
                       onClick={() => {
                         if (key === "cart") setIsOpen(true);
                         if (key === "compare") navigate("/compare");
+                        if (key === "like") navigate("/wishlist");
                       }}
                     >
                       {count}

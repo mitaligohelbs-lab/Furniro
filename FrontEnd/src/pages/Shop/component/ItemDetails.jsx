@@ -1,6 +1,6 @@
 import { Activity, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 import { IoMdShareAlt } from "react-icons/io";
@@ -8,6 +8,10 @@ import { IoMdShareAlt } from "react-icons/io";
 import httpService from "@/service/httpService";
 
 import { addToRecentlyViewCard } from "@/redux/features/RecentlyView/RecentlyViewSlice";
+import {
+  addToWhistListItem,
+  removeFromWhistList,
+} from "../../../redux/features/wishlist/WishlistSlice";
 
 import { ItemDetailsSkeleton } from "@/components/Skalaton";
 import RatingStars from "@/components/common/RatingStars";
@@ -15,6 +19,9 @@ import CommonPage from "@/components/common/CommonPage";
 import Card from "@/components/common/Card";
 import QuantityControl from "@/components/common/QuantityControl";
 import ShareModal from "@/components/modal/ShareModal";
+
+import { IoMdHeartEmpty } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -26,6 +33,20 @@ const ItemDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [isWishListCheck, setIsWishListClick] = useState(false);
+
+  const wishListItems = useSelector((state) => state.wishlist.items);
+  const wishListitemFound = wishListItems.find(
+    ({ id: itemId }) => itemId === id,
+  );
+
+  useEffect(() => {
+    if (wishListitemFound) {
+      setIsWishListClick(true);
+    } else {
+      setIsWishListClick(false);
+    }
+  }, [wishListitemFound]);
 
   useEffect(() => {
     (async () => {
@@ -81,6 +102,15 @@ const ItemDetails = () => {
     [showAllDetails, relatedProduct],
   );
 
+  const handleWishListClick = () => {
+    setIsWishListClick(!isWishListCheck);
+    if (wishListitemFound) {
+      dispatch(removeFromWhistList(id));
+    } else {
+      dispatch(addToWhistListItem({ id, name, src, price }));
+    }
+  };
+
   if (isLoading) return <ItemDetailsSkeleton />;
 
   return (
@@ -125,13 +155,25 @@ const ItemDetails = () => {
         </div>
         <div className="flex flex-col space-y-1 md:space-y-2 px-3 md:px-0">
           <div className="flex w-full items-center justify-between">
-            <span className="text-[30px] md:text-[42px]">{name}</span>
-            <span
-              className="text-gray-400 hover:text-blue-500 flex gap-1 pe-5 cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            >
-              <IoMdShareAlt size={26} /> Share
-            </span>
+            <div className="text-[30px] md:text-[42px]">{name}</div>
+            <div className="flex gap-2">
+              <span
+                className="text-gray-400 hover:text-blue-500 flex gap-1 pe-5 cursor-pointer"
+                onClick={() => setIsOpen(true)}
+              >
+                <IoMdShareAlt size={26} /> Share
+              </span>
+              <span
+                className="text-gray-400 flex gap-1 pe-5 cursor-pointer"
+                onClick={handleWishListClick}
+              >
+                {isWishListCheck ? (
+                  <FaHeart size={26} color="red" />
+                ) : (
+                  <IoMdHeartEmpty size={26} />
+                )}
+              </span>
+            </div>
           </div>
           <span className="text-[#9F9F9F] font-bold">Rs: {price}</span>
           <div className="flex gap-3">

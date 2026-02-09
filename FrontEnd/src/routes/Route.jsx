@@ -3,13 +3,13 @@ import { createBrowserRouter } from "react-router";
 import Checkout from "../pages/Checkout/Checkout";
 import Contact from "../pages/Contact/Contact";
 import Compare from "../pages/Compare/Compare";
-import Home from "../pages/Home/Home";
 import ItemDetails from "../pages/Shop/component/ItemDetails";
 import Layout from "../components/layout/Layout";
 import Payment from "../pages/Payment/Payment";
 import Privacypolicy from "../pages/PrivacyPolicy/Privacypolicy";
 import Return from "../pages/Return/Return";
 import Shop from "../pages/Shop/Shop";
+import Wishlist from "../pages/Wishlist/Wishlist";
 import App from "../App";
 
 const Route = createBrowserRouter([
@@ -54,6 +54,10 @@ const Route = createBrowserRouter([
       {
         path: "/payment",
         element: <Payment />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
     ],
   },

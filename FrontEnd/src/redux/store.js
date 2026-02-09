@@ -15,12 +15,14 @@ import cardReducer from "./features/card/CardSlice";
 import cartReducer from "./features/cart/CartSlice";
 import compareReducer from "./features/cart/ComparisionSlice";
 import recentlyViewReducer from "./features/RecentlyView/RecentlyViewSlice";
+import wishlistReducer from "./features/wishlist/WishlistSlice";
 
 const rootReducer = combineReducers({
   card: cardReducer,
   cart: cartReducer,
   compareItem: compareReducer,
   recentlyView: recentlyViewReducer,
+  wishlist: wishlistReducer,
 });
 
 const persistConfig = {
