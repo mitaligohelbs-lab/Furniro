@@ -45,7 +45,7 @@ const ItemDrawer = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
-      <div className="absolute right-0 top-0 h-200 w-full sm:w-150 bg-white shadow-xl flex flex-col">
+      <div className="absolute right-0 top-0 h-dvh w-full sm:w-150 bg-white shadow-xl flex flex-col">
         <div className="flex justify-between items-center p-4">
           <span className="font-semibold text-xl">Shopping Cart</span>
           <button onClick={onClose}>
@@ -54,30 +54,87 @@ const ItemDrawer = ({ onClose }) => {
         </div>
 
         <div className="block max-[500px]:hidden overflow-auto flex-1">
-          <table className="w-full text-sm">
+            <table className="w-full text-sm">
             <thead className="sticky top-0 bg-[#F9F1E7]">
-              <tr>
-                {CART_HEADER.map(({ name }) => (
-                  <th key={name} className="p-2 text-left">
-                    {name}
-                  </th>
-                ))}
-              </tr>
-            </thead>
+                <tr>
+                  {CART_HEADER.map(({ name }) => (
+                    <th key={name} className="p-2 text-left">
+                      {name}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
 
-            <tbody>
-              {items.map(({ id, name, price, src, quantity }) => (
-                <tr key={id} className="border-b">
-                  <td className="p-2">
-                    <img
-                      src={src}
-                      alt={name}
-                      className="h-14 w-14 rounded object-cover"
-                    />
-                  </td>
-                  <td>{name}</td>
-                  <td>₹{price}</td>
-                  <td>
+              <tbody>
+                {items.map(({ id, name, price, src, quantity }) => (
+                  <tr key={id} className="border-b">
+                    <td className="p-2">
+                      <img
+                        src={src}
+                        alt={name}
+                        className="h-14 w-14 rounded object-cover"
+                      />
+                    </td>
+                    <td>{name}</td>
+                    <td>₹{price}</td>
+                    <td>
+                      <QuantityControl
+                        id={id}
+                        name={name}
+                        price={price}
+                        src={src}
+                        isDisplay={false}
+                      />
+                    </td>
+                    <td className="font-semibold text-[#B88E2F]">
+                      ₹{price * quantity}
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={selectedProductId.includes(+id)}
+                        onChange={(e) => handleChange(e.target.checked, +id)}
+                      />
+                    </td>
+                    <td>
+                      <img
+                        key={id}
+                        src={Vector}
+                        alt="remove"
+                        className="cursor-pointer"
+                        onClick={() => handleRemoveItem(id)}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+        <div className="hidden max-[500px]:block overflow-auto flex-1 p-4 space-y-4">
+            {items.map(({ id, name, price, src, quantity }) => (
+              <div
+                key={id}
+                className="border border-[#9F9F9F] rounded-lg p-3 flex flex-col gap-3"
+              >
+                <div className="flex gap-3">
+                  <img
+                    src={src}
+                    alt={name}
+                    className="h-24 w-24 rounded object-cover"
+                  />
+
+                  <div className="flex flex-col flex-1">
+                    <div className="flex justify-between font-medium">
+                      <span>{name}</span>
+                      <img
+                        src={Vector}
+                        alt="remove"
+                        className="cursor-pointer w-5 h-5"
+                        onClick={() => handleRemoveItem(id)}
+                      />
+                    </div>
+                    <span className="text-sm">₹{price}</span>
                     <QuantityControl
                       id={id}
                       name={name}
@@ -85,81 +142,24 @@ const ItemDrawer = ({ onClose }) => {
                       src={src}
                       isDisplay={false}
                     />
-                  </td>
-                  <td className="font-semibold text-[#B88E2F]">
-                    ₹{price * quantity}
-                  </td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={selectedProductId.includes(+id)}
-                      onChange={(e) => handleChange(e.target.checked, +id)}
-                    />
-                  </td>
-                  <td>
-                    <img
-                      key={id}
-                      src={Vector}
-                      alt="remove"
-                      className="cursor-pointer"
-                      onClick={() => handleRemoveItem(id)}
-                    />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="hidden max-[500px]:block overflow-auto flex-1 p-4 space-y-4">
-          {items.map(({ id, name, price, src, quantity }) => (
-            <div
-              key={id}
-              className="border border-[#9F9F9F] rounded-lg p-3 flex flex-col gap-3"
-            >
-              <div className="flex gap-3">
-                <img
-                  src={src}
-                  alt={name}
-                  className="h-24 w-24 rounded object-cover"
-                />
-
-                <div className="flex flex-col flex-1">
-                  <div className="flex justify-between font-medium">
-                    <span>{name}</span>
-                    <img
-                      src={Vector}
-                      alt="remove"
-                      className="cursor-pointer w-5 h-5"
-                      onClick={() => handleRemoveItem(id)}
-                    />
-                  </div>
-                  <span className="text-sm">₹{price}</span>
-                  <QuantityControl
-                    id={id}
-                    name={name}
-                    price={price}
-                    src={src}
-                    isDisplay={false}
-                  />
-                  <div className="flex justify-between items-center mt-2">
-                    <span className="font-semibold text-[#B88E2F]">
-                      ₹{price * quantity}
-                    </span>
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={selectedProductId.includes(+id)}
-                        onChange={(e) => handleChange(e.target.checked, +id)}
-                      />
-                      Compare
-                    </label>
+                    <div className="flex justify-between items-center mt-2">
+                      <span className="font-semibold text-[#B88E2F]">
+                        ₹{price * quantity}
+                      </span>
+                      <label className="flex items-center gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={selectedProductId.includes(+id)}
+                          onChange={(e) => handleChange(e.target.checked, +id)}
+                        />
+                        Compare
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         <div className="text-red-400 text-sm px-4">
           You can select max {MAX_COMPARE - selectedProductId.length} products.
           Remove one to continue.
