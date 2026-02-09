@@ -11,6 +11,7 @@ import {
   removeCompareItem,
 } from "../../../redux/features/cart/ComparisionSlice";
 
+import { CompareStackSkeleton } from "../../../components/Skalaton";
 import RatingStars from "../../../components/common/RatingStars";
 import ConfirmationDialog from "../../../components/modal/ConfirmationDialog";
 import { DISPLAY_KEYS } from "../../../constant";
@@ -37,6 +38,7 @@ const CompareStack = () => {
   const [removeId, setRemoveId] = useState(null);
   const [removeProductData, setRemoveProductData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (allProduct.length) setAllSearchProduct(allProduct);
@@ -44,8 +46,16 @@ const CompareStack = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await httpService.get("/product");
-      setAllProduct(res.data);
+      try {
+        setIsLoading(true);
+        const res = await httpService.get("/product");
+        setAllProduct(res.data);
+      } catch (e) {
+        console.log("Failed to fetch product data:", error);
+        toast.error("Failed to fetch product data");
+      } finally {
+        setIsLoading(false);
+      }
     })();
   }, []);
 
@@ -104,6 +114,8 @@ const CompareStack = () => {
 
     setAllSearchProduct(filtered);
   };
+
+  if (isLoading) return <CompareStackSkeleton />;
 
   return (
     <>

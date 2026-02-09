@@ -1,8 +1,11 @@
 import { Activity, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import clsx from "clsx";
 
-import httpService from "../../../service/httpService";
+import { ProductCardSkeleton } from "../../../components/Skalaton";
 import Card from "../../../components/common/Card";
+
+import httpService from "../../../service/httpService";
 
 import { SORTING_LIST, SORTING_TYPE } from "../../../constant";
 
@@ -16,6 +19,7 @@ const ProductList = () => {
   const [sortingKeyName, setSortingKeyName] = useState("");
   const [sortingValue, setSortingValue] = useState("");
   const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const startPage = Math.floor((currPage - 1) / PAGE_WINDOW) * PAGE_WINDOW + 1;
   const endPage = Math.min(startPage + PAGE_WINDOW - 1, totalPages);
@@ -26,6 +30,7 @@ const ProductList = () => {
   );
 
   const fetchProduct = async () => {
+    setIsLoading(true);
     try {
       const params = {
         _page: currPage,
@@ -46,7 +51,10 @@ const ProductList = () => {
       setTotalPages(Math.ceil(totalCount / limit));
       setProducts(res.data);
     } catch (error) {
-      console.error(error);
+      console.error("Failed to fetch product data:", error);
+      toast.error("Failed to fetch product data:");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -124,9 +132,11 @@ const ProductList = () => {
         </div>
       </div>
       <div className="grid  grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  mx-auto place-items-center max-w-350 py-4 gap-1">
-        {products.map((item) => (
-          <Card key={item.id} {...item} />
-        ))}
+        {isLoading
+          ? Array.from({ length: 8 }).map((_, idx) => (
+              <ProductCardSkeleton key={idx} />
+            ))
+          : products.map((item) => <Card key={item.id} {...item} />)}
       </div>
 
       <div className="flex gap-2 justify-center mb-4">
