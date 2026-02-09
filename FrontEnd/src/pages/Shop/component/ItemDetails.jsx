@@ -1,11 +1,13 @@
 import { Activity, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 import httpService from "../../../service/httpService";
 
 import { addToRecentlyViewCard } from "../../../redux/features/RecentlyView/RecentlyViewSlice";
 
+import { ItemDetailsSkeleton } from "../../../components/Skalaton";
 import RatingStars from "../../../components/common/RatingStars";
 import CommonPage from "../../../components/common/CommonPage";
 import Card from "../../../components/common/Card";
@@ -23,6 +25,7 @@ const ItemDetails = () => {
   const [showAllDetails, setShowAllDetails] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -36,12 +39,18 @@ const ItemDetails = () => {
   useEffect(() => {
     (async () => {
       try {
+        setIsLoading(true);
         const res = await httpService.get("/product", {
           params: { id },
         });
         dispatch(addToRecentlyViewCard(res.data[0]));
         setProductDetail(res.data[0]);
-      } catch (error) {}
+      } catch (error) {
+        console.log("Failed to fetch product detail data", error);
+        toast.error("Failed to fetch product detail data");
+      } finally {
+        setIsLoading(false);
+      }
     })();
   }, [id]);
 
@@ -71,6 +80,8 @@ const ItemDetails = () => {
     () => (showAllDetails ? relatedProduct : relatedProduct.slice(1, 5)),
     [showAllDetails, relatedProduct],
   );
+
+  if (isLoading) return <ItemDetailsSkeleton />;
 
   return (
     <>
