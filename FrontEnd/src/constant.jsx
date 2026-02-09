@@ -3,6 +3,7 @@ import { FaPhone } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoTime } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 
 export const NAV_LINKS = [
   {
@@ -86,11 +87,13 @@ export const ICON_LIST = [
   //   isDisplay: false,
   //   src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/search_pftbde.svg",
   // },
-  // {
-  //   key: "like",
-  //   isDisplay: false,
-  //   src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
-  // },
+  {
+    key: "like",
+    isDisplay: true,
+    badgeClass: "-top-3 -right-4",
+    src: "https://res.cloudinary.com/dbfad05pd/image/upload/v1768991115/like_nyar3f.svg",
+    icon: <FaRegHeart size={26} />,
+  },
 ];
 
 export const DISPLAY_KEYS = [
@@ -243,5 +246,26 @@ export const PAYMENT_SECTION = [
   },
   {
     title: "support",
+  },
+];
+
+export const wishListColumn = [
+  {
+    name: "",
+  },
+  {
+    name: "",
+  },
+  {
+    name: "Product Name",
+  },
+  {
+    name: "Price",
+  },
+  {
+    name: "Quantity",
+  },
+  {
+    name: "",
   },
 ];
