@@ -1,6 +1,7 @@
 import { Activity, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router";
+import { toast } from "react-toastify";
 
 import httpService from "../../../service/httpService";
 import { addToCart } from "../../../redux/features/cart/CartSlice";
@@ -81,6 +82,7 @@ const CompareStack = () => {
         quantity: 1,
       }),
     );
+    toast.success("Item added to card");
   };
 
   const handleAddItem = (checked, id) => {

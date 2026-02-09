@@ -1,5 +1,6 @@
 import { Activity, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import {
   addToCart,
   decreaseQuantity,
@@ -54,9 +55,10 @@ const QuantityControl = ({ id, name, price, src, isDisplay = true }) => {
       <Activity mode={isDisplay ? "visible" : "hidden"}>
         <button
           className="px-3 py-2 rounded-md border cursor-pointer h-10 md:h-auto"
-          onClick={() =>
-            dispatch(addToCart({ id, name, price, src, quantity }))
-          }
+          onClick={() => {
+            dispatch(addToCart({ id, name, price, src, quantity }));
+            toast.success("Item added to compare list");
+          }}
         >
           <span className="hidden md:block">Add To Cart</span>
           <span className="block md:hidden">
