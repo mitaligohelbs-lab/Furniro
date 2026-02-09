@@ -4,9 +4,9 @@ import { useNavigate } from "react-router";
 import clsx from "clsx";
 import { toast } from "react-toastify";
 
-import { addToCard } from "../../redux/features/card/CardSlice";
-import { addToCart } from "../../redux/features/cart/CartSlice";
-import { addCompareItem } from "../../redux/features/cart/ComparisionSlice";
+import { addToCard } from "@/redux/features/card/CardSlice";
+import { addToCart } from "@/redux/features/cart/CartSlice";
+import { addCompareItem } from "@/redux/features/cart/ComparisionSlice";
 
 import ShareModal from "../modal/ShareModal";
 

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import httpService from "../../../service/httpService";
 
-import { BrowseSkeleton } from "../../../components/Skalaton";
-import CommonPage from "../../../components/common/CommonPage";
+import httpService from "@/service/httpService";
+
+import { BrowseSkeleton } from "@/components/Skalaton";
+import CommonPage from "@/components/common/CommonPage";
 
 const Browse = () => {
   const [browseData, setBrowseData] = useState([]);

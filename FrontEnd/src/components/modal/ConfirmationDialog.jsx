@@ -1,4 +1,4 @@
-import Vector from "../../assets/Vector.png";
+import Vector from "@/assets/Vector.png";
 
 const ConfirmationDialog = ({ isOpen, isClose, onConfirm, name }) => {
   if (!isOpen) return null;

@@ -5,7 +5,7 @@ import {
   addToCart,
   decreaseQuantity,
   increseQuantity,
-} from "../../redux/features/cart/CartSlice";
+} from "@/redux/features/cart/CartSlice";
 
 import { FaShoppingCart } from "react-icons/fa";
 

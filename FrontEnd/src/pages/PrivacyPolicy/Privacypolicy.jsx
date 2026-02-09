@@ -1,4 +1,4 @@
-import PolicyLayout from "../../components/common/PolicyLayout";
+import PolicyLayout from "@/components/common/PolicyLayout";
 import Policy from "./components/Policy";
 
 const Privacypolicy = () => {

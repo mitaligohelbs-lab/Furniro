@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
-import { ProductCardSkeleton } from "../../../components/Skalaton";
-import CommonPage from "../../../components/common/CommonPage";
-import Card from "../../../components/common/Card";
+import httpService from "@/service/httpService";
 
-import httpService from "../../../service/httpService";
+import { ProductCardSkeleton } from "@/components/Skalaton";
+import CommonPage from "@/components/common/CommonPage";
+import Card from "@/components/common/Card";
 
 const Product = () => {
   const navigate = useNavigate();

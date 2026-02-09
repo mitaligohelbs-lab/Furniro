@@ -3,18 +3,18 @@ import { useNavigate, useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
-import httpService from "../../../service/httpService";
-
-import { addToRecentlyViewCard } from "../../../redux/features/RecentlyView/RecentlyViewSlice";
-
-import { ItemDetailsSkeleton } from "../../../components/Skalaton";
-import RatingStars from "../../../components/common/RatingStars";
-import CommonPage from "../../../components/common/CommonPage";
-import Card from "../../../components/common/Card";
-import QuantityControl from "../../../components/common/QuantityControl";
-import ShareModal from "../../../components/modal/ShareModal";
-
 import { IoMdShareAlt } from "react-icons/io";
+
+import httpService from "@/service/httpService";
+
+import { addToRecentlyViewCard } from "@/redux/features/RecentlyView/RecentlyViewSlice";
+
+import { ItemDetailsSkeleton } from "@/components/Skalaton";
+import RatingStars from "@/components/common/RatingStars";
+import CommonPage from "@/components/common/CommonPage";
+import Card from "@/components/common/Card";
+import QuantityControl from "@/components/common/QuantityControl";
+import ShareModal from "@/components/modal/ShareModal";
 
 const ItemDetails = () => {
   const { id } = useParams();

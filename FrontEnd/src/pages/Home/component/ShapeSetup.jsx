@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-import { ShapeImageSkeleton } from "../../../components/Skalaton";
-import CommonPage from "../../../components/common/CommonPage";
+import httpService from "@/service/httpService";
 
-import httpService from "../../../service/httpService";
+import { ShapeImageSkeleton } from "@/components/Skalaton";
+import CommonPage from "@/components/common/CommonPage";
 
 const ShapeSetup = () => {
   const [shapeImage, setShapeImage] = useState([]);

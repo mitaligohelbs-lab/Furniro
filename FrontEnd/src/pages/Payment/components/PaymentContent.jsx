@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import JsonContentDisplay from "../../../components/common/JsonContentDisplay";
-import { PAYMENT_SECTION } from "../../../constant";
+import JsonContentDisplay from "@/components/common/JsonContentDisplay";
+import { PAYMENT_SECTION } from "@/constant";
 
 const PaymentContent = () => {
   const { t } = useTranslation("payment");

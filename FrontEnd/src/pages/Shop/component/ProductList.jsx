@@ -2,12 +2,12 @@ import { Activity, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import clsx from "clsx";
 
-import { ProductCardSkeleton } from "../../../components/Skalaton";
-import Card from "../../../components/common/Card";
+import httpService from "@/service/httpService";
 
-import httpService from "../../../service/httpService";
+import { ProductCardSkeleton } from "@/components/Skalaton";
+import Card from "@/components/common/Card";
 
-import { SORTING_LIST, SORTING_TYPE } from "../../../constant";
+import { SORTING_LIST, SORTING_TYPE } from "@/constant";
 
 const PAGE_WINDOW = 3;
 
@@ -15,7 +15,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [currPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(8);
+  const [limit, setLimit] = useState(8);/*  */
   const [sortingKeyName, setSortingKeyName] = useState("");
   const [sortingValue, setSortingValue] = useState("");
   const [totalPages, setTotalPages] = useState(1);
